@@ -1,0 +1,732 @@
+{
+  "topics": [
+    {
+      "id": "csharp",
+      "number": 1,
+      "title": "Основы языка C#",
+      "symbol": "C#",
+      "color": "violet",
+      "description": "Типы, синтаксис и возможности языка",
+      "questions": [
+        {
+          "id": "csharp-001",
+          "text": "Какие существуют типы данных в C#?"
+        },
+        {
+          "id": "csharp-002",
+          "text": "Чем значимые типы (value types) отличаются от ссылочных (reference types)?"
+        },
+        {
+          "id": "csharp-003",
+          "text": "Чем class отличается от struct?"
+        },
+        {
+          "id": "csharp-004",
+          "text": "Что такое record и чем он отличается от class?"
+        },
+        {
+          "id": "csharp-005",
+          "text": "Чем string отличается от StringBuilder?"
+        },
+        {
+          "id": "csharp-006",
+          "text": "Что такое boxing и unboxing?"
+        },
+        {
+          "id": "csharp-007",
+          "text": "Что такое nullable-типы?"
+        },
+        {
+          "id": "csharp-008",
+          "text": "В чём разница между var, object и dynamic?"
+        },
+        {
+          "id": "csharp-009",
+          "text": "Как передаются аргументы в методы C#?"
+        },
+        {
+          "id": "csharp-010",
+          "text": "Чем отличаются ref, out и in?"
+        },
+        {
+          "id": "csharp-011",
+          "text": "Чем const отличается от readonly?"
+        },
+        {
+          "id": "csharp-012",
+          "text": "Что такое static и для чего используется?"
+        },
+        {
+          "id": "csharp-013",
+          "text": "Чем == отличается от Equals()?"
+        },
+        {
+          "id": "csharp-014",
+          "text": "Чем is отличается от as?"
+        },
+        {
+          "id": "csharp-015",
+          "text": "Что такое enum и когда его стоит использовать?"
+        },
+        {
+          "id": "csharp-016",
+          "text": "Что такое свойства (properties) и чем они отличаются от полей?"
+        },
+        {
+          "id": "csharp-017",
+          "text": "Что такое обобщения (generics) и для чего они нужны?"
+        },
+        {
+          "id": "csharp-018",
+          "text": "Как работают try, catch, finally и throw?"
+        },
+        {
+          "id": "csharp-019",
+          "text": "Чем throw отличается от throw ex?"
+        },
+        {
+          "id": "csharp-020",
+          "text": "Что такое делегаты и события?"
+        },
+        {
+          "id": "csharp-021",
+          "text": "Чем отличаются Action, Func и Predicate?"
+        },
+        {
+          "id": "csharp-022",
+          "text": "Что такое лямбда-выражение?"
+        }
+      ]
+    },
+    {
+      "id": "oop-design",
+      "number": 2,
+      "title": "ООП, SOLID и проектирование",
+      "symbol": "◇",
+      "color": "green",
+      "description": "Принципы ООП, SOLID и паттерны",
+      "questions": [
+        {
+          "id": "oop-design-001",
+          "text": "Что такое объектно-ориентированное программирование?"
+        },
+        {
+          "id": "oop-design-002",
+          "text": "Какие четыре основных принципа ООП ты знаешь?"
+        },
+        {
+          "id": "oop-design-003",
+          "text": "Что такое инкапсуляция? Приведи пример."
+        },
+        {
+          "id": "oop-design-004",
+          "text": "Что такое наследование? Когда его стоит применять?"
+        },
+        {
+          "id": "oop-design-005",
+          "text": "Что такое полиморфизм? Приведи пример."
+        },
+        {
+          "id": "oop-design-006",
+          "text": "Что такое абстракция и зачем она нужна?"
+        },
+        {
+          "id": "oop-design-007",
+          "text": "Чем интерфейс отличается от абстрактного класса?"
+        },
+        {
+          "id": "oop-design-008",
+          "text": "В чём разница между перегрузкой и переопределением методов?"
+        },
+        {
+          "id": "oop-design-009",
+          "text": "Для чего используются virtual, override, abstract и sealed?"
+        },
+        {
+          "id": "oop-design-010",
+          "text": "Что такое композиция и чем она отличается от наследования?"
+        },
+        {
+          "id": "oop-design-011",
+          "text": "Что такое SOLID?"
+        },
+        {
+          "id": "oop-design-012",
+          "text": "Объясни каждый из пяти принципов SOLID."
+        },
+        {
+          "id": "oop-design-013",
+          "text": "Что такое Dependency Injection и какие задачи он решает?"
+        },
+        {
+          "id": "oop-design-014",
+          "text": "Что такое слабая связанность (loose coupling)?"
+        },
+        {
+          "id": "oop-design-015",
+          "text": "Какие паттерны проектирования ты знаешь?"
+        },
+        {
+          "id": "oop-design-016",
+          "text": "Что такое паттерн Factory?"
+        },
+        {
+          "id": "oop-design-017",
+          "text": "Что такое паттерн Strategy?"
+        },
+        {
+          "id": "oop-design-018",
+          "text": "Что такое рефакторинг и зачем он нужен?"
+        }
+      ]
+    },
+    {
+      "id": "collections-linq",
+      "number": 3,
+      "title": "Коллекции и LINQ",
+      "symbol": "{ }",
+      "color": "blue",
+      "description": "Коллекции, запросы и перечисление",
+      "questions": [
+        {
+          "id": "collections-linq-001",
+          "text": "Какие основные коллекции есть в C#?"
+        },
+        {
+          "id": "collections-linq-002",
+          "text": "Чем массив отличается от List<T>?"
+        },
+        {
+          "id": "collections-linq-003",
+          "text": "Как устроен Dictionary<TKey, TValue>?"
+        },
+        {
+          "id": "collections-linq-004",
+          "text": "Чем Dictionary отличается от HashSet?"
+        },
+        {
+          "id": "collections-linq-005",
+          "text": "Что такое хеширование и хеш-коллизии?"
+        },
+        {
+          "id": "collections-linq-006",
+          "text": "Как работают стек и очередь?"
+        },
+        {
+          "id": "collections-linq-007",
+          "text": "Что такое IEnumerable<T>?"
+        },
+        {
+          "id": "collections-linq-008",
+          "text": "Чем IEnumerable<T> отличается от IEnumerator<T>?"
+        },
+        {
+          "id": "collections-linq-009",
+          "text": "Чем IEnumerable<T> отличается от IQueryable<T>?"
+        },
+        {
+          "id": "collections-linq-010",
+          "text": "Что такое LINQ и для чего он используется?"
+        },
+        {
+          "id": "collections-linq-011",
+          "text": "Чем Where() отличается от Select()?"
+        },
+        {
+          "id": "collections-linq-012",
+          "text": "Чем First() отличается от FirstOrDefault()?"
+        },
+        {
+          "id": "collections-linq-013",
+          "text": "Чем Any() отличается от Count() при проверке наличия элементов?"
+        },
+        {
+          "id": "collections-linq-014",
+          "text": "Что такое отложенное выполнение LINQ (deferred execution)?"
+        },
+        {
+          "id": "collections-linq-015",
+          "text": "Чем ToList() отличается от AsEnumerable()?"
+        },
+        {
+          "id": "collections-linq-016",
+          "text": "Что такое yield return?"
+        },
+        {
+          "id": "collections-linq-017",
+          "text": "Чем ConcurrentDictionary отличается от обычного Dictionary?"
+        },
+        {
+          "id": "collections-linq-018",
+          "text": "Какие коллекции лучше использовать при конкурентном доступе из нескольких потоков?"
+        }
+      ]
+    },
+    {
+      "id": "dotnet-memory",
+      "number": 4,
+      "title": "Платформа .NET и управление памятью",
+      "symbol": ".Net",
+      "color": "teal",
+      "description": "CLR, сборка мусора и ресурсы",
+      "questions": [
+        {
+          "id": "dotnet-memory-001",
+          "text": "Что такое .NET и из каких основных компонентов состоит платформа?"
+        },
+        {
+          "id": "dotnet-memory-002",
+          "text": "Что такое CLR?"
+        },
+        {
+          "id": "dotnet-memory-003",
+          "text": "Что происходит при компиляции и запуске C#-программы?"
+        },
+        {
+          "id": "dotnet-memory-004",
+          "text": "Что такое IL и JIT-компиляция?"
+        },
+        {
+          "id": "dotnet-memory-005",
+          "text": "Что такое Garbage Collector и зачем он нужен?"
+        },
+        {
+          "id": "dotnet-memory-006",
+          "text": "Как устроены поколения сборщика мусора?"
+        },
+        {
+          "id": "dotnet-memory-007",
+          "text": "Что такое стек и куча в контексте управления памятью?"
+        },
+        {
+          "id": "dotnet-memory-008",
+          "text": "Всегда ли значимые типы располагаются в стеке?"
+        },
+        {
+          "id": "dotnet-memory-009",
+          "text": "Чем управляемая память отличается от неуправляемой?"
+        },
+        {
+          "id": "dotnet-memory-010",
+          "text": "Что такое IDisposable?"
+        },
+        {
+          "id": "dotnet-memory-011",
+          "text": "Для чего используется конструкция using?"
+        },
+        {
+          "id": "dotnet-memory-012",
+          "text": "Что такое утечка памяти и может ли она возникнуть в C#?"
+        },
+        {
+          "id": "dotnet-memory-013",
+          "text": "Что такое финализатор и чем он отличается от Dispose()?"
+        },
+        {
+          "id": "dotnet-memory-014",
+          "text": "Как можно исследовать высокое потребление памяти приложением?"
+        }
+      ]
+    },
+    {
+      "id": "async-threading",
+      "number": 5,
+      "title": "Асинхронность и многопоточность",
+      "symbol": "⇄",
+      "color": "orange",
+      "description": "Задачи, потоки и синхронизация",
+      "questions": [
+        {
+          "id": "async-threading-001",
+          "text": "Что такое процесс и поток?"
+        },
+        {
+          "id": "async-threading-002",
+          "text": "В чём разница между многопоточностью, параллелизмом и асинхронностью?"
+        },
+        {
+          "id": "async-threading-003",
+          "text": "Что такое Thread?"
+        },
+        {
+          "id": "async-threading-004",
+          "text": "Что такое ThreadPool?"
+        },
+        {
+          "id": "async-threading-005",
+          "text": "Что такое Task?"
+        },
+        {
+          "id": "async-threading-006",
+          "text": "Чем Task отличается от Thread?"
+        },
+        {
+          "id": "async-threading-007",
+          "text": "Как работают async и await?"
+        },
+        {
+          "id": "async-threading-008",
+          "text": "Создаёт ли async/await новый поток?"
+        },
+        {
+          "id": "async-threading-009",
+          "text": "Чем Task.Run() отличается от Task.Delay()?"
+        },
+        {
+          "id": "async-threading-010",
+          "text": "Чем Thread.Sleep() отличается от Task.Delay()?"
+        },
+        {
+          "id": "async-threading-011",
+          "text": "Чем Task.WhenAll() отличается от Task.WhenAny()?"
+        },
+        {
+          "id": "async-threading-012",
+          "text": "Что такое CPU-bound и I/O-bound операции?"
+        },
+        {
+          "id": "async-threading-013",
+          "text": "Что такое race condition? Приведи пример."
+        },
+        {
+          "id": "async-threading-014",
+          "text": "Почему операция counter++ не является потокобезопасной?"
+        },
+        {
+          "id": "async-threading-015",
+          "text": "Для чего используется lock?"
+        },
+        {
+          "id": "async-threading-016",
+          "text": "Чем lock отличается от Monitor?"
+        },
+        {
+          "id": "async-threading-017",
+          "text": "Для чего нужен SemaphoreSlim?"
+        },
+        {
+          "id": "async-threading-018",
+          "text": "Что такое Interlocked?"
+        },
+        {
+          "id": "async-threading-019",
+          "text": "Что такое deadlock и как он возникает?"
+        },
+        {
+          "id": "async-threading-020",
+          "text": "Что такое CancellationToken?"
+        },
+        {
+          "id": "async-threading-021",
+          "text": "Как обрабатываются исключения в асинхронном коде?"
+        },
+        {
+          "id": "async-threading-022",
+          "text": "Какие проблемы могут возникнуть при использовании .Result и .Wait()?"
+        },
+        {
+          "id": "async-threading-023",
+          "text": "Что такое async void и почему его обычно не рекомендуют?"
+        },
+        {
+          "id": "async-threading-024",
+          "text": "Как ограничить число одновременно выполняемых асинхронных операций?"
+        },
+        {
+          "id": "async-threading-025",
+          "text": "Что такое потокобезопасность и как её обеспечить?"
+        }
+      ]
+    },
+    {
+      "id": "algorithms",
+      "number": 6,
+      "title": "Алгоритмы и структуры данных",
+      "symbol": "O(n)",
+      "color": "pink",
+      "description": "Сложность, поиск и структуры данных",
+      "questions": [
+        {
+          "id": "algorithms-001",
+          "text": "Что такое алгоритм?"
+        },
+        {
+          "id": "algorithms-002",
+          "text": "Что означает временная и пространственная сложность алгоритма?"
+        },
+        {
+          "id": "algorithms-003",
+          "text": "Что такое Big O?"
+        },
+        {
+          "id": "algorithms-004",
+          "text": "Чем отличаются O(1), O(log n), O(n), O(n log n) и O(n²)?"
+        },
+        {
+          "id": "algorithms-005",
+          "text": "Как определить сложность алгоритма с несколькими вложенными циклами?"
+        },
+        {
+          "id": "algorithms-006",
+          "text": "Как работает линейный поиск?"
+        },
+        {
+          "id": "algorithms-007",
+          "text": "Как работает бинарный поиск и когда его можно использовать?"
+        },
+        {
+          "id": "algorithms-008",
+          "text": "Какие алгоритмы сортировки ты знаешь?"
+        },
+        {
+          "id": "algorithms-009",
+          "text": "Чем быстрая сортировка отличается от сортировки слиянием?"
+        },
+        {
+          "id": "algorithms-010",
+          "text": "Как работает хеш-таблица и какова сложность основных операций?"
+        },
+        {
+          "id": "algorithms-011",
+          "text": "Чем массив отличается от связного списка?"
+        },
+        {
+          "id": "algorithms-012",
+          "text": "Где применяются стек и очередь?"
+        },
+        {
+          "id": "algorithms-013",
+          "text": "Что такое рекурсия?"
+        },
+        {
+          "id": "algorithms-014",
+          "text": "Что такое дерево и бинарное дерево поиска?"
+        },
+        {
+          "id": "algorithms-015",
+          "text": "Что такое граф и как его можно представить?"
+        },
+        {
+          "id": "algorithms-016",
+          "text": "Чем BFS отличается от DFS?"
+        },
+        {
+          "id": "algorithms-017",
+          "text": "Что такое алгоритм Two Pointers?"
+        },
+        {
+          "id": "algorithms-018",
+          "text": "Что такое Sliding Window?"
+        },
+        {
+          "id": "algorithms-019",
+          "text": "Как найти повторяющиеся элементы в массиве?"
+        },
+        {
+          "id": "algorithms-020",
+          "text": "Как выбрать подходящую структуру данных под задачу?"
+        }
+      ]
+    },
+    {
+      "id": "databases",
+      "number": 7,
+      "title": "SQL и реляционные базы данных",
+      "symbol": "SQL",
+      "color": "blue",
+      "description": "SQL, транзакции и Entity Framework Core",
+      "questions": [
+        {
+          "id": "databases-001",
+          "text": "Что такое реляционная база данных?"
+        },
+        {
+          "id": "databases-002",
+          "text": "Чем SQL отличается от СУБД?"
+        },
+        {
+          "id": "databases-003",
+          "text": "Что такое первичный и внешний ключ?"
+        },
+        {
+          "id": "databases-004",
+          "text": "Для чего используются ограничения UNIQUE, NOT NULL, CHECK?"
+        },
+        {
+          "id": "databases-005",
+          "text": "Как работают SELECT, WHERE, ORDER BY?"
+        },
+        {
+          "id": "databases-006",
+          "text": "Чем WHERE отличается от HAVING?"
+        },
+        {
+          "id": "databases-007",
+          "text": "Какие виды JOIN существуют?"
+        },
+        {
+          "id": "databases-008",
+          "text": "Чем INNER JOIN отличается от LEFT JOIN?"
+        },
+        {
+          "id": "databases-009",
+          "text": "Для чего нужны GROUP BY и агрегатные функции?"
+        },
+        {
+          "id": "databases-010",
+          "text": "Что такое NULL и как он влияет на сравнения?"
+        },
+        {
+          "id": "databases-011",
+          "text": "Что такое индекс и зачем он нужен?"
+        },
+        {
+          "id": "databases-012",
+          "text": "В каких ситуациях индекс может ухудшать производительность?"
+        },
+        {
+          "id": "databases-013",
+          "text": "Что такое транзакция?"
+        },
+        {
+          "id": "databases-014",
+          "text": "Что означает ACID?"
+        },
+        {
+          "id": "databases-015",
+          "text": "Какие уровни изоляции транзакций ты знаешь?"
+        },
+        {
+          "id": "databases-016",
+          "text": "Что такое нормализация базы данных?"
+        },
+        {
+          "id": "databases-017",
+          "text": "Что такое ORM?"
+        },
+        {
+          "id": "databases-018",
+          "text": "Что такое Entity Framework Core?"
+        },
+        {
+          "id": "databases-019",
+          "text": "Для чего используются DbContext и миграции EF Core?"
+        },
+        {
+          "id": "databases-020",
+          "text": "Что такое tracking и AsNoTracking()?"
+        },
+        {
+          "id": "databases-021",
+          "text": "Что такое проблема N+1 запросов?"
+        },
+        {
+          "id": "databases-022",
+          "text": "Чем EF Core отличается от Dapper?"
+        },
+        {
+          "id": "databases-023",
+          "text": "Как найти и оптимизировать медленный SQL-запрос?"
+        }
+      ]
+    },
+    {
+      "id": "http",
+      "number": 8,
+      "title": "HTTP, REST API и сетевые основы",
+      "symbol": "↗",
+      "color": "orange",
+      "description": "HTTP, REST, безопасность и сети",
+      "questions": [
+        {
+          "id": "http-001",
+          "text": "Что такое клиент-серверная архитектура?"
+        },
+        {
+          "id": "http-002",
+          "text": "Что такое HTTP?"
+        },
+        {
+          "id": "http-003",
+          "text": "Из чего состоит HTTP-запрос?"
+        },
+        {
+          "id": "http-004",
+          "text": "Из чего состоит HTTP-ответ?"
+        },
+        {
+          "id": "http-005",
+          "text": "Какие HTTP-методы ты знаешь?"
+        },
+        {
+          "id": "http-006",
+          "text": "Чем GET отличается от POST?"
+        },
+        {
+          "id": "http-007",
+          "text": "Чем PUT отличается от PATCH?"
+        },
+        {
+          "id": "http-008",
+          "text": "Что такое идемпотентность HTTP-метода?"
+        },
+        {
+          "id": "http-009",
+          "text": "Что означают группы HTTP-статусов 2xx, 3xx, 4xx и 5xx?"
+        },
+        {
+          "id": "http-010",
+          "text": "Чем 400 отличается от 422?"
+        },
+        {
+          "id": "http-011",
+          "text": "Чем 401 отличается от 403?"
+        },
+        {
+          "id": "http-012",
+          "text": "В каких случаях сервер возвращает 404, 409 и 500?"
+        },
+        {
+          "id": "http-013",
+          "text": "Что такое REST API?"
+        },
+        {
+          "id": "http-014",
+          "text": "Что такое JSON и XML?"
+        },
+        {
+          "id": "http-015",
+          "text": "Чем аутентификация отличается от авторизации?"
+        },
+        {
+          "id": "http-016",
+          "text": "Что такое JWT?"
+        },
+        {
+          "id": "http-017",
+          "text": "Чем HTTP отличается от HTTPS?"
+        },
+        {
+          "id": "http-018",
+          "text": "Какую роль выполняют TLS и цифровые сертификаты?"
+        },
+        {
+          "id": "http-019",
+          "text": "Что такое DNS и для чего он нужен?"
+        },
+        {
+          "id": "http-020",
+          "text": "Чем TCP отличается от UDP?"
+        },
+        {
+          "id": "http-021",
+          "text": "Что происходит при отправке запроса к веб-сервису?"
+        },
+        {
+          "id": "http-022",
+          "text": "Как можно проверить работоспособность REST API?"
+        }
+      ]
+    }
+  ]
+}
