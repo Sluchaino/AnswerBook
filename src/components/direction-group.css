@@ -1,0 +1,12 @@
+.direction-group { margin:20px 0; min-width:0; }
+.direction-group-heading { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:20px; border:1px solid var(--line-dfe5d8); border-radius:18px; background:var(--surface-fff); cursor:pointer; list-style:none; min-height:72px; }
+.direction-group-heading::-webkit-details-marker { display:none; }
+.direction-group-heading > div { min-width:0; }
+.direction-group-heading h2 { font-size:20px; line-height:1.4; font-weight:500; margin:0; overflow-wrap:anywhere; }
+.direction-group-heading p { margin:6px 0; color:var(--ink-74856a); font-size:12px; line-height:1.7; }
+.direction-group-count { display:block; margin-top:8px; font-size:12px; color:var(--ink-607d48); }
+.direction-group-heading svg { flex-shrink:0; color:var(--ink-607d48); }
+.direction-group details[open] > summary svg { transform:rotate(180deg); }
+.direction-group-content { padding-top:16px; }
+.direction-group-heading:focus-visible { outline:3px solid var(--line-66884c); outline-offset:3px; }
+@media(max-width:760px) { .direction-group-heading { padding:16px; } .direction-group-heading h2 { font-size:18px; } .direction-group-heading p { font-size:11px; } }

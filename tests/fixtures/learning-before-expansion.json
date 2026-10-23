@@ -1,0 +1,92 @@
+[
+  {
+    "id": "csharp-language-oop",
+    "file": "csharp-foundations-course.json",
+    "sha256": "73daf0453662200443e297316e99c594d2baa0bac33cd9e6af6a7496b01099a2",
+    "readingSha256": "b55c602d323524c6d186d6c8e644e6d8e148e3fd407fd9e366d0491b102cec18"
+  },
+  {
+    "id": "csharp-collections-linq-events",
+    "file": "csharp-collections-course.json",
+    "sha256": "f8956de9ab8203db182734f58c42ac33a89c2f39463e010372103e6634224b39",
+    "readingSha256": "9625efc0fab617c62b473c2f4e6539a66cd75588b9e41db231dfec1c163b6088"
+  },
+  {
+    "id": "csharp-exceptions-memory",
+    "file": "csharp-memory-course.json",
+    "sha256": "1f50e7b605f438a527d48e21cccf2bc71e6ad38580e4c403de180628fdbf9e5d",
+    "readingSha256": "0eb1587a8a2f76f39aae9ee434e21c26a2fe88bf21246d7cad4a4dfed7410711"
+  },
+  {
+    "id": "dotnet-async-practical",
+    "file": "dotnet-async-course.json",
+    "sha256": "19370d4e26c47186b30e65c19a7f976e4aa0afe07083038ec401e10a619d716e",
+    "readingSha256": "eb983c54b800f34be7d50fe4887e95af0afc63c985aa64aa4a03ab498299076a"
+  },
+  {
+    "id": "dotnet-engineering-tools",
+    "file": "dotnet-engineering-course.json",
+    "sha256": "8c845406289a05ce530dbc5243fafe5e5c8d793e5afbca761cdb5c98727589d1",
+    "readingSha256": "1f0eedae799581d33893643a386b025a4a89ce8eb4c9c64e97fb1beadc2413e3"
+  },
+  {
+    "id": "algorithms-data-structures",
+    "file": "algorithms-course.json",
+    "sha256": "9df373c91e3ce8050f9387b947368d7addbbd37cc975dac52a245306332af8ca",
+    "readingSha256": "3194f09f5fdb0c9f743dbc2cda5b2058d66457dfaf0b72b39b6d4fdf13ff992d"
+  },
+  {
+    "id": "sql-relational",
+    "file": "sql-course.json",
+    "sha256": "587ce585ece203e8e9cf624ba166354107013a377f0a321708bedc177fbea2ce",
+    "readingSha256": "f0bf00dfa764d0614eca6a80d4d87e2d24495839765e689501e96573cf678646"
+  },
+  {
+    "id": "postgresql",
+    "file": "postgresql-course.json",
+    "sha256": "d8344fc2f06e6bf569ee1eb9c45aa7644a68d7692ff4e76e6dd8f848beae9220",
+    "readingSha256": "85b4df6eeb97ed50427708f82cd4f4be55b219aaf1ea86f2de5c8d4b2b1843cc"
+  },
+  {
+    "id": "ef-core",
+    "file": "ef-core-course.json",
+    "sha256": "081c6bfe40fbbdcc4660e36262bb818a207536d12411bf1c4ebc96df7f794364",
+    "readingSha256": "0bf89f9207a19d1ffe52b2e0b987ef15f58eb245eec322e431ea3bb49b336213"
+  },
+  {
+    "id": "redis-caching",
+    "file": "redis-course.json",
+    "sha256": "f98e8d2024b50c5ca0f646c1e4c1927115846329ead185f696c11d7a668dd8bf",
+    "readingSha256": "d2a486eba142bada1c5c859a86df86952591a80eb3c486e702e066679ef3643d"
+  },
+  {
+    "id": "networks-http-tls",
+    "file": "networks-http-course.json",
+    "sha256": "a038d8fd2fe89f0c8fcf87ee47ae75a0ebe53e9273bcf08c6ab01f4780ced1dd",
+    "readingSha256": "81fdbda8a2d615e02b24679caf5385b45e5fc413967b3f2514aa0ee1e0c093f0"
+  },
+  {
+    "id": "aspnet-core",
+    "file": "aspnet-core-course.json",
+    "sha256": "5ecb429cffe31e06b575498df994b25004460b0682483c9941f3f3309aa1fd28",
+    "readingSha256": "32cc6576537c76d687a86b785516d47591c33ca269a04f2baf287ccd12371533"
+  },
+  {
+    "id": "rest-api-design",
+    "file": "rest-api-course.json",
+    "sha256": "22b5c2eacd2cc34c4c959b747c993953fdb2c4908d63b17e3aa694ef7fc7a8d9",
+    "readingSha256": "5d965525f0f75642e970d38cfed53361d35f1ab3b47bb87deb98b5b398821289"
+  },
+  {
+    "id": "backend-security",
+    "file": "backend-security-course.json",
+    "sha256": "7f4a8dbed17a74175b24f01d82be1765280ac8e9003b4b0ac12bf06c3fc5efc9",
+    "readingSha256": "5ed0df0a538d6b37f3f9d2ec35c483137c03564564eb98355c2bcbb2a33120bb"
+  },
+  {
+    "id": "rabbitmq-messaging",
+    "file": "rabbitmq-course.json",
+    "sha256": "e6d3d505954da1bcb00a7779683db6ea962b35b55e909d392141a3dc99fc0c2e",
+    "readingSha256": "bbcb280753ea8176b8021edecf13a4f58f4d5d0a64596ddb9d3c5fd1617b85ed"
+  }
+]

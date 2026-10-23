@@ -95,6 +95,174 @@
         {
           "id": "csharp-022",
           "text": "Что такое лямбда-выражение?"
+        },
+        {
+          "id": "csharp-pdf1-22-1",
+          "text": "Чем LangVersion отличается от TargetFramework и почему новый синтаксис не добавляет отсутствующие API?",
+          "block": "Типы и современный синтаксис",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "csharp-pdf1-23-2",
+          "text": "Создают ли nullable-аннотации string? отдельный тип во время выполнения? Что делает оператор !?",
+          "block": "Типы и современный синтаксис",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "csharp-pdf1-24-3",
+          "text": "Чем отличаются операторы ?., ?? и ??=? Приведите пример каждого.",
+          "block": "Типы и современный синтаксис",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "csharp-pdf1-25-4",
+          "text": "Как checked влияет на целочисленное переполнение и явные преобразования?",
+          "block": "Типы и современный синтаксис",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "csharp-pdf1-26-5",
+          "text": "Что считает string.Length и почему это число может отличаться от количества видимых символов?",
+          "block": "Типы и современный синтаксис",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "csharp-pdf1-27-6",
+          "text": "Чем отличаются прямоугольный и ступенчатый массивы T[,] и T[][]?",
+          "block": "Типы и современный синтаксис",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "csharp-pdf1-28-7",
+          "text": "Как работают tuple, именованные элементы и деконструкция?",
+          "block": "Типы и современный синтаксис",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "csharp-pdf1-29-8",
+          "text": "Как проектировать enum с [Flags] и проверять наличие нескольких флагов?",
+          "block": "Типы и современный синтаксис",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "csharp-pdf1-30-9",
+          "text": "Чем init отличается от set и гарантирует ли required отсутствие null во время выполнения?",
+          "block": "Типы и современный синтаксис",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "csharp-pdf1-31-10",
+          "text": "Становятся ли параметры primary constructor обычного класса публичными свойствами автоматически?",
+          "block": "Типы и современный синтаксис",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "csharp-pdf1-32-11",
+          "text": "Чем readonly struct отличается от ref struct и что readonly означает для ссылочных полей?",
+          "block": "Типы и современный синтаксис",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "csharp-pdf1-33-12",
+          "text": "Как работают атрибуты и почему наличие атрибута само по себе не запускает поведение?",
+          "block": "Типы и современный синтаксис",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "open-csharp-language-oop-runtime-1",
+          "text": "За что отвечает LangVersion?",
+          "block": "C#, .NET и устройство программы",
+          "source": "01_CSharp_Tipy_i_Yazyk.pdf, стр. 3"
+        },
+        {
+          "id": "open-csharp-language-oop-runtime-2",
+          "text": "Что делает using System.Text;?",
+          "block": "C#, .NET и устройство программы",
+          "source": "01_CSharp_Tipy_i_Yazyk.pdf, стр. 3"
+        },
+        {
+          "id": "open-csharp-language-oop-types-1",
+          "text": "Что произойдёт при присваивании var other = list, если list — List<int>?",
+          "block": "Значения, ссылки и null",
+          "source": "01_CSharp_Tipy_i_Yazyk.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-csharp-language-oop-casts-1",
+          "text": "Как безопасно проверить, что object value содержит int, и получить это значение?",
+          "block": "Преобразования и pattern matching",
+          "source": "01_CSharp_Tipy_i_Yazyk.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-csharp-language-oop-strings-1",
+          "text": "Что именно возвращает string.Length?",
+          "block": "Строки и накопление текста",
+          "source": "01_CSharp_Tipy_i_Yazyk.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-csharp-language-oop-arrays-1",
+          "text": "Какая запись обозначает массив массивов, строки которого могут иметь разную длину?",
+          "block": "Числа, массивы и tuple",
+          "source": "01_CSharp_Tipy_i_Yazyk.pdf, стр. 5–6, 8–9"
+        },
+        {
+          "id": "open-csharp-language-oop-flags-1",
+          "text": "Как проверить, что в permissions присутствует флаг Write?",
+          "block": "Enum и битовые флаги",
+          "source": "01_CSharp_Tipy_i_Yazyk.pdf, стр. 8"
+        },
+        {
+          "id": "open-csharp-language-oop-members-1",
+          "text": "Что обещает required string Name { get; init; }?",
+          "block": "Свойства и доступность",
+          "source": "01_CSharp_Tipy_i_Yazyk.pdf, стр. 10"
+        },
+        {
+          "id": "open-csharp-language-oop-members-2",
+          "text": "Где доступен член private protected?",
+          "block": "Свойства и доступность",
+          "source": "01_CSharp_Tipy_i_Yazyk.pdf, стр. 10"
+        },
+        {
+          "id": "open-csharp-language-oop-static-1",
+          "text": "Что верно для readonly List<int> items = new();?",
+          "block": "Static, const и readonly",
+          "source": "01_CSharp_Tipy_i_Yazyk.pdf, стр. 11"
+        },
+        {
+          "id": "open-csharp-language-oop-static-2",
+          "text": "Что выбрать для общего значения Environment.MachineName, вычисляемого при запуске?",
+          "block": "Static, const и readonly",
+          "source": "01_CSharp_Tipy_i_Yazyk.pdf, стр. 11"
+        },
+        {
+          "id": "open-csharp-language-oop-constructors-1",
+          "text": "В обычном классе class Calculator(int factor) параметр factor автоматически становится публичным свойством?",
+          "block": "Конструкторы и инициализация",
+          "source": "01_CSharp_Tipy_i_Yazyk.pdf, стр. 10–11, 13"
+        },
+        {
+          "id": "open-csharp-language-oop-records-1",
+          "text": "Что гарантирует with у record с полем List<int>?",
+          "block": "Class, struct, record и копирование",
+          "source": "01_CSharp_Tipy_i_Yazyk.pdf, стр. 11–12"
+        },
+        {
+          "id": "open-csharp-language-oop-equality-1",
+          "text": "У двух объектов одинаковый GetHashCode. Что из этого следует?",
+          "block": "Равенство, сравнение и операторы",
+          "source": "01_CSharp_Tipy_i_Yazyk.pdf, стр. 12"
+        },
+        {
+          "id": "open-csharp-language-oop-design-2",
+          "text": "Запускает ли сам по себе пользовательский атрибут [Audited] логирование?",
+          "block": "Атрибуты, локальные функции и SOLID",
+          "source": "01_CSharp_Tipy_i_Yazyk.pdf, стр. 13–14"
+        },
+        {
+          "id": "open-csharp-language-oop-method-contracts-1",
+          "text": "Сравните ref, out и in. Какой из этих параметров вызываемый метод обязан присвоить до нормального возврата и почему?",
+          "block": "Методы, ref, out и in",
+          "source": "01_CSharp_Tipy_i_Yazyk.pdf, стр. 9–10"
         }
       ]
     },
@@ -177,6 +345,120 @@
         {
           "id": "oop-design-018",
           "text": "Что такое рефакторинг и зачем он нужен?"
+        },
+        {
+          "id": "oop-design-pdf1-18-1",
+          "text": "Почему выражение with у record не создаёт глубокую копию вложенного списка?",
+          "block": "Контракты объектной модели",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "oop-design-pdf1-19-2",
+          "text": "Чем ReferenceEquals отличается от логического равенства объектов?",
+          "block": "Контракты объектной модели",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "oop-design-pdf1-20-3",
+          "text": "Какой контракт связывает Equals и GetHashCode и почему одинаковый hash code не доказывает равенство?",
+          "block": "Контракты объектной модели",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "oop-design-pdf1-21-4",
+          "text": "В чём разница между IComparable<T>, IComparer<T> и IEqualityComparer<T>?",
+          "block": "Контракты объектной модели",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "oop-design-pdf1-22-5",
+          "text": "Чем protected internal отличается от private protected?",
+          "block": "Контракты объектной модели",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "oop-design-pdf1-23-6",
+          "text": "Когда следует использовать this(...) и base(...) в конструкторах?",
+          "block": "Контракты объектной модели",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "oop-design-pdf1-24-7",
+          "text": "Как наследник может нарушить LSP, усилив предусловия метода?",
+          "block": "Контракты объектной модели",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "oop-design-pdf1-25-8",
+          "text": "Чем Dependency Inversion Principle отличается от Dependency Injection?",
+          "block": "Контракты объектной модели",
+          "source": "01_CSharp_Yazyk_i_OOP.pdf"
+        },
+        {
+          "id": "open-csharp-language-oop-design-1",
+          "text": "Чем принцип DIP отличается от Dependency Injection? Покажите, как передача зависимости через конструктор помогает разделить политику и реализацию.",
+          "block": "Атрибуты, локальные функции и SOLID",
+          "source": "02_OOP_Generics_Delegates_Events.pdf, стр. 5, 10–11"
+        },
+        {
+          "id": "open-csharp-language-oop-oop-model-1",
+          "text": "Что является хорошим основанием для наследования?",
+          "block": "Инкапсуляция, наследование и композиция",
+          "source": "02_OOP_Generics_Delegates_Events.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-csharp-language-oop-oop-model-2",
+          "text": "Чем override отличается от new?",
+          "block": "Инкапсуляция, наследование и композиция",
+          "source": "02_OOP_Generics_Delegates_Events.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-csharp-language-oop-solid-contracts-1",
+          "text": "Сервис получает IClock вместо создания системных часов внутри метода. Какую задачу это облегчает?",
+          "block": "SOLID и зависимости",
+          "source": "02_OOP_Generics_Delegates_Events.pdf, стр. 5, 10–11"
+        },
+        {
+          "id": "open-csharp-language-oop-solid-contracts-2",
+          "text": "Подтип запрещает операцию, которую базовый контракт обещает всем экземплярам. Какой принцип нарушен?",
+          "block": "SOLID и зависимости",
+          "source": "02_OOP_Generics_Delegates_Events.pdf, стр. 5, 10–11"
+        },
+        {
+          "id": "open-csharp-language-oop-generic-1",
+          "text": "Какое ограничение позволяет вызвать left.CompareTo(right) в generic-методе?",
+          "block": "Обобщения и ограничения типов",
+          "source": "02_OOP_Generics_Delegates_Events.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-csharp-language-oop-variance-1",
+          "text": "Приведите пример присваивания, допустимого благодаря ковариантности IEnumerable<T>. Почему такое присваивание типобезопасно?",
+          "block": "Ковариантность и контрвариантность",
+          "source": "02_OOP_Generics_Delegates_Events.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-csharp-language-oop-variance-2",
+          "text": "Почему Action<object> подходит на место Action<string>?",
+          "block": "Ковариантность и контрвариантность",
+          "source": "02_OOP_Generics_Delegates_Events.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-csharp-language-oop-delegate-1",
+          "text": "Какой делегат принимает int и возвращает string?",
+          "block": "Делегаты, лямбды и замыкания",
+          "source": "02_OOP_Generics_Delegates_Events.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-csharp-language-oop-event-1",
+          "text": "Что может удерживать короткоживущего подписчика в памяти?",
+          "block": "События и время жизни подписки",
+          "source": "02_OOP_Generics_Delegates_Events.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-csharp-language-oop-multicast-2",
+          "text": "Первый обработчик multicast-делегата бросил необработанное исключение. Что произойдёт при обычном вызове?",
+          "block": "Замыкания и multicast-делегаты",
+          "source": "02_OOP_Generics_Delegates_Events.pdf, стр. 8–9"
         }
       ]
     },
@@ -259,6 +541,192 @@
         {
           "id": "collections-linq-018",
           "text": "Какие коллекции лучше использовать при конкурентном доступе из нескольких потоков?"
+        },
+        {
+          "id": "collections-linq-pdf2-18-1",
+          "text": "Что гарантируют ограничения where T : struct, class, unmanaged, notnull и new()?",
+          "block": "Обобщения и контракты",
+          "source": "02_CSharp_Obobshcheniya_Kollektsii_LINQ_Sobytiya.pdf"
+        },
+        {
+          "id": "collections-linq-pdf2-19-2",
+          "text": "Почему List<Dog> нельзя присвоить List<Animal>, а IEnumerable<Dog> можно рассматривать как IEnumerable<Animal>?",
+          "block": "Обобщения и контракты",
+          "source": "02_CSharp_Obobshcheniya_Kollektsii_LINQ_Sobytiya.pdf"
+        },
+        {
+          "id": "collections-linq-pdf2-20-3",
+          "text": "Как контрвариантность Action<in T> позволяет использовать обработчик Animal для Dog?",
+          "block": "Обобщения и контракты",
+          "source": "02_CSharp_Obobshcheniya_Kollektsii_LINQ_Sobytiya.pdf"
+        },
+        {
+          "id": "collections-linq-pdf2-21-4",
+          "text": "Почему default(T) не всегда позволяет отличить отсутствие результата от найденного значения?",
+          "block": "Обобщения и контракты",
+          "source": "02_CSharp_Obobshcheniya_Kollektsii_LINQ_Sobytiya.pdf"
+        },
+        {
+          "id": "collections-linq-pdf2-22-5",
+          "text": "Гарантирует ли IReadOnlyList<T> глубокую неизменяемость данных?",
+          "block": "Обобщения и контракты",
+          "source": "02_CSharp_Obobshcheniya_Kollektsii_LINQ_Sobytiya.pdf"
+        },
+        {
+          "id": "collections-linq-pdf2-23-1",
+          "text": "Что произойдёт при повторном перечислении ленивой последовательности с побочными эффектами?",
+          "block": "LINQ и перечисление",
+          "source": "02_CSharp_Obobshcheniya_Kollektsii_LINQ_Sobytiya.pdf"
+        },
+        {
+          "id": "collections-linq-pdf2-24-2",
+          "text": "Как изменение источника между созданием LINQ-запроса и перечислением влияет на результат?",
+          "block": "LINQ и перечисление",
+          "source": "02_CSharp_Obobshcheniya_Kollektsii_LINQ_Sobytiya.pdf"
+        },
+        {
+          "id": "collections-linq-pdf2-25-3",
+          "text": "Чем ThenBy отличается от повторного вызова OrderBy?",
+          "block": "LINQ и перечисление",
+          "source": "02_CSharp_Obobshcheniya_Kollektsii_LINQ_Sobytiya.pdf"
+        },
+        {
+          "id": "collections-linq-pdf2-26-4",
+          "text": "В чём разница между Select и SelectMany?",
+          "block": "LINQ и перечисление",
+          "source": "02_CSharp_Obobshcheniya_Kollektsii_LINQ_Sobytiya.pdf"
+        },
+        {
+          "id": "collections-linq-pdf2-27-5",
+          "text": "Чем Single отличается от First и какие проверки контракта выполняет Single?",
+          "block": "LINQ и перечисление",
+          "source": "02_CSharp_Obobshcheniya_Kollektsii_LINQ_Sobytiya.pdf"
+        },
+        {
+          "id": "collections-linq-pdf2-28-6",
+          "text": "Почему слишком ранний AsEnumerable в запросе EF Core может увеличить объём загруженных данных?",
+          "block": "LINQ и перечисление",
+          "source": "02_CSharp_Obobshcheniya_Kollektsii_LINQ_Sobytiya.pdf"
+        },
+        {
+          "id": "collections-linq-pdf2-29-7",
+          "text": "Как изменение ключа после добавления в Dictionary или HashSet нарушает поиск?",
+          "block": "LINQ и перечисление",
+          "source": "02_CSharp_Obobshcheniya_Kollektsii_LINQ_Sobytiya.pdf"
+        },
+        {
+          "id": "collections-linq-pdf2-30-1",
+          "text": "Чем event отличается от публичного поля типа делегата?",
+          "block": "Делегаты и события",
+          "source": "02_CSharp_Obobshcheniya_Kollektsii_LINQ_Sobytiya.pdf"
+        },
+        {
+          "id": "collections-linq-pdf2-31-2",
+          "text": "В каком потоке выполняются обычные обработчики событий .NET и что происходит при исключении одного обработчика?",
+          "block": "Делегаты и события",
+          "source": "02_CSharp_Obobshcheniya_Kollektsii_LINQ_Sobytiya.pdf"
+        },
+        {
+          "id": "collections-linq-pdf2-32-3",
+          "text": "Как подписка на событие долгоживущего издателя может удерживать подписчика в памяти?",
+          "block": "Делегаты и события",
+          "source": "02_CSharp_Obobshcheniya_Kollektsii_LINQ_Sobytiya.pdf"
+        },
+        {
+          "id": "collections-linq-pdf2-33-4",
+          "text": "Почему для отписки от лямбды нужно сохранить тот же экземпляр делегата?",
+          "block": "Делегаты и события",
+          "source": "02_CSharp_Obobshcheniya_Kollektsii_LINQ_Sobytiya.pdf"
+        },
+        {
+          "id": "collections-linq-pdf2-34-5",
+          "text": "Чем событие в памяти отличается от сообщения в брокере и зачем нужна идемпотентность обработчика?",
+          "block": "Делегаты и события",
+          "source": "02_CSharp_Obobshcheniya_Kollektsii_LINQ_Sobytiya.pdf"
+        },
+        {
+          "id": "open-csharp-collections-linq-events-contracts-1",
+          "text": "Методу нужны только Count и чтение по индексу. Какой контракт подходит?",
+          "block": "Контракты коллекций",
+          "source": "03_Kollektsii_LINQ.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-csharp-collections-linq-events-list-1",
+          "text": "Назовите операции List<T> со стоимостью O(n). Почему вставка или удаление в середине требует сдвига элементов?",
+          "block": "Массив, List и стоимость операций",
+          "source": "03_Kollektsii_LINQ.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-csharp-collections-linq-events-hash-1",
+          "text": "Какой контракт связывает Equals и GetHashCode? Почему одинаковый хеш не доказывает равенство объектов?",
+          "block": "Dictionary, HashSet и равенство",
+          "source": "03_Kollektsii_LINQ.pdf, стр. 5, 10–11"
+        },
+        {
+          "id": "open-csharp-collections-linq-events-queue-1",
+          "text": "Какой порядок обеспечивает Queue<T>?",
+          "block": "Очередь и стек",
+          "source": "03_Kollektsii_LINQ.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-csharp-collections-linq-events-yield-1",
+          "text": "Что хранит IEnumerator<T>?",
+          "block": "Итераторы, yield и ленивость",
+          "source": "03_Kollektsii_LINQ.pdf, стр. 7"
+        },
+        {
+          "id": "open-csharp-collections-linq-events-linq-1",
+          "text": "Как добавить второй критерий к уже заданному OrderBy?",
+          "block": "Where, Select и сортировка",
+          "source": "03_Kollektsii_LINQ.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-csharp-collections-linq-events-execution-1",
+          "text": "Как получить материализованный снимок результата LINQ-запроса? Чем его поведение отличается от повторного перечисления отложенного запроса?",
+          "block": "Выполнение запроса и снимок данных",
+          "source": "03_Kollektsii_LINQ.pdf, стр. 9"
+        },
+        {
+          "id": "open-csharp-collections-linq-events-queryable-1",
+          "text": "Что делает AsEnumerable в цепочке IQueryable?",
+          "block": "IQueryable и граница выполнения",
+          "source": "03_Kollektsii_LINQ.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-csharp-collections-linq-events-queryable-2",
+          "text": "Где лучше применить переводимый Where при чтении большой таблицы?",
+          "block": "IQueryable и граница выполнения",
+          "source": "03_Kollektsii_LINQ.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-csharp-collections-linq-events-linq-composition-1",
+          "text": "Какой оператор разворачивает массив массивов в одну последовательность?",
+          "block": "Join, GroupJoin, SelectMany и Aggregate",
+          "source": "03_Kollektsii_LINQ.pdf, стр. 8–9"
+        },
+        {
+          "id": "open-csharp-collections-linq-events-priority-sorted-1",
+          "text": "Нужно регулярно извлекать задачу с минимальным числовым приоритетом. Что подходит?",
+          "block": "Приоритетная очередь и упорядоченные множества",
+          "source": "03_Kollektsii_LINQ.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-csharp-collections-linq-events-priority-sorted-2",
+          "text": "Нужно множество уникальных элементов с упорядоченным обходом. Что выбрать?",
+          "block": "Приоритетная очередь и упорядоченные множества",
+          "source": "03_Kollektsii_LINQ.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-csharp-collections-linq-events-collection-concurrency-1",
+          "text": "Гарантирует ли IReadOnlyList неизменность исходного списка? Объясните ответ.",
+          "block": "Коллекции при конкурентном доступе",
+          "source": "03_Kollektsii_LINQ.pdf, стр. 11–12"
+        },
+        {
+          "id": "open-csharp-collections-linq-events-collection-concurrency-2",
+          "text": "Можно ли помещать одноразовый внешний платёж внутрь фабрики GetOrAdd? Объясните ответ.",
+          "block": "Коллекции при конкурентном доступе",
+          "source": "03_Kollektsii_LINQ.pdf, стр. 11–12"
         }
       ]
     },
@@ -325,6 +793,216 @@
         {
           "id": "dotnet-memory-014",
           "text": "Как можно исследовать высокое потребление памяти приложением?"
+        },
+        {
+          "id": "dotnet-memory-pdf3-14-1",
+          "text": "Когда для ожидаемого альтернативного результата лучше TryParse, nullable или Result<T>, а не исключение?",
+          "block": "Исключения и владение ресурсами",
+          "source": "03_CSharp_Isklyucheniya_Resursy_Pamyat_Performance (1).pdf"
+        },
+        {
+          "id": "dotnet-memory-pdf3-15-2",
+          "text": "Как работают фильтры исключений catch (...) when (...) и где следует обрабатывать ошибку?",
+          "block": "Исключения и владение ресурсами",
+          "source": "03_CSharp_Isklyucheniya_Resursy_Pamyat_Performance (1).pdf"
+        },
+        {
+          "id": "dotnet-memory-pdf3-16-3",
+          "text": "Когда оправдан пользовательский тип исключения и зачем сохранять InnerException?",
+          "block": "Исключения и владение ресурсами",
+          "source": "03_CSharp_Isklyucheniya_Resursy_Pamyat_Performance (1).pdf"
+        },
+        {
+          "id": "dotnet-memory-pdf3-17-4",
+          "text": "Как using преобразуется в try/finally и кто должен освобождать ресурс, переданный в метод извне?",
+          "block": "Исключения и владение ресурсами",
+          "source": "03_CSharp_Isklyucheniya_Resursy_Pamyat_Performance (1).pdf"
+        },
+        {
+          "id": "dotnet-memory-pdf3-18-5",
+          "text": "Чем IAsyncDisposable и await using отличаются от IDisposable и using?",
+          "block": "Исключения и владение ресурсами",
+          "source": "03_CSharp_Isklyucheniya_Resursy_Pamyat_Performance (1).pdf"
+        },
+        {
+          "id": "dotnet-memory-pdf3-19-6",
+          "text": "Зачем нужен SafeHandle и когда вызывают GC.SuppressFinalize?",
+          "block": "Исключения и владение ресурсами",
+          "source": "03_CSharp_Isklyucheniya_Resursy_Pamyat_Performance (1).pdf"
+        },
+        {
+          "id": "dotnet-memory-pdf3-20-1",
+          "text": "Что такое GC roots и почему недостижимый объект не обязательно освобождается немедленно?",
+          "block": "GC, размещение и диагностика",
+          "source": "03_CSharp_Isklyucheniya_Resursy_Pamyat_Performance (1).pdf"
+        },
+        {
+          "id": "dotnet-memory-pdf3-21-2",
+          "text": "Какие этапы mark, relocate и compact выполняет перемещающий сборщик мусора?",
+          "block": "GC, размещение и диагностика",
+          "source": "03_CSharp_Isklyucheniya_Resursy_Pamyat_Performance (1).pdf"
+        },
+        {
+          "id": "dotnet-memory-pdf3-22-3",
+          "text": "Чем отличаются SOH, LOH и POH? Все ли объекты с fixed автоматически попадают в POH?",
+          "block": "GC, размещение и диагностика",
+          "source": "03_CSharp_Isklyucheniya_Resursy_Pamyat_Performance (1).pdf"
+        },
+        {
+          "id": "dotnet-memory-pdf3-23-4",
+          "text": "Почему закрепление объектов может усиливать фрагментацию и как pooling влияет на аллокации?",
+          "block": "GC, размещение и диагностика",
+          "source": "03_CSharp_Isklyucheniya_Resursy_Pamyat_Performance (1).pdf"
+        },
+        {
+          "id": "dotnet-memory-pdf3-24-5",
+          "text": "Почему частые выделения памяти и большой объём удерживаемой памяти требуют разных способов оптимизации?",
+          "block": "GC, размещение и диагностика",
+          "source": "03_CSharp_Isklyucheniya_Resursy_Pamyat_Performance (1).pdf"
+        },
+        {
+          "id": "dotnet-memory-pdf3-25-6",
+          "text": "Что происходит с копией структуры при boxing и последующем изменении исходной переменной?",
+          "block": "GC, размещение и диагностика",
+          "source": "03_CSharp_Isklyucheniya_Resursy_Pamyat_Performance (1).pdf"
+        },
+        {
+          "id": "dotnet-memory-pdf3-26-7",
+          "text": "Как вызов метода структуры через интерфейс может изменить boxed-копию, не изменяя исходную структуру?",
+          "block": "GC, размещение и диагностика",
+          "source": "03_CSharp_Isklyucheniya_Resursy_Pamyat_Performance (1).pdf"
+        },
+        {
+          "id": "dotnet-memory-pdf3-27-8",
+          "text": "Чем Span<T> отличается от Memory<T> и какие ограничения времени жизни важны при выборе?",
+          "block": "GC, размещение и диагностика",
+          "source": "03_CSharp_Isklyucheniya_Resursy_Pamyat_Performance (1).pdf"
+        },
+        {
+          "id": "dotnet-memory-pdf3-28-9",
+          "text": "Почему GC.Collect() не устраняет удержание объектов singleton-кешем или подпиской на событие?",
+          "block": "GC, размещение и диагностика",
+          "source": "03_CSharp_Isklyucheniya_Resursy_Pamyat_Performance (1).pdf"
+        },
+        {
+          "id": "dotnet-memory-pdf3-29-10",
+          "text": "Когда использовать dotnet-counters, dotnet-trace и heap dump для расследования роста памяти?",
+          "block": "GC, размещение и диагностика",
+          "source": "03_CSharp_Isklyucheniya_Resursy_Pamyat_Performance (1).pdf"
+        },
+        {
+          "id": "dotnet-memory-pdf3-30-11",
+          "text": "Почему измерения через один запуск Stopwatch могут быть недостоверны и для чего нужен BenchmarkDotNet?",
+          "block": "GC, размещение и диагностика",
+          "source": "03_CSharp_Isklyucheniya_Resursy_Pamyat_Performance (1).pdf"
+        },
+        {
+          "id": "dotnet-memory-pdf3-31-12",
+          "text": "Почему для сервиса важно измерять p95/p99 задержек, а не только среднее время?",
+          "block": "GC, размещение и диагностика",
+          "source": "03_CSharp_Isklyucheniya_Resursy_Pamyat_Performance (1).pdf"
+        },
+        {
+          "id": "open-csharp-exceptions-memory-clr-jit-1",
+          "text": "Что обычно получает CLR после компиляции C# в обычную управляемую сборку?",
+          "block": "CLR, IL и JIT",
+          "source": "04_CLR_Memory_GC.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-csharp-exceptions-memory-clr-jit-2",
+          "text": "Верно ли, что любой struct обязательно хранится на стеке? Объясните ответ.",
+          "block": "CLR, IL и JIT",
+          "source": "04_CLR_Memory_GC.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-csharp-exceptions-memory-roots-1",
+          "text": "Как достижимость от GC roots определяет, какие объекты сборщик мусора обязан сохранить? Приведите примеры таких корней.",
+          "block": "Ссылки, достижимость и управляемая куча",
+          "source": "04_CLR_Memory_GC.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-csharp-exceptions-memory-generation-1",
+          "text": "Что означает нахождение обычного объекта в Gen 2?",
+          "block": "Поколения GC и сборки",
+          "source": "04_CLR_Memory_GC.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-csharp-exceptions-memory-generation-2",
+          "text": "Почему временные объекты могут увеличить нагрузку на Gen 2?",
+          "block": "Поколения GC и сборки",
+          "source": "04_CLR_Memory_GC.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-csharp-exceptions-memory-heap-1",
+          "text": "Какие объекты обычно попадают в LOH? Как большие аллокации, фрагментация и закрепление влияют на управление памятью?",
+          "block": "SOH, LOH, POH и закрепление",
+          "source": "04_CLR_Memory_GC.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-csharp-exceptions-memory-heap-2",
+          "text": "Что означает закрепление объекта?",
+          "block": "SOH, LOH, POH и закрепление",
+          "source": "04_CLR_Memory_GC.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-csharp-exceptions-memory-gc-mode-1",
+          "text": "Что означает Background GC?",
+          "block": "Режимы GC и паузы",
+          "source": "04_CLR_Memory_GC.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-csharp-exceptions-memory-gc-mode-2",
+          "text": "По чему выбирать режим GC для сервиса?",
+          "block": "Режимы GC и паузы",
+          "source": "04_CLR_Memory_GC.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-csharp-exceptions-memory-boxing-1",
+          "text": "object boxed = 42; Как корректно получить long?",
+          "block": "Boxing, unboxing и копия значения",
+          "source": "04_CLR_Memory_GC.pdf, стр. 8"
+        },
+        {
+          "id": "open-csharp-exceptions-memory-span-1",
+          "text": "Сравните Span<T> и Memory<T> для хранения буфера в обычном объекте и последующей асинхронной обработки. Какие ограничения времени жизни нужно учитывать?",
+          "block": "Span, Memory и время жизни буфера",
+          "source": "04_CLR_Memory_GC.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-csharp-exceptions-memory-using-1",
+          "text": "Что гарантирует using при обычном выходе из области с IDisposable?",
+          "block": "Владение ресурсом и using",
+          "source": "04_CLR_Memory_GC.pdf, стр. 10"
+        },
+        {
+          "id": "open-csharp-exceptions-memory-leak-1",
+          "text": "Кэш бесконечно удерживает ненужные объекты. Почему GC.Collect не решит проблему?",
+          "block": "Управляемые утечки и диагностика удержания",
+          "source": "04_CLR_Memory_GC.pdf, стр. 10–11"
+        },
+        {
+          "id": "open-csharp-exceptions-memory-leak-2",
+          "text": "Что лучше помогает найти, почему объект удерживается?",
+          "block": "Управляемые утечки и диагностика удержания",
+          "source": "04_CLR_Memory_GC.pdf, стр. 10–11"
+        },
+        {
+          "id": "open-csharp-exceptions-memory-measure-1",
+          "text": "Что показывает GC.GetAllocatedBytesForCurrentThread()?",
+          "block": "Измерение до оптимизации",
+          "source": "04_CLR_Memory_GC.pdf, стр. 11–12"
+        },
+        {
+          "id": "open-csharp-exceptions-memory-measure-2",
+          "text": "С чего начать оптимизацию медленного API?",
+          "block": "Измерение до оптимизации",
+          "source": "04_CLR_Memory_GC.pdf, стр. 11–12"
+        },
+        {
+          "id": "open-csharp-exceptions-memory-readonly-copy-1",
+          "text": "Зачем компилятор может создать defensive copy структуры?",
+          "block": "Readonly-структуры и defensive copy",
+          "source": "04_CLR_Memory_GC.pdf, стр. 8–9"
         }
       ]
     },
@@ -435,6 +1113,252 @@
         {
           "id": "async-threading-025",
           "text": "Что такое потокобезопасность и как её обеспечить?"
+        },
+        {
+          "id": "async-threading-pdf4-25-1",
+          "text": "Почему I/O-bound Task может ожидать завершения без отдельного занятого managed-потока?",
+          "block": "Планирование и контексты",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "async-threading-pdf4-26-2",
+          "text": "Чем TaskScheduler отличается от ThreadPool и SynchronizationContext?",
+          "block": "Планирование и контексты",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "async-threading-pdf4-27-3",
+          "text": "Почему Task.Factory.StartNew с async-лямбдой может вернуть Task<Task> и когда нужен Unwrap?",
+          "block": "Планирование и контексты",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "async-threading-pdf4-28-4",
+          "text": "Может ли await уже завершённой задачи продолжить выполнение синхронно?",
+          "block": "Планирование и контексты",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "async-threading-pdf4-29-5",
+          "text": "Чем ExecutionContext и AsyncLocal<T> отличаются от SynchronizationContext и ThreadStatic?",
+          "block": "Планирование и контексты",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "async-threading-pdf4-30-6",
+          "text": "Что означает ThreadPool starvation и как синхронная блокировка влияет на задержки сервиса?",
+          "block": "Планирование и контексты",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "async-threading-pdf4-31-7",
+          "text": "Что гарантирует ConfigureAwait(false) и чего он не гарантирует?",
+          "block": "Планирование и контексты",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "async-threading-pdf4-32-1",
+          "text": "В чём различие атомарности, видимости и порядка операций в модели памяти?",
+          "block": "Атомарность и управление конкурентностью",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "async-threading-pdf4-33-2",
+          "text": "Почему volatile не делает counter++ атомарным и когда нужен Interlocked?",
+          "block": "Атомарность и управление конкурентностью",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "async-threading-pdf4-34-3",
+          "text": "Как работает Interlocked.CompareExchange и что сообщает возвращённое старое значение?",
+          "block": "Атомарность и управление конкурентностью",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "async-threading-pdf4-35-4",
+          "text": "Почему в блоке lock нельзя использовать await и чем для этой задачи подходит SemaphoreSlim?",
+          "block": "Атомарность и управление конкурентностью",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "async-threading-pdf4-36-5",
+          "text": "Когда SemaphoreSlim.Release нужно вызывать в finally и почему нельзя освобождать неполученное разрешение?",
+          "block": "Атомарность и управление конкурентностью",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "async-threading-pdf4-37-6",
+          "text": "Почему ограничение SemaphoreSlim на одной реплике не является глобальным лимитом сервиса?",
+          "block": "Атомарность и управление конкурентностью",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "async-threading-pdf4-38-7",
+          "text": "Может ли ConcurrentDictionary.GetOrAdd вызвать фабрику несколько раз и как это влияет на побочные эффекты?",
+          "block": "Атомарность и управление конкурентностью",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "async-threading-pdf4-39-8",
+          "text": "Что такое bounded Channel<T>, backpressure и завершение очереди producer-consumer?",
+          "block": "Атомарность и управление конкурентностью",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "async-threading-pdf4-40-9",
+          "text": "Ограничивает ли Task.WhenAll число одновременно запущенных операций?",
+          "block": "Атомарность и управление конкурентностью",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "async-threading-pdf4-41-10",
+          "text": "Как получить все исключения задач после ошибки Task.WhenAll?",
+          "block": "Атомарность и управление конкурентностью",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "async-threading-pdf4-42-11",
+          "text": "Для чего служит TaskCompletionSource и зачем может понадобиться RunContinuationsAsynchronously?",
+          "block": "Атомарность и управление конкурентностью",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "async-threading-pdf4-43-12",
+          "text": "Почему CancellationToken не отменяет уже совершённый внешний побочный эффект?",
+          "block": "Атомарность и управление конкурентностью",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "open-dotnet-async-practical-async-model-1",
+          "text": "Что представляет собой Task и чем он отличается от отдельного потока? Может ли задача завершиться без запуска нового потока?",
+          "block": "Асинхронность, параллелизм и I/O",
+          "source": "05_Async_Concurrency.pdf, стр. 3"
+        },
+        {
+          "id": "open-dotnet-async-practical-async-model-2",
+          "text": "Как обычно ожидать HTTP I/O в ASP.NET Core?",
+          "block": "Асинхронность, параллелизм и I/O",
+          "source": "05_Async_Concurrency.pdf, стр. 3"
+        },
+        {
+          "id": "open-dotnet-async-practical-await-1",
+          "text": "Почему async void нежелателен в обычном сервисном API?",
+          "block": "async, await и машина состояний",
+          "source": "05_Async_Concurrency.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-dotnet-async-practical-all-1",
+          "text": "Ограничивает ли Task.WhenAll число одновременно запущенных запросов?",
+          "block": "Независимые операции и Task.WhenAll",
+          "source": "05_Async_Concurrency.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-dotnet-async-practical-cancel-1",
+          "text": "Что делает CancellationToken при запросе отмены?",
+          "block": "Отмена и таймаут как контракт",
+          "source": "05_Async_Concurrency.pdf, стр. 7"
+        },
+        {
+          "id": "open-dotnet-async-practical-value-1",
+          "text": "Что даёт IAsyncEnumerable<T> в сравнении с Task<List<T>>?",
+          "block": "ValueTask и асинхронные последовательности",
+          "source": "05_Async_Concurrency.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-dotnet-async-practical-context-1",
+          "text": "Что гарантирует ConfigureAwait(false)?",
+          "block": "Контекст продолжения и блокирующее ожидание",
+          "source": "05_Async_Concurrency.pdf, стр. 6"
+        },
+        {
+          "id": "open-dotnet-async-practical-context-2",
+          "text": "Как обычно избежать sync-over-async в серверном вызове?",
+          "block": "Контекст продолжения и блокирующее ожидание",
+          "source": "05_Async_Concurrency.pdf, стр. 6"
+        },
+        {
+          "id": "open-dotnet-async-practical-pool-1",
+          "text": "Почему ThreadPool переиспользует потоки?",
+          "block": "ThreadPool и TaskScheduler",
+          "source": "05_Async_Concurrency.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-dotnet-async-practical-pool-2",
+          "text": "Какой риск есть у Task.Factory.StartNew(async () => ...)?",
+          "block": "ThreadPool и TaskScheduler",
+          "source": "05_Async_Concurrency.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-dotnet-async-practical-execution-1",
+          "text": "Что лучше подходит для логического идентификатора async-запроса?",
+          "block": "ExecutionContext и AsyncLocal",
+          "source": "05_Async_Concurrency.pdf, стр. 6"
+        },
+        {
+          "id": "open-dotnet-async-practical-memory-model-1",
+          "text": "Исправит ли volatile int counter потерю обновлений при counter++ из нескольких потоков?",
+          "block": "Атомарность, видимость и порядок",
+          "source": "05_Async_Concurrency.pdf, стр. 8–9"
+        },
+        {
+          "id": "open-dotnet-async-practical-memory-model-2",
+          "text": "Что нужно для согласованной пары связанных полей?",
+          "block": "Атомарность, видимость и порядок",
+          "source": "05_Async_Concurrency.pdf, стр. 8–9"
+        },
+        {
+          "id": "open-dotnet-async-practical-lock-1",
+          "text": "Почему для обычной критической секции лучше приватный объект блокировки?",
+          "block": "lock, Interlocked и CAS",
+          "source": "05_Async_Concurrency.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-dotnet-async-practical-semaphore-1",
+          "text": "Где должен находиться Release после успешного WaitAsync?",
+          "block": "Ограничение async-конкурентности",
+          "source": "05_Async_Concurrency.pdf, стр. 10"
+        },
+        {
+          "id": "open-dotnet-async-practical-concurrent-1",
+          "text": "Гарантирует ли GetOrAdd единственный вызов фабрики при конкуренции? Объясните ответ.",
+          "block": "ConcurrentDictionary и составные операции",
+          "source": "05_Async_Concurrency.pdf, стр. 10"
+        },
+        {
+          "id": "open-dotnet-async-practical-channel-1",
+          "text": "Для чего нужен bounded Channel в режиме ожидания при заполнении?",
+          "block": "Channel и обратное давление",
+          "source": "05_Async_Concurrency.pdf, стр. 8"
+        },
+        {
+          "id": "open-dotnet-async-practical-tcs-1",
+          "text": "Зачем часто используют RunContinuationsAsynchronously у TaskCompletionSource?",
+          "block": "Ошибки задач и TaskCompletionSource",
+          "source": "05_Async_Concurrency.pdf, стр. 11–12"
+        },
+        {
+          "id": "open-dotnet-async-practical-diagnostics-1",
+          "text": "После запуска сотен DB-вызовов одновременно выросла задержка. Что проверить первым?",
+          "block": "Параллельные циклы и диагностика",
+          "source": "05_Async_Concurrency.pdf, стр. 12–13"
+        },
+        {
+          "id": "open-dotnet-async-practical-diagnostics-2",
+          "text": "Опишите признаки ThreadPool starvation. Как отличить нехватку доступных исполнителей от высокой вычислительной нагрузки?",
+          "block": "Параллельные циклы и диагностика",
+          "source": "05_Async_Concurrency.pdf, стр. 12–13"
+        },
+        {
+          "id": "open-dotnet-async-practical-deadlocks-1",
+          "text": "Два потока держат по одной блокировке и ждут блокировку друг друга. Как называется эта ситуация, какие условия её создают и как её предотвратить?",
+          "block": "Deadlock, livelock и starvation",
+          "source": "05_Async_Concurrency.pdf, стр. 11–13"
+        },
+        {
+          "id": "open-dotnet-async-practical-deadlocks-2",
+          "text": "Как снизить риск deadlock при нескольких блокировках?",
+          "block": "Deadlock, livelock и starvation",
+          "source": "05_Async_Concurrency.pdf, стр. 11–13"
         }
       ]
     },
@@ -525,6 +1449,120 @@
         {
           "id": "algorithms-020",
           "text": "Как выбрать подходящую структуру данных под задачу?"
+        },
+        {
+          "id": "open-algorithms-data-structures-complexity-1",
+          "text": "Какова сложность двух последовательных проходов по n элементам?",
+          "block": "Контракт алгоритма и Big O",
+          "source": "07_Algoritmy_i_Struktury_Dannyh (1).pdf, стр. 3–4"
+        },
+        {
+          "id": "open-algorithms-data-structures-complexity-2",
+          "text": "Что означает O(1) амортизированно для append динамического массива?",
+          "block": "Контракт алгоритма и Big O",
+          "source": "07_Algoritmy_i_Struktury_Dannyh (1).pdf, стр. 3–4"
+        },
+        {
+          "id": "open-algorithms-data-structures-linear-structures-1",
+          "text": "Почему вставка в середину массива с сохранением порядка стоит O(n)?",
+          "block": "Массивы, списки и хеш-таблицы",
+          "source": "07_Algoritmy_i_Struktury_Dannyh (1).pdf, стр. 4–5"
+        },
+        {
+          "id": "open-algorithms-data-structures-linear-structures-2",
+          "text": "Гарантирует ли хеш-таблица поиск O(1) в любом худшем случае? Объясните ответ.",
+          "block": "Массивы, списки и хеш-таблицы",
+          "source": "07_Algoritmy_i_Struktury_Dannyh (1).pdf, стр. 4–5"
+        },
+        {
+          "id": "open-algorithms-data-structures-stack-queue-heap-1",
+          "text": "Какая структура нужна для BFS по невзвешенному графу?",
+          "block": "Стек, очередь и приоритетная очередь",
+          "source": "07_Algoritmy_i_Struktury_Dannyh (1).pdf, стр. 5–6"
+        },
+        {
+          "id": "open-algorithms-data-structures-binary-search-1",
+          "text": "Что вернёт lower_bound для [1, 3, 3, 8] и target = 3 при нумерации с нуля?",
+          "block": "Бинарный поиск и инвариант",
+          "source": "07_Algoritmy_i_Struktury_Dannyh (1).pdf, стр. 6, 10–11"
+        },
+        {
+          "id": "open-algorithms-data-structures-binary-search-2",
+          "text": "Каково ключевое условие поиска первого true бинарным поиском?",
+          "block": "Бинарный поиск и инвариант",
+          "source": "07_Algoritmy_i_Struktury_Dannyh (1).pdf, стр. 6, 10–11"
+        },
+        {
+          "id": "open-algorithms-data-structures-sorting-1",
+          "text": "Что сохраняет устойчивая сортировка?",
+          "block": "Сортировки и устойчивость",
+          "source": "07_Algoritmy_i_Struktury_Dannyh (1).pdf, стр. 6–7"
+        },
+        {
+          "id": "open-algorithms-data-structures-sorting-2",
+          "text": "Можно ли считать любой quicksort гарантированно O(n log n) в худшем случае? Объясните ответ.",
+          "block": "Сортировки и устойчивость",
+          "source": "07_Algoritmy_i_Struktury_Dannyh (1).pdf, стр. 6–7"
+        },
+        {
+          "id": "open-algorithms-data-structures-windows-1",
+          "text": "Почему простой поиск окна с суммой ≥ порога может сломаться на отрицательных числах?",
+          "block": "Два указателя, окно и интервалы",
+          "source": "07_Algoritmy_i_Struktury_Dannyh (1).pdf, стр. 7, 11–12"
+        },
+        {
+          "id": "open-algorithms-data-structures-windows-2",
+          "text": "Пересекаются ли полуоткрытые интервалы [1,3) и [3,5)?",
+          "block": "Два указателя, окно и интервалы",
+          "source": "07_Algoritmy_i_Struktury_Dannyh (1).pdf, стр. 7, 11–12"
+        },
+        {
+          "id": "open-algorithms-data-structures-trees-1",
+          "text": "Каков поиск в вырожденном BST из n узлов в худшем случае?",
+          "block": "Деревья поиска и куча",
+          "source": "07_Algoritmy_i_Struktury_Dannyh (1).pdf, стр. 7"
+        },
+        {
+          "id": "open-algorithms-data-structures-trees-2",
+          "text": "Какой обход BST выдаёт ключи по возрастанию?",
+          "block": "Деревья поиска и куча",
+          "source": "07_Algoritmy_i_Struktury_Dannyh (1).pdf, стр. 7"
+        },
+        {
+          "id": "open-algorithms-data-structures-graphs-1",
+          "text": "Когда BFS даёт кратчайшие расстояния по числу рёбер?",
+          "block": "BFS, DFS и топологический порядок",
+          "source": "07_Algoritmy_i_Struktury_Dannyh (1).pdf, стр. 7–8"
+        },
+        {
+          "id": "open-algorithms-data-structures-graphs-2",
+          "text": "У ориентированного графа есть цикл. Существует ли топологический порядок всех его вершин?",
+          "block": "BFS, DFS и топологический порядок",
+          "source": "07_Algoritmy_i_Struktury_Dannyh (1).pdf, стр. 7–8"
+        },
+        {
+          "id": "open-algorithms-data-structures-dijkstra-1",
+          "text": "Какое ограничение нужно обычному алгоритму Дейкстры?",
+          "block": "Кратчайшие пути и Дейкстра",
+          "source": "07_Algoritmy_i_Struktury_Dannyh (1).pdf, стр. 8"
+        },
+        {
+          "id": "open-algorithms-data-structures-dijkstra-2",
+          "text": "Пути имеют веса 2+7 и 4+1+1. Какой путь короче по сумме весов?",
+          "block": "Кратчайшие пути и Дейкстра",
+          "source": "07_Algoritmy_i_Struktury_Dannyh (1).pdf, стр. 8"
+        },
+        {
+          "id": "open-algorithms-data-structures-dp-greedy-1",
+          "text": "Номиналы 1, 3, 4. Сколько монет минимум нужно для суммы 6?",
+          "block": "Динамическое программирование и жадный выбор",
+          "source": "07_Algoritmy_i_Struktury_Dannyh (1).pdf, стр. 8–9, 11–12"
+        },
+        {
+          "id": "open-algorithms-data-structures-dp-greedy-2",
+          "text": "Что сначала нужно определить в динамическом программировании?",
+          "block": "Динамическое программирование и жадный выбор",
+          "source": "07_Algoritmy_i_Struktury_Dannyh (1).pdf, стр. 8–9, 11–12"
         }
       ]
     },
@@ -627,6 +1665,108 @@
         {
           "id": "databases-023",
           "text": "Как найти и оптимизировать медленный SQL-запрос?"
+        },
+        {
+          "id": "open-sql-relational-relational-1",
+          "text": "Что гарантирует FOREIGN KEY?",
+          "block": "Реляционная модель, типы и ограничения",
+          "source": "08_SQL_i_Relyatsionnaya_Model (1).pdf, стр. 3–4, 6–7"
+        },
+        {
+          "id": "open-sql-relational-relational-2",
+          "text": "Зачем нормализуют данные?",
+          "block": "Реляционная модель, типы и ограничения",
+          "source": "08_SQL_i_Relyatsionnaya_Model (1).pdf, стр. 3–4, 6–7"
+        },
+        {
+          "id": "open-sql-relational-select-order-1",
+          "text": "Что отбирает группы после агрегации?",
+          "block": "SELECT, фильтрация и группировка",
+          "source": "08_SQL_i_Relyatsionnaya_Model (1).pdf, стр. 4, 6, 9"
+        },
+        {
+          "id": "open-sql-relational-null-1",
+          "text": "Как правильно найти строки, у которых email отсутствует?",
+          "block": "NULL и трёхзначная логика",
+          "source": "08_SQL_i_Relyatsionnaya_Model (1).pdf, стр. 4–5"
+        },
+        {
+          "id": "open-sql-relational-joins-1",
+          "text": "У клиента два подходящих заказа. Сколько строк даст INNER JOIN этого клиента с заказами?",
+          "block": "JOIN и кратность результата",
+          "source": "08_SQL_i_Relyatsionnaya_Model (1).pdf, стр. 4–5, 9"
+        },
+        {
+          "id": "open-sql-relational-joins-2",
+          "text": "Нужны все клиенты и только оплаченные заказы справа. Где разместить o.status = 'paid'?",
+          "block": "JOIN и кратность результата",
+          "source": "08_SQL_i_Relyatsionnaya_Model (1).pdf, стр. 4–5, 9"
+        },
+        {
+          "id": "open-sql-relational-subqueries-1",
+          "text": "Какое объединение сохраняет дубликаты?",
+          "block": "Подзапросы, EXISTS, UNION и CTE",
+          "source": "08_SQL_i_Relyatsionnaya_Model (1).pdf, стр. 5–6"
+        },
+        {
+          "id": "open-sql-relational-subqueries-2",
+          "text": "Что проверяет EXISTS?",
+          "block": "Подзапросы, EXISTS, UNION и CTE",
+          "source": "08_SQL_i_Relyatsionnaya_Model (1).pdf, стр. 5–6"
+        },
+        {
+          "id": "open-sql-relational-windows-sql-1",
+          "text": "Чем оконная SUM отличается от обычной групповой SUM?",
+          "block": "Оконные функции",
+          "source": "08_SQL_i_Relyatsionnaya_Model (1).pdf, стр. 6, 9–10"
+        },
+        {
+          "id": "open-sql-relational-pagination-1",
+          "text": "У нескольких записей одинаковый created_at. Что добавить для стабильного порядка?",
+          "block": "Стабильная пагинация",
+          "source": "08_SQL_i_Relyatsionnaya_Model (1).pdf, стр. 7"
+        },
+        {
+          "id": "open-sql-relational-pagination-2",
+          "text": "Как обычно продолжается keyset-пагинация по возрастающему id?",
+          "block": "Стабильная пагинация",
+          "source": "08_SQL_i_Relyatsionnaya_Model (1).pdf, стр. 7"
+        },
+        {
+          "id": "open-sql-relational-transactions-1",
+          "text": "Два клиента прочитали остаток 10 и оба записали 9 вместо последовательного уменьшения до 8. Как называется аномалия и какие способы защиты подходят?",
+          "block": "Транзакции и ACID",
+          "source": "08_SQL_i_Relyatsionnaya_Model (1).pdf, стр. 7–8, 10"
+        },
+        {
+          "id": "open-sql-relational-transactions-2",
+          "text": "Охватывает ли COMMIT в PostgreSQL автоматически отправленное письмо?",
+          "block": "Транзакции и ACID",
+          "source": "08_SQL_i_Relyatsionnaya_Model (1).pdf, стр. 7–8, 10"
+        },
+        {
+          "id": "open-sql-relational-isolation-1",
+          "text": "Гарантирует ли простое SELECT, что другая транзакция не изменит строку до вашего UPDATE? Объясните ответ.",
+          "block": "Изоляция и конкурентные изменения",
+          "source": "08_SQL_i_Relyatsionnaya_Model (1).pdf, стр. 8, 10"
+        },
+        {
+          "id": "open-sql-relational-isolation-2",
+          "text": "Что важно при повторе транзакции после конфликта сериализации?",
+          "block": "Изоляция и конкурентные изменения",
+          "source": "08_SQL_i_Relyatsionnaya_Model (1).pdf, стр. 8, 10"
+        },
+        {
+          "id": "open-sql-relational-sql-safety-1",
+          "text": "Как передавать пользовательское значение фильтра в SQL?",
+          "block": "Параметры и эволюция схемы",
+          "source": "08_SQL_i_Relyatsionnaya_Model (1).pdf, стр. 8, 10–11"
+        },
+        {
+          "id": "open-sql-relational-sql-safety-2",
+          "text": "Какой первый шаг обычной expand-and-contract миграции?",
+          "block": "Параметры и эволюция схемы",
+          "source": "08_SQL_i_Relyatsionnaya_Model (1).pdf, стр. 8, 10–11"
         }
       ]
     },
@@ -727,6 +1867,2523 @@
           "text": "Как можно проверить работоспособность REST API?"
         }
       ]
+    },
+    {
+      "id": "dotnet-practical",
+      "number": 9,
+      "title": ".NET: прикладная разработка",
+      "symbol": ".Net",
+      "color": "teal",
+      "description": "SDK, DI, конфигурация, HTTP и диагностика",
+      "questions": [
+        {
+          "id": "dotnet-practical-pdf4-0-1",
+          "text": "Чем SDK отличается от runtime и какие задачи решают dotnet restore, build, test и publish?",
+          "block": "Инструменты и зависимости",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "dotnet-practical-pdf4-1-2",
+          "text": "Как PackageReference и TargetFramework влияют на зависимости и воспроизводимость сборки?",
+          "block": "Инструменты и зависимости",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "dotnet-practical-pdf4-2-3",
+          "text": "Чем отличаются Transient, Scoped и Singleton в DI-контейнере?",
+          "block": "Инструменты и зависимости",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "dotnet-practical-pdf4-3-4",
+          "text": "Почему захват scoped-сервиса в singleton опасен и как управлять scope явно?",
+          "block": "Инструменты и зависимости",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "dotnet-practical-pdf4-4-5",
+          "text": "Как хранить конфигурацию отдельно от кода и почему секреты нельзя сохранять в репозитории?",
+          "block": "Инструменты и зависимости",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "dotnet-practical-pdf4-5-1",
+          "text": "Чем структурированное логирование отличается от конкатенации строк и зачем нужен correlation ID?",
+          "block": "Работа с данными и наблюдаемость",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "dotnet-practical-pdf4-6-2",
+          "text": "Почему жизненным циклом HttpClient следует управлять осознанно и какую задачу решает IHttpClientFactory?",
+          "block": "Работа с данными и наблюдаемость",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "dotnet-practical-pdf4-7-3",
+          "text": "Почему DbContext обычно имеет scoped lifetime и не должен использоваться конкурентно?",
+          "block": "Работа с данными и наблюдаемость",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "dotnet-practical-pdf4-8-4",
+          "text": "Как проекция в DTO и ограничение Take уменьшают объём данных запроса EF Core?",
+          "block": "Работа с данными и наблюдаемость",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "dotnet-practical-pdf4-9-5",
+          "text": "Почему длительный HTTP-вызов внутри открытой транзакции может ухудшить работу приложения?",
+          "block": "Работа с данными и наблюдаемость",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "dotnet-practical-pdf4-10-6",
+          "text": "Чем unit-тест отличается от интеграционного и как убрать зависимость проверки от реального времени?",
+          "block": "Работа с данными и наблюдаемость",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "dotnet-practical-pdf4-11-7",
+          "text": "Как выбрать между логами, метриками, трассировками и профилировщиком при диагностике сервиса?",
+          "block": "Работа с данными и наблюдаемость",
+          "source": "04_DotNet_Async_Concurrency_Practical (1).pdf"
+        },
+        {
+          "id": "open-dotnet-engineering-tools-sdk-1",
+          "text": "Какая команда .NET CLI готовит артефакты развёртывания? Чем публикация отличается от обычной сборки проекта?",
+          "block": "SDK, runtime, NuGet и публикация",
+          "source": "06_DotNet_Engineering_Tools.pdf, стр. 3–4, 12"
+        },
+        {
+          "id": "open-dotnet-engineering-tools-sdk-2",
+          "text": "Что прежде всего определяет доступные проекту API .NET?",
+          "block": "SDK, runtime, NuGet и публикация",
+          "source": "06_DotNet_Engineering_Tools.pdf, стр. 3–4, 12"
+        },
+        {
+          "id": "open-dotnet-engineering-tools-di-1",
+          "text": "Какой lifetime обычно подходит DbContext в веб-запросе?",
+          "block": "Конфигурация, DI и структурированные логи",
+          "source": "06_DotNet_Engineering_Tools.pdf, стр. 5–7"
+        },
+        {
+          "id": "open-dotnet-engineering-tools-di-2",
+          "text": "Почему опасен прямой захват scoped-сервиса в singleton?",
+          "block": "Конфигурация, DI и структурированные логи",
+          "source": "06_DotNet_Engineering_Tools.pdf, стр. 5–7"
+        },
+        {
+          "id": "open-dotnet-engineering-tools-io-1",
+          "text": "Что нужно после десериализации внешнего JSON?",
+          "block": "JSON, потоки и HttpClient",
+          "source": "06_DotNet_Engineering_Tools.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-dotnet-engineering-tools-testing-1",
+          "text": "Как сделать правило, зависящее от текущей даты, детерминированно тестируемым?",
+          "block": "Тестирование и общий поток backend",
+          "source": "06_DotNet_Engineering_Tools.pdf, стр. 11–12"
+        },
+        {
+          "id": "open-dotnet-engineering-tools-testing-2",
+          "text": "Как должен проходить CancellationToken запроса при I/O?",
+          "block": "Тестирование и общий поток backend",
+          "source": "06_DotNet_Engineering_Tools.pdf, стр. 11–12"
+        },
+        {
+          "id": "open-dotnet-engineering-tools-errors-1",
+          "text": "Пользователь вводит строку, которая может не быть числом. Что лучше для обычной проверки?",
+          "block": "Исключения и контракт метода",
+          "source": "06_DotNet_Engineering_Tools.pdf, стр. 8"
+        },
+        {
+          "id": "open-dotnet-engineering-tools-catch-1",
+          "text": "Зачем нужен фильтр catch (...) when (...) ?",
+          "block": "try, catch, finally и фильтры",
+          "source": "06_DotNet_Engineering_Tools.pdf, стр. 8"
+        },
+        {
+          "id": "open-dotnet-engineering-tools-rethrow-1",
+          "text": "Как повторно выбросить пойманное исключение, сохранив исходную трассировку?",
+          "block": "Повторный выброс и контекст ошибки",
+          "source": "06_DotNet_Engineering_Tools.pdf, стр. 8"
+        },
+        {
+          "id": "open-dotnet-engineering-tools-rethrow-2",
+          "text": "Зачем передавать исходное исключение в InnerException?",
+          "block": "Повторный выброс и контекст ошибки",
+          "source": "06_DotNet_Engineering_Tools.pdf, стр. 8"
+        },
+        {
+          "id": "open-dotnet-engineering-tools-disposal-1",
+          "text": "Что ожидает await using?",
+          "block": "Асинхронное освобождение и финализация",
+          "source": "06_DotNet_Engineering_Tools.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-dotnet-engineering-tools-disposal-2",
+          "text": "Почему нельзя полагаться на финализатор для своевременного закрытия файла?",
+          "block": "Асинхронное освобождение и финализация",
+          "source": "06_DotNet_Engineering_Tools.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-dotnet-engineering-tools-msbuild-1",
+          "text": "Где обычно задают целевую платформу net10.0?",
+          "block": "csproj, MSBuild и NuGet",
+          "source": "06_DotNet_Engineering_Tools.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-dotnet-engineering-tools-msbuild-2",
+          "text": "Что такое транзитивная зависимость?",
+          "block": "csproj, MSBuild и NuGet",
+          "source": "06_DotNet_Engineering_Tools.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-dotnet-engineering-tools-host-options-1",
+          "text": "Два провайдера содержат один ключ. Что определяет итоговое значение в обычном IConfiguration?",
+          "block": "Generic Host и порядок конфигурации",
+          "source": "06_DotNet_Engineering_Tools.pdf, стр. 5–7"
+        },
+        {
+          "id": "open-dotnet-engineering-tools-host-options-2",
+          "text": "Как singleton-фоновому сервису использовать scoped DbContext?",
+          "block": "Generic Host и порядок конфигурации",
+          "source": "06_DotNet_Engineering_Tools.pdf, стр. 5–7"
+        },
+        {
+          "id": "open-dotnet-engineering-tools-structured-logs-1",
+          "text": "Как записать структурированный лог с именованным свойством OrderId? Чем параметризованный шаблон отличается от заранее собранной строки?",
+          "block": "Структурированные логи и диагностика",
+          "source": "06_DotNet_Engineering_Tools.pdf, стр. 7–8, 11–12"
+        },
+        {
+          "id": "open-dotnet-engineering-tools-structured-logs-2",
+          "text": "Чем полезен trace ID?",
+          "block": "Структурированные логи и диагностика",
+          "source": "06_DotNet_Engineering_Tools.pdf, стр. 7–8, 11–12"
+        }
+      ]
+    },
+    {
+      "id": "postgresql",
+      "number": 10,
+      "title": "PostgreSQL",
+      "symbol": "PG",
+      "color": "blue",
+      "description": "MVCC, индексы, планы запросов, VACUUM и восстановление",
+      "questions": [
+        {
+          "id": "open-postgresql-pg-architecture-1",
+          "text": "Заменяет ли индекс физическую heap-таблицу во всех запросах? Объясните ответ.",
+          "block": "Архитектура, страницы и буферы",
+          "source": "09_PostgreSQL_Internals (1).pdf, стр. 3"
+        },
+        {
+          "id": "open-postgresql-mvcc-1",
+          "text": "Что обычно делает UPDATE с версией строки в PostgreSQL?",
+          "block": "MVCC и версии строк",
+          "source": "09_PostgreSQL_Internals (1).pdf, стр. 3–4"
+        },
+        {
+          "id": "open-postgresql-mvcc-2",
+          "text": "Два SELECT в одной Read Committed транзакции могут увидеть разные зафиксированные данные?",
+          "block": "MVCC и версии строк",
+          "source": "09_PostgreSQL_Internals (1).pdf, стр. 3–4"
+        },
+        {
+          "id": "open-postgresql-pg-locks-1",
+          "text": "Что делает PostgreSQL при обнаруженном deadlock?",
+          "block": "Блокировки и deadlock",
+          "source": "09_PostgreSQL_Internals (1).pdf, стр. 4, 10"
+        },
+        {
+          "id": "open-postgresql-pg-locks-2",
+          "text": "Что уменьшает время удержания блокировок?",
+          "block": "Блокировки и deadlock",
+          "source": "09_PostgreSQL_Internals (1).pdf, стр. 4, 10"
+        },
+        {
+          "id": "open-postgresql-btree-1",
+          "text": "Какой индекс хранит лишь строки WHERE status = 'active'?",
+          "block": "B-tree и составные индексы",
+          "source": "09_PostgreSQL_Internals (1).pdf, стр. 4–5, 9–10"
+        },
+        {
+          "id": "open-postgresql-btree-2",
+          "text": "Нужно ли создавать индекс на каждый столбец? Объясните ответ.",
+          "block": "B-tree и составные индексы",
+          "source": "09_PostgreSQL_Internals (1).pdf, стр. 4–5, 9–10"
+        },
+        {
+          "id": "open-postgresql-special-indexes-1",
+          "text": "Когда BRIN особенно полезен?",
+          "block": "GIN, GiST и BRIN",
+          "source": "09_PostgreSQL_Internals (1).pdf, стр. 5–6"
+        },
+        {
+          "id": "open-postgresql-special-indexes-2",
+          "text": "Что нужно проверить помимо типа столбца при выборе GIN?",
+          "block": "GIN, GiST и BRIN",
+          "source": "09_PostgreSQL_Internals (1).pdf, стр. 5–6"
+        },
+        {
+          "id": "open-postgresql-explain-1",
+          "text": "Выполнит ли EXPLAIN ANALYZE оператор UPDATE? Объясните ответ.",
+          "block": "EXPLAIN, ANALYZE и статистика",
+          "source": "09_PostgreSQL_Internals (1).pdf, стр. 6, 9"
+        },
+        {
+          "id": "open-postgresql-explain-2",
+          "text": "Узел показал actual rows = 4, loops = 100. Как оценить число выданных строк суммарно?",
+          "block": "EXPLAIN, ANALYZE и статистика",
+          "source": "09_PostgreSQL_Internals (1).pdf, стр. 6, 9"
+        },
+        {
+          "id": "open-postgresql-vacuum-1",
+          "text": "Что обычно освобождает обычный VACUUM?",
+          "block": "VACUUM, autovacuum и долгие транзакции",
+          "source": "09_PostgreSQL_Internals (1).pdf, стр. 6–7, 10"
+        },
+        {
+          "id": "open-postgresql-vacuum-2",
+          "text": "Почему опасна долго открытая транзакция?",
+          "block": "VACUUM, autovacuum и долгие транзакции",
+          "source": "09_PostgreSQL_Internals (1).pdf, стр. 6–7, 10"
+        },
+        {
+          "id": "open-postgresql-wal-1",
+          "text": "Что означает RTO?",
+          "block": "WAL и восстановление",
+          "source": "09_PostgreSQL_Internals (1).pdf, стр. 7, 10"
+        },
+        {
+          "id": "open-postgresql-wal-2",
+          "text": "Почему реплика не заменяет резервную копию?",
+          "block": "WAL и восстановление",
+          "source": "09_PostgreSQL_Internals (1).pdf, стр. 7, 10"
+        },
+        {
+          "id": "open-postgresql-replication-1",
+          "text": "Гарантирует ли асинхронная реплика мгновенное чтение собственной только что выполненной записи? Объясните ответ.",
+          "block": "Репликация, пулы и партиционирование",
+          "source": "09_PostgreSQL_Internals (1).pdf, стр. 7–8"
+        },
+        {
+          "id": "open-postgresql-replication-2",
+          "text": "Что даёт partition pruning?",
+          "block": "Репликация, пулы и партиционирование",
+          "source": "09_PostgreSQL_Internals (1).pdf, стр. 7–8"
+        },
+        {
+          "id": "open-postgresql-pg-operations-1",
+          "text": "Запрос стал медленным. С чего начать?",
+          "block": "Диагностика и безопасная эксплуатация",
+          "source": "09_PostgreSQL_Internals (1).pdf, стр. 8–10"
+        },
+        {
+          "id": "open-postgresql-pg-operations-2",
+          "text": "Что подтверждает пригодность резервной копии?",
+          "block": "Диагностика и безопасная эксплуатация",
+          "source": "09_PostgreSQL_Internals (1).pdf, стр. 8–10"
+        }
+      ]
+    },
+    {
+      "id": "ef-core",
+      "number": 11,
+      "title": "Entity Framework Core",
+      "symbol": "EF",
+      "color": "violet",
+      "description": "DbContext, миграции, запросы, tracking и сохранение данных",
+      "questions": [
+        {
+          "id": "open-ef-core-orm-context-1",
+          "text": "Можно ли одновременно выполнять два запроса через один DbContext? Объясните ответ.",
+          "block": "ORM и время жизни DbContext",
+          "source": "10_Entity_Framework_Core (1).pdf, стр. 3–4"
+        },
+        {
+          "id": "open-ef-core-orm-context-2",
+          "text": "Что остаётся важным при использовании ORM?",
+          "block": "ORM и время жизни DbContext",
+          "source": "10_Entity_Framework_Core (1).pdf, стр. 3–4"
+        },
+        {
+          "id": "open-ef-core-ef-model-1",
+          "text": "Означает ли наличие свойства Product.Tags, что теги уже загружены? Объясните ответ.",
+          "block": "Сущности, ключи и Fluent API",
+          "source": "10_Entity_Framework_Core (1).pdf, стр. 4–5"
+        },
+        {
+          "id": "open-ef-core-ef-model-2",
+          "text": "Зачем CHECK в БД, если приложение проверяет Price ≥ 0?",
+          "block": "Сущности, ключи и Fluent API",
+          "source": "10_Entity_Framework_Core (1).pdf, стр. 4–5"
+        },
+        {
+          "id": "open-ef-core-ef-migrations-1",
+          "text": "Что делает dotnet ef migrations add?",
+          "block": "Миграции и развёртывание",
+          "source": "10_Entity_Framework_Core (1).pdf, стр. 5, 11"
+        },
+        {
+          "id": "open-ef-core-ef-migrations-2",
+          "text": "Что проверить в миграции при переименовании столбца?",
+          "block": "Миграции и развёртывание",
+          "source": "10_Entity_Framework_Core (1).pdf, стр. 5, 11"
+        },
+        {
+          "id": "open-ef-core-ef-query-1",
+          "text": "Какая операция обычно материализует запрос EF Core?",
+          "block": "LINQ to Entities и выполнение SQL",
+          "source": "10_Entity_Framework_Core (1).pdf, стр. 5–6"
+        },
+        {
+          "id": "open-ef-core-tracking-1",
+          "text": "После AsNoTracking изменили свойство объекта и вызвали SaveChanges без Attach. Что обычно произойдёт?",
+          "block": "Tracking и NoTracking",
+          "source": "10_Entity_Framework_Core (1).pdf, стр. 6"
+        },
+        {
+          "id": "open-ef-core-tracking-2",
+          "text": "Равнозначны ли tracking и транзакция? Объясните ответ.",
+          "block": "Tracking и NoTracking",
+          "source": "10_Entity_Framework_Core (1).pdf, стр. 6"
+        },
+        {
+          "id": "open-ef-core-save-changes-1",
+          "text": "Два последовательных SaveChanges без внешней транзакции всегда атомарны вместе?",
+          "block": "SaveChanges и границы транзакции",
+          "source": "10_Entity_Framework_Core (1).pdf, стр. 6–7, 10"
+        },
+        {
+          "id": "open-ef-core-save-changes-2",
+          "text": "Для чего нужен transactional outbox?",
+          "block": "SaveChanges и границы транзакции",
+          "source": "10_Entity_Framework_Core (1).pdf, стр. 6–7, 10"
+        },
+        {
+          "id": "open-ef-core-loading-1",
+          "text": "Список из 20 заказов и по запросу клиента на каждый заказ — сколько SQL-команд в таком сценарии?",
+          "block": "Include, N+1 и объём загрузки",
+          "source": "10_Entity_Framework_Core (1).pdf, стр. 7, 11"
+        },
+        {
+          "id": "open-ef-core-loading-2",
+          "text": "Всегда ли Include всех коллекций — оптимальная стратегия?",
+          "block": "Include, N+1 и объём загрузки",
+          "source": "10_Entity_Framework_Core (1).pdf, стр. 7, 11"
+        },
+        {
+          "id": "open-ef-core-ef-concurrency-1",
+          "text": "Что предотвращает проверка исходной версии в WHERE обновления?",
+          "block": "Concurrency tokens и потерянное обновление",
+          "source": "10_Entity_Framework_Core (1).pdf, стр. 8, 10"
+        },
+        {
+          "id": "open-ef-core-ef-concurrency-2",
+          "text": "Что разумно сделать после DbUpdateConcurrencyException?",
+          "block": "Concurrency tokens и потерянное обновление",
+          "source": "10_Entity_Framework_Core (1).pdf, стр. 8, 10"
+        },
+        {
+          "id": "open-ef-core-bulk-raw-1",
+          "text": "Обновит ли ExecuteUpdate автоматически свойства уже загруженной отслеживаемой сущности?",
+          "block": "ExecuteUpdate и параметризованный SQL",
+          "source": "10_Entity_Framework_Core (1).pdf, стр. 8–9"
+        },
+        {
+          "id": "open-ef-core-bulk-raw-2",
+          "text": "Как безопасно передать значение в сырой SQL?",
+          "block": "ExecuteUpdate и параметризованный SQL",
+          "source": "10_Entity_Framework_Core (1).pdf, стр. 8–9"
+        },
+        {
+          "id": "open-ef-core-ef-diagnostics-1",
+          "text": "Доказывает ли успешный тест с InMemory корректность SQL для PostgreSQL? Объясните ответ.",
+          "block": "Query filters, тестирование и диагностика",
+          "source": "10_Entity_Framework_Core (1).pdf, стр. 9–11"
+        },
+        {
+          "id": "open-ef-core-ef-diagnostics-2",
+          "text": "Можно ли считать глобальный query filter единственной границей безопасности tenant-данных? Объясните ответ.",
+          "block": "Query filters, тестирование и диагностика",
+          "source": "10_Entity_Framework_Core (1).pdf, стр. 9–11"
+        }
+      ]
+    },
+    {
+      "id": "redis-caching",
+      "number": 12,
+      "title": "Redis и кеширование",
+      "symbol": "R",
+      "color": "pink",
+      "description": "TTL, инвалидация, согласованность и структуры Redis",
+      "questions": [
+        {
+          "id": "open-redis-caching-redis-model-1",
+          "text": "Какую структуру Redis удобно использовать для рейтинга со score?",
+          "block": "Кеш, источник истины и типы Redis",
+          "source": "11_Redis_i_Keshirovanie (1).pdf, стр. 3–4"
+        },
+        {
+          "id": "open-redis-caching-redis-model-2",
+          "text": "Что нужно определить до добавления кеша?",
+          "block": "Кеш, источник истины и типы Redis",
+          "source": "11_Redis_i_Keshirovanie (1).pdf, стр. 3–4"
+        },
+        {
+          "id": "open-redis-caching-ttl-1",
+          "text": "Гарантирует ли TTL = 60, что ключ обязательно существует все 60 секунд? Объясните ответ.",
+          "block": "TTL и вытеснение",
+          "source": "11_Redis_i_Keshirovanie (1).pdf, стр. 4–5, 10–11"
+        },
+        {
+          "id": "open-redis-caching-ttl-2",
+          "text": "Зачем добавлять случайную вариацию к TTL разных ключей?",
+          "block": "TTL и вытеснение",
+          "source": "11_Redis_i_Keshirovanie (1).pdf, стр. 4–5, 10–11"
+        },
+        {
+          "id": "open-redis-caching-cache-aside-1",
+          "text": "Что делает приложение при cache miss в обычном cache-aside?",
+          "block": "Cache-aside и доступ к данным",
+          "source": "11_Redis_i_Keshirovanie (1).pdf, стр. 5–7"
+        },
+        {
+          "id": "open-redis-caching-cache-aside-2",
+          "text": "Какой риск у долгого негативного кеширования?",
+          "block": "Cache-aside и доступ к данным",
+          "source": "11_Redis_i_Keshirovanie (1).pdf, стр. 5–7"
+        },
+        {
+          "id": "open-redis-caching-invalidation-1",
+          "text": "Почему удаление кеша перед коммитом БД опасно?",
+          "block": "Инвалидация и гонки",
+          "source": "11_Redis_i_Keshirovanie (1).pdf, стр. 5–6, 10"
+        },
+        {
+          "id": "open-redis-caching-invalidation-2",
+          "text": "Устраняет ли порядок «коммит, затем удалить» абсолютно все гонки? Объясните ответ.",
+          "block": "Инвалидация и гонки",
+          "source": "11_Redis_i_Keshirovanie (1).pdf, стр. 5–6, 10"
+        },
+        {
+          "id": "open-redis-caching-stampede-1",
+          "text": "Что уменьшает single-flight для одного ключа?",
+          "block": "Cache stampede и устаревшие данные",
+          "source": "11_Redis_i_Keshirovanie (1).pdf, стр. 6, 10–11"
+        },
+        {
+          "id": "open-redis-caching-stampede-2",
+          "text": "Когда допустим stale-while-revalidate?",
+          "block": "Cache stampede и устаревшие данные",
+          "source": "11_Redis_i_Keshirovanie (1).pdf, стр. 6, 10–11"
+        },
+        {
+          "id": "open-redis-caching-redis-atomic-1",
+          "text": "Делает ли pipelining последовательность команд атомарной?",
+          "block": "Атомарные команды, MULTI и Lua",
+          "source": "11_Redis_i_Keshirovanie (1).pdf, стр. 7"
+        },
+        {
+          "id": "open-redis-caching-rate-limit-1",
+          "text": "Лимит 10 в минутном фиксированном окне. Возможны ли 20 запросов вокруг границы двух минут за короткое время?",
+          "block": "Rate limiting и границы окна",
+          "source": "11_Redis_i_Keshirovanie (1).pdf, стр. 7–8, 11"
+        },
+        {
+          "id": "open-redis-caching-rate-limit-2",
+          "text": "Что важно сделать атомарным в конкурентном rate limiter?",
+          "block": "Rate limiting и границы окна",
+          "source": "11_Redis_i_Keshirovanie (1).pdf, стр. 7–8, 11"
+        },
+        {
+          "id": "open-redis-caching-messaging-1",
+          "text": "Получит ли отключённый Pub/Sub-подписчик позже все пропущенные сообщения автоматически?",
+          "block": "Pub/Sub и Streams",
+          "source": "11_Redis_i_Keshirovanie (1).pdf, стр. 8, 11"
+        },
+        {
+          "id": "open-redis-caching-messaging-2",
+          "text": "Почему обработчику Streams нужна идемпотентность?",
+          "block": "Pub/Sub и Streams",
+          "source": "11_Redis_i_Keshirovanie (1).pdf, стр. 8, 11"
+        },
+        {
+          "id": "open-redis-caching-redis-durability-1",
+          "text": "Какова основная роль Redis Cluster?",
+          "block": "RDB, AOF и топология",
+          "source": "11_Redis_i_Keshirovanie (1).pdf, стр. 8–9"
+        },
+        {
+          "id": "open-redis-caching-redis-durability-2",
+          "text": "Гарантирует ли асинхронная репликация сохранение всех последних записей при любом failover? Объясните ответ.",
+          "block": "RDB, AOF и топология",
+          "source": "11_Redis_i_Keshirovanie (1).pdf, стр. 8–9"
+        },
+        {
+          "id": "open-redis-caching-redis-operations-1",
+          "text": "Почему нельзя просто DEL lock после долгой операции?",
+          "block": "Распределённые блокировки и эксплуатация",
+          "source": "11_Redis_i_Keshirovanie (1).pdf, стр. 9–12"
+        },
+        {
+          "id": "open-redis-caching-redis-operations-2",
+          "text": "Достаточно ли высокого cache hit ratio для вывода об ускорении системы? Объясните ответ.",
+          "block": "Распределённые блокировки и эксплуатация",
+          "source": "11_Redis_i_Keshirovanie (1).pdf, стр. 9–12"
+        }
+      ]
+    },
+    {
+      "id": "networks-http-tls",
+      "number": 13,
+      "title": "Сети, HTTP и TLS",
+      "symbol": "HTTP",
+      "color": "teal",
+      "description": "DNS, TCP/IP, HTTPS, HTTP-кеш и диагностика сети",
+      "questions": [
+        {
+          "id": "open-networks-http-tls-network-stack-1",
+          "text": "Какие компоненты задают origin?",
+          "block": "Путь запроса, URL и origin",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-networks-http-tls-network-stack-2",
+          "text": "Что обычно происходит с #section в URL при HTTP-запросе?",
+          "block": "Путь запроса, URL и origin",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-networks-http-tls-dns-1",
+          "text": "Какая DNS-запись содержит IPv6-адрес?",
+          "block": "DNS, TTL и смена адреса",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-networks-http-tls-dns-2",
+          "text": "Снижение TTL мгновенно обновит все уже закешированные ответы?",
+          "block": "DNS, TTL и смена адреса",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-networks-http-tls-ip-nat-1",
+          "text": "По чему обычный IP-маршрутизатор выбирает направление пакета?",
+          "block": "IP, маршрутизация, NAT и MTU",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 5"
+        },
+        {
+          "id": "open-networks-http-tls-ip-nat-2",
+          "text": "Какова задача TTL пакета IPv4?",
+          "block": "IP, маршрутизация, NAT и MTU",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 5"
+        },
+        {
+          "id": "open-networks-http-tls-tcp-1",
+          "text": "Клиент выполнил два write. Сервер обязательно получит два read с теми же границами?",
+          "block": "TCP, границы сообщений и соединения",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-networks-http-tls-tcp-2",
+          "text": "Чем flow control отличается от congestion control?",
+          "block": "TCP, границы сообщений и соединения",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-networks-http-tls-udp-quic-1",
+          "text": "Какой транспорт использует HTTP/3?",
+          "block": "UDP, QUIC и HTTP/3",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 7"
+        },
+        {
+          "id": "open-networks-http-tls-udp-quic-2",
+          "text": "Верно ли, что HTTP/3 обязательно ненадёжен из-за UDP? Объясните ответ.",
+          "block": "UDP, QUIC и HTTP/3",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 7"
+        },
+        {
+          "id": "open-networks-http-tls-tls-1",
+          "text": "Зачем клиент передаёт SNI?",
+          "block": "TLS, сертификаты и SNI",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 8–9"
+        },
+        {
+          "id": "open-networks-http-tls-tls-2",
+          "text": "Сертификат не проходит проверку. Что исправлять?",
+          "block": "TLS, сертификаты и SNI",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 8–9"
+        },
+        {
+          "id": "open-networks-http-tls-http-semantics-1",
+          "text": "Какой заголовок описывает тип фактически отправленного тела?",
+          "block": "HTTP: методы, тела и заголовки",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-networks-http-tls-http-semantics-2",
+          "text": "Повтор DELETE вернул 404 вместо первого 204. Это само по себе нарушает идемпотентность?",
+          "block": "HTTP: методы, тела и заголовки",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-networks-http-tls-http-versions-1",
+          "text": "Какой код сообщает об ограничении частоты запросов?",
+          "block": "Версии HTTP и статусы",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 10"
+        },
+        {
+          "id": "open-networks-http-tls-http-versions-2",
+          "text": "Какая возможность появилась в HTTP/2?",
+          "block": "Версии HTTP и статусы",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 10"
+        },
+        {
+          "id": "open-networks-http-tls-http-cache-1",
+          "text": "Чем no-cache отличается от no-store?",
+          "block": "HTTP-кеш и условные запросы",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 11"
+        },
+        {
+          "id": "open-networks-http-tls-cookies-cors-1",
+          "text": "Что делает HttpOnly?",
+          "block": "Cookies, SameSite и CORS",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 11–12"
+        },
+        {
+          "id": "open-networks-http-tls-cookies-cors-2",
+          "text": "Защищает ли CORS API от запросов произвольной серверной программы? Объясните ответ.",
+          "block": "Cookies, SameSite и CORS",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 11–12"
+        },
+        {
+          "id": "open-networks-http-tls-deadlines-1",
+          "text": "Клиент получил timeout после POST. Что известно о результате на сервере?",
+          "block": "Таймауты, дедлайн и повторы",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 12, 14"
+        },
+        {
+          "id": "open-networks-http-tls-proxies-diagnostics-1",
+          "text": "От кого можно принимать доверенные X-Forwarded-*?",
+          "block": "Прокси и разбор задержки",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 13–14"
+        },
+        {
+          "id": "open-networks-http-tls-proxies-diagnostics-2",
+          "text": "Высокий TTFB обязательно доказывает медленную бизнес-логику?",
+          "block": "Прокси и разбор задержки",
+          "source": "12_Networks_HTTP_TLS.pdf, стр. 13–14"
+        }
+      ]
+    },
+    {
+      "id": "aspnet-core",
+      "number": 14,
+      "title": "ASP.NET Core",
+      "symbol": "ASP",
+      "color": "violet",
+      "description": "Middleware, маршруты, DI и жизненный цикл запроса",
+      "questions": [
+        {
+          "id": "open-aspnet-core-asp-host-1",
+          "text": "Когда обычно исполняется обработчик, переданный в MapGet?",
+          "block": "ASP.NET Core, Kestrel и запуск",
+          "source": "13_ASPNET_Core.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-aspnet-core-asp-host-2",
+          "text": "Какова роль Kestrel?",
+          "block": "ASP.NET Core, Kestrel и запуск",
+          "source": "13_ASPNET_Core.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-aspnet-core-http-context-1",
+          "text": "Где уместно держать вычисленное значение только на время текущего HTTP-запроса?",
+          "block": "HttpContext и отмена запроса",
+          "source": "13_ASPNET_Core.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-aspnet-core-http-context-2",
+          "text": "Можно ли сохранить HttpContext в singleton для фоновой обработки позже? Объясните ответ.",
+          "block": "HttpContext и отмена запроса",
+          "source": "13_ASPNET_Core.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-aspnet-core-middleware-2",
+          "text": "Что произойдёт, если middleware вернул ответ без вызова next?",
+          "block": "Порядок middleware",
+          "source": "13_ASPNET_Core.pdf, стр. 5–7"
+        },
+        {
+          "id": "open-aspnet-core-routing-1",
+          "text": "Что гарантирует маршрут /products/{id:int}?",
+          "block": "Маршруты, binding и DTO",
+          "source": "13_ASPNET_Core.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-aspnet-core-routing-2",
+          "text": "Почему внешний DTO часто лучше прямой публикации EF-сущности?",
+          "block": "Маршруты, binding и DTO",
+          "source": "13_ASPNET_Core.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-aspnet-core-asp-di-1",
+          "text": "Какой риск у singleton, удерживающего request-scoped DbContext?",
+          "block": "DI и владение ресурсами",
+          "source": "13_ASPNET_Core.pdf, стр. 8–9"
+        },
+        {
+          "id": "open-aspnet-core-asp-di-2",
+          "text": "Делает ли AddSingleton обычный Dictionary потокобезопасным?",
+          "block": "DI и владение ресурсами",
+          "source": "13_ASPNET_Core.pdf, стр. 8–9"
+        },
+        {
+          "id": "open-aspnet-core-asp-options-1",
+          "text": "Что даёт ValidateOnStart при правильно настроенной валидации Options?",
+          "block": "Конфигурация и Options",
+          "source": "13_ASPNET_Core.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-aspnet-core-asp-options-2",
+          "text": "Изменение переменной окружения вне работающего процесса гарантированно обновит Options в нём?",
+          "block": "Конфигурация и Options",
+          "source": "13_ASPNET_Core.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-aspnet-core-asp-errors-1",
+          "text": "Что безопаснее вернуть клиенту при неизвестной внутренней ошибке?",
+          "block": "Обработка исключений и Problem Details",
+          "source": "13_ASPNET_Core.pdf, стр. 10"
+        },
+        {
+          "id": "open-aspnet-core-asp-errors-2",
+          "text": "Достаточно ли AddProblemDetails для определения всех бизнес-кодов ошибок? Объясните ответ.",
+          "block": "Обработка исключений и Problem Details",
+          "source": "13_ASPNET_Core.pdf, стр. 10"
+        },
+        {
+          "id": "open-aspnet-core-asp-validation-1",
+          "text": "Два запроса одновременно проверили отсутствие email. Что защищает уникальность при вставке?",
+          "block": "Валидация и инварианты",
+          "source": "13_ASPNET_Core.pdf, стр. 11"
+        },
+        {
+          "id": "open-aspnet-core-asp-validation-2",
+          "text": "Можно ли доверять role = admin из тела пользовательского запроса? Объясните ответ.",
+          "block": "Валидация и инварианты",
+          "source": "13_ASPNET_Core.pdf, стр. 11"
+        },
+        {
+          "id": "open-aspnet-core-asp-auth-1",
+          "text": "Каков обычный относительный порядок двух компонентов?",
+          "block": "Аутентификация и авторизация",
+          "source": "13_ASPNET_Core.pdf, стр. 11–12"
+        },
+        {
+          "id": "open-aspnet-core-asp-auth-2",
+          "text": "JWT корректен. Достаточно ли этого для доступа к заказу другого владельца?",
+          "block": "Аутентификация и авторизация",
+          "source": "13_ASPNET_Core.pdf, стр. 11–12"
+        },
+        {
+          "id": "open-aspnet-core-http-clients-1",
+          "text": "Что помогает контролировать IHttpClientFactory?",
+          "block": "HttpClientFactory и исходящие запросы",
+          "source": "13_ASPNET_Core.pdf, стр. 12"
+        },
+        {
+          "id": "open-aspnet-core-http-clients-2",
+          "text": "Безопасно ли автоматически повторять любой POST после сетевой ошибки? Объясните ответ.",
+          "block": "HttpClientFactory и исходящие запросы",
+          "source": "13_ASPNET_Core.pdf, стр. 12"
+        },
+        {
+          "id": "open-aspnet-core-asp-background-1",
+          "text": "Почему BackgroundService сам по себе не гарантирует выполнение задания после падения процесса?",
+          "block": "Async I/O и BackgroundService",
+          "source": "13_ASPNET_Core.pdf, стр. 13–14"
+        },
+        {
+          "id": "open-aspnet-core-asp-background-2",
+          "text": "Ускоряет ли Task.Run уже асинхронное ожидание сети само по себе?",
+          "block": "Async I/O и BackgroundService",
+          "source": "13_ASPNET_Core.pdf, стр. 13–14"
+        },
+        {
+          "id": "open-aspnet-core-asp-observability-1",
+          "text": "Что отражает readiness?",
+          "block": "Health checks и измерение производительности",
+          "source": "13_ASPNET_Core.pdf, стр. 14–15"
+        },
+        {
+          "id": "open-aspnet-core-asp-observability-2",
+          "text": "Время ответа растёт без высокого CPU. Что стоит проверить?",
+          "block": "Health checks и измерение производительности",
+          "source": "13_ASPNET_Core.pdf, стр. 14–15"
+        }
+      ]
+    },
+    {
+      "id": "rest-api-design",
+      "number": 15,
+      "title": "Проектирование REST API",
+      "symbol": "API",
+      "color": "blue",
+      "description": "Контракты, повторы, пагинация и конкурентные изменения",
+      "questions": [
+        {
+          "id": "open-rest-api-design-api-contract-1",
+          "text": "Что должно сохраняться при переносе бизнес-логики из контроллера в сервис?",
+          "block": "API как внешний контракт и ресурсы",
+          "source": "14_REST_API_Design.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-rest-api-design-api-contract-2",
+          "text": "Почему секреты не стоит передавать через query URL?",
+          "block": "API как внешний контракт и ресурсы",
+          "source": "14_REST_API_Design.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-rest-api-design-api-methods-1",
+          "text": "Идемпотентен ли PATCH с операцией «увеличить счётчик на 1» без защиты повторов?",
+          "block": "Safe, idempotent и выбор метода",
+          "source": "14_REST_API_Design.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-rest-api-design-api-create-1",
+          "text": "Какой заголовок обычно указывает адрес созданного ресурса при 201?",
+          "block": "Создание и асинхронные операции",
+          "source": "14_REST_API_Design.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-rest-api-design-api-create-2",
+          "text": "Доказывает ли 202, что фоновая бизнес-операция уже успешно выполнена? Объясните ответ.",
+          "block": "Создание и асинхронные операции",
+          "source": "14_REST_API_Design.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-rest-api-design-api-retries-1",
+          "text": "Один ключ пришёл повторно с другой суммой платежа. Как поступить?",
+          "block": "Idempotency-Key и неизвестный результат",
+          "source": "14_REST_API_Design.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-rest-api-design-api-retries-2",
+          "text": "Почему словарь одного экземпляра API недостаточен для распределённой дедупликации?",
+          "block": "Idempotency-Key и неизвестный результат",
+          "source": "14_REST_API_Design.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-rest-api-design-api-errors-1",
+          "text": "If-Match не совпал с текущей версией ресурса. Какой статус соответствует невыполненному предусловию?",
+          "block": "Статусы и машинные ошибки",
+          "source": "14_REST_API_Design.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-rest-api-design-api-errors-2",
+          "text": "Как клиенту надёжнее различать виды ошибок?",
+          "block": "Статусы и машинные ошибки",
+          "source": "14_REST_API_Design.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-rest-api-design-api-data-1",
+          "text": "Для частичного изменения «поле не передано» и «передан null» всегда одно и то же?",
+          "block": "Валидация, деньги, даты и null",
+          "source": "14_REST_API_Design.pdf, стр. 8–9"
+        },
+        {
+          "id": "open-rest-api-design-api-data-2",
+          "text": "Что нужно определить для денежного поля API?",
+          "block": "Валидация, деньги, даты и null",
+          "source": "14_REST_API_Design.pdf, стр. 8–9"
+        },
+        {
+          "id": "open-rest-api-design-api-pagination-1",
+          "text": "Почему сортировка только по created_at может быть нестабильной?",
+          "block": "Пагинация, сортировка и лимиты",
+          "source": "14_REST_API_Design.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-rest-api-design-api-pagination-2",
+          "text": "Можно ли вставить произвольный sort из query в SQL как имя столбца? Объясните ответ.",
+          "block": "Пагинация, сортировка и лимиты",
+          "source": "14_REST_API_Design.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-rest-api-design-api-etag-1",
+          "text": "Где должна быть обеспечена конкурентная проверка версии?",
+          "block": "ETag, If-Match и потеря обновлений",
+          "source": "14_REST_API_Design.pdf, стр. 10–11"
+        },
+        {
+          "id": "open-rest-api-design-api-etag-2",
+          "text": "Чем If-Match при изменении отличается от If-None-Match для кешированного GET?",
+          "block": "ETag, If-Match и потеря обновлений",
+          "source": "14_REST_API_Design.pdf, стр. 10–11"
+        },
+        {
+          "id": "open-rest-api-design-api-patch-1",
+          "text": "Что означает null для члена объекта в JSON Merge Patch?",
+          "block": "Форматы PATCH и разрешённые поля",
+          "source": "14_REST_API_Design.pdf, стр. 11"
+        },
+        {
+          "id": "open-rest-api-design-api-patch-2",
+          "text": "Зачем ограничивать пути JSON Patch?",
+          "block": "Форматы PATCH и разрешённые поля",
+          "source": "14_REST_API_Design.pdf, стр. 11"
+        },
+        {
+          "id": "open-rest-api-design-api-compatibility-1",
+          "text": "Может ли добавление нового значения enum сломать клиента? Объясните ответ.",
+          "block": "Версионирование и совместимость",
+          "source": "14_REST_API_Design.pdf, стр. 11–12"
+        },
+        {
+          "id": "open-rest-api-design-api-compatibility-2",
+          "text": "Достаточно ли сохранить имя и тип поля при изменении его смысла? Объясните ответ.",
+          "block": "Версионирование и совместимость",
+          "source": "14_REST_API_Design.pdf, стр. 11–12"
+        },
+        {
+          "id": "open-rest-api-design-openapi-1",
+          "text": "Гарантирует ли автогенерация OpenAPI правильное описание всех бизнес-инвариантов? Объясните ответ.",
+          "block": "OpenAPI и проверяемое описание",
+          "source": "14_REST_API_Design.pdf, стр. 12"
+        },
+        {
+          "id": "open-rest-api-design-openapi-2",
+          "text": "Что стоит сравнивать с OpenAPI при проверке контракта?",
+          "block": "OpenAPI и проверяемое описание",
+          "source": "14_REST_API_Design.pdf, стр. 12"
+        },
+        {
+          "id": "open-rest-api-design-api-limits-1",
+          "text": "Три реплики имеют независимый лимит 100 запросов на пользователя. Гарантирует ли это общий лимит 100?",
+          "block": "Квоты, безопасность и наблюдаемость",
+          "source": "14_REST_API_Design.pdf, стр. 13–14"
+        },
+        {
+          "id": "open-rest-api-design-api-limits-2",
+          "text": "Как именовать метрику запросов к отдельным заказам, чтобы не создавать ряд для каждого ID? Сравните шаблон /orders/{id} с фактическими URL и объясните риск высокой кардинальности.",
+          "block": "Квоты, безопасность и наблюдаемость",
+          "source": "14_REST_API_Design.pdf, стр. 13–14"
+        }
+      ]
+    },
+    {
+      "id": "backend-security",
+      "number": 16,
+      "title": "Безопасность backend-приложений",
+      "symbol": "SEC",
+      "color": "green",
+      "description": "JWT, OAuth/OIDC, права доступа и защита интеграций",
+      "questions": [
+        {
+          "id": "open-backend-security-threat-model-1",
+          "text": "Что означает fail closed при ошибке проверки прав?",
+          "block": "Модель угроз и границы доверия",
+          "source": "15_Backend_Security.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-backend-security-threat-model-2",
+          "text": "Защищает ли UUID ресурса от доступа постороннего пользователя сам по себе? Объясните ответ.",
+          "block": "Модель угроз и границы доверия",
+          "source": "15_Backend_Security.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-backend-security-identity-permissions-1",
+          "text": "Какой вопрос решает авторизация?",
+          "block": "Аутентификация, авторизация и аудит",
+          "source": "15_Backend_Security.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-backend-security-identity-permissions-2",
+          "text": "Может ли аудит заменить запрет неразрешённого действия? Объясните ответ.",
+          "block": "Аутентификация, авторизация и аудит",
+          "source": "15_Backend_Security.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-backend-security-password-storage-1",
+          "text": "Почему обычный быстрый SHA-256 без password-hashing схемы плохо подходит для хранения паролей?",
+          "block": "Пароли и восстановление доступа",
+          "source": "15_Backend_Security.pdf, стр. 5"
+        },
+        {
+          "id": "open-backend-security-password-storage-2",
+          "text": "Должна ли соль храниться как отдельный секрет вместо pepper?",
+          "block": "Пароли и восстановление доступа",
+          "source": "15_Backend_Security.pdf, стр. 5"
+        },
+        {
+          "id": "open-backend-security-sessions-tokens-1",
+          "text": "Гарантирует ли удаление токена из интерфейса немедленную недействительность украденной копии JWT? Объясните ответ.",
+          "block": "Сессии, cookies и отзыв",
+          "source": "15_Backend_Security.pdf, стр. 6"
+        },
+        {
+          "id": "open-backend-security-sessions-tokens-2",
+          "text": "Зачем менять идентификатор сессии после успешного входа?",
+          "block": "Сессии, cookies и отзыв",
+          "source": "15_Backend_Security.pdf, стр. 6"
+        },
+        {
+          "id": "open-backend-security-jwt-validation-1",
+          "text": "Скрывает ли обычный подписанный JWT содержимое payload от обладателя токена?",
+          "block": "JWT: подпись и предназначение",
+          "source": "15_Backend_Security.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-backend-security-jwt-validation-2",
+          "text": "Для чего проверяют aud?",
+          "block": "JWT: подпись и предназначение",
+          "source": "15_Backend_Security.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-backend-security-oauth-oidc-1",
+          "text": "Что добавляет OpenID Connect поверх OAuth?",
+          "block": "OAuth 2.0, PKCE и OpenID Connect",
+          "source": "15_Backend_Security.pdf, стр. 7–9"
+        },
+        {
+          "id": "open-backend-security-oauth-oidc-2",
+          "text": "Какую связь подтверждает code_verifier при PKCE?",
+          "block": "OAuth 2.0, PKCE и OpenID Connect",
+          "source": "15_Backend_Security.pdf, стр. 7–9"
+        },
+        {
+          "id": "open-backend-security-resource-authorization-2",
+          "text": "Пользователь вошёл и подставил в URL id чужого счёта. Какой проверки не хватает?",
+          "block": "RBAC, ABAC, BOLA и BFLA",
+          "source": "15_Backend_Security.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-backend-security-browser-threats-1",
+          "text": "Какую угрозу описывает выполнение внедрённого JavaScript в контексте страницы?",
+          "block": "CSRF, CORS и XSS",
+          "source": "15_Backend_Security.pdf, стр. 10"
+        },
+        {
+          "id": "open-backend-security-browser-threats-2",
+          "text": "Достаточно ли CORS как единственной защиты изменяющего cookie-запроса от CSRF? Объясните ответ.",
+          "block": "CSRF, CORS и XSS",
+          "source": "15_Backend_Security.pdf, стр. 10"
+        },
+        {
+          "id": "open-backend-security-injections-ssrf-1",
+          "text": "Что безопаснее для пользовательского значения email в SQL?",
+          "block": "Инъекции и SSRF",
+          "source": "15_Backend_Security.pdf, стр. 11"
+        },
+        {
+          "id": "open-backend-security-injections-ssrf-2",
+          "text": "Почему проверка «URL начинается с https» не предотвращает SSRF?",
+          "block": "Инъекции и SSRF",
+          "source": "15_Backend_Security.pdf, стр. 11"
+        },
+        {
+          "id": "open-backend-security-file-upload-1",
+          "text": "Можно ли считать загружаемый файл безопасным только по Content-Type клиента? Объясните ответ.",
+          "block": "Загрузка файлов и обработка содержимого",
+          "source": "15_Backend_Security.pdf, стр. 12"
+        },
+        {
+          "id": "open-backend-security-file-upload-2",
+          "text": "Почему нужны лимиты распаковки архива?",
+          "block": "Загрузка файлов и обработка содержимого",
+          "source": "15_Backend_Security.pdf, стр. 12"
+        },
+        {
+          "id": "open-backend-security-secrets-mtls-1",
+          "text": "Что прежде всего нужно сделать с подтверждённо утёкшим API-ключом?",
+          "block": "Секреты, ротация и mTLS",
+          "source": "15_Backend_Security.pdf, стр. 12–13"
+        },
+        {
+          "id": "open-backend-security-secrets-mtls-2",
+          "text": "Заменяет ли mTLS ресурсную авторизацию? Объясните ответ.",
+          "block": "Секреты, ротация и mTLS",
+          "source": "15_Backend_Security.pdf, стр. 12–13"
+        },
+        {
+          "id": "open-backend-security-abuse-limits-1",
+          "text": "Может ли жёсткая блокировка аккаунта после чужих попыток входа ухудшить доступность? Объясните ответ.",
+          "block": "Brute force, DoS и бюджеты работы",
+          "source": "15_Backend_Security.pdf, стр. 13"
+        },
+        {
+          "id": "open-backend-security-abuse-limits-2",
+          "text": "Нужны ли ресурсные лимиты для вошедших пользователей? Объясните ответ.",
+          "block": "Brute force, DoS и бюджеты работы",
+          "source": "15_Backend_Security.pdf, стр. 13"
+        },
+        {
+          "id": "open-backend-security-webhook-security-1",
+          "text": "Почему нельзя безусловно пересериализовать JSON перед проверкой HMAC исходного тела?",
+          "block": "Webhooks, подпись и повторы",
+          "source": "15_Backend_Security.pdf, стр. 13–14"
+        },
+        {
+          "id": "open-backend-security-webhook-security-2",
+          "text": "Защищает ли корректная подпись сама по себе от повторной доставки того же события? Объясните ответ.",
+          "block": "Webhooks, подпись и повторы",
+          "source": "15_Backend_Security.pdf, стр. 13–14"
+        },
+        {
+          "id": "open-backend-security-supply-audit-1",
+          "text": "Зачем нужен SBOM?",
+          "block": "Supply chain, логи и проверка границ",
+          "source": "15_Backend_Security.pdf, стр. 14–15"
+        },
+        {
+          "id": "open-backend-security-supply-audit-2",
+          "text": "Какая запись недопустима в обычном диагностическом логе?",
+          "block": "Supply chain, логи и проверка границ",
+          "source": "15_Backend_Security.pdf, стр. 14–15"
+        }
+      ]
+    },
+    {
+      "id": "rabbitmq-messaging",
+      "number": 17,
+      "title": "RabbitMQ и обмен сообщениями",
+      "symbol": "MQ",
+      "color": "orange",
+      "description": "Маршрутизация, подтверждения, повторы, outbox и inbox",
+      "questions": [
+        {
+          "id": "open-rabbitmq-messaging-broker-contract-1",
+          "text": "Чем команда отличается от события в обмене сообщениями? Приведите примеры подходящих имён и объясните, какой факт или намерение выражает каждое сообщение.",
+          "block": "Брокер, команды и события",
+          "source": "16_RabbitMQ.pdf, стр. 3–4, 17"
+        },
+        {
+          "id": "open-rabbitmq-messaging-broker-contract-2",
+          "text": "Если клиент обязан сразу получить точный результат операции, всегда ли полезно заменить вызов очередью?",
+          "block": "Брокер, команды и события",
+          "source": "16_RabbitMQ.pdf, стр. 3–4, 17"
+        },
+        {
+          "id": "open-rabbitmq-messaging-rabbit-routing-1",
+          "text": "Какой topic binding соответствует payments.refund.requested?",
+          "block": "Exchange, queue, binding и маршрутизация",
+          "source": "16_RabbitMQ.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-rabbitmq-messaging-rabbit-routing-2",
+          "text": "Два consumer читают одну очередь. Получит ли каждый обязательную полную копию всех сообщений?",
+          "block": "Exchange, queue, binding и маршрутизация",
+          "source": "16_RabbitMQ.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-rabbitmq-messaging-rabbit-connections-1",
+          "text": "Что изолирует vhost?",
+          "block": "Соединения, channels и vhost",
+          "source": "16_RabbitMQ.pdf, стр. 5–6, 16"
+        },
+        {
+          "id": "open-rabbitmq-messaging-rabbit-connections-2",
+          "text": "Можно ли без проверки SDK одновременно публиковать из любых потоков через один channel? Объясните ответ.",
+          "block": "Соединения, channels и vhost",
+          "source": "16_RabbitMQ.pdf, стр. 5–6, 16"
+        },
+        {
+          "id": "open-rabbitmq-messaging-rabbit-confirms-1",
+          "text": "Доказывает ли publisher confirm успешный бизнес-эффект consumer? Объясните ответ.",
+          "block": "Durability и publisher confirms",
+          "source": "16_RabbitMQ.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-rabbitmq-messaging-rabbit-confirms-2",
+          "text": "Ожидание confirm завершилось timeout. Что известно?",
+          "block": "Durability и publisher confirms",
+          "source": "16_RabbitMQ.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-rabbitmq-messaging-rabbit-ack-1",
+          "text": "БД зафиксировала изменение, но соединение оборвалось до ACK. Что возможно?",
+          "block": "Consumer ACK и гарантии доставки",
+          "source": "16_RabbitMQ.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-rabbitmq-messaging-rabbit-ack-2",
+          "text": "Когда обычно отправлять manual ACK?",
+          "block": "Consumer ACK и гарантии доставки",
+          "source": "16_RabbitMQ.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-rabbitmq-messaging-rabbit-prefetch-1",
+          "text": "Что ограничивает prefetch в обычной модели consumer?",
+          "block": "Prefetch, конкурентность и порядок",
+          "source": "16_RabbitMQ.pdf, стр. 9, 13"
+        },
+        {
+          "id": "open-rabbitmq-messaging-rabbit-prefetch-2",
+          "text": "A взял первое сообщение, B — второе. Обязательно ли первое завершится раньше?",
+          "block": "Prefetch, конкурентность и порядок",
+          "source": "16_RabbitMQ.pdf, стр. 9, 13"
+        },
+        {
+          "id": "open-rabbitmq-messaging-rabbit-retries-1",
+          "text": "Сообщение навсегда не соответствует схеме. Что опасно?",
+          "block": "Requeue, DLX и poison messages",
+          "source": "16_RabbitMQ.pdf, стр. 9–11"
+        },
+        {
+          "id": "open-rabbitmq-messaging-rabbit-retries-2",
+          "text": "Исправляет ли DLQ несовместимое сообщение автоматически?",
+          "block": "Requeue, DLX и poison messages",
+          "source": "16_RabbitMQ.pdf, стр. 9–11"
+        },
+        {
+          "id": "open-rabbitmq-messaging-quorum-streams-1",
+          "text": "Из трёх участников quorum-группы доступны два. Сохранилось ли большинство?",
+          "block": "Quorum queues, classic и streams",
+          "source": "16_RabbitMQ.pdf, стр. 11–12"
+        },
+        {
+          "id": "open-rabbitmq-messaging-quorum-streams-2",
+          "text": "Что характерно для streams в отличие от обычной рабочей очереди?",
+          "block": "Quorum queues, classic и streams",
+          "source": "16_RabbitMQ.pdf, стр. 11–12"
+        },
+        {
+          "id": "open-rabbitmq-messaging-rabbit-outbox-1",
+          "text": "Что outbox записывает атомарно с бизнес-изменением?",
+          "block": "Transactional outbox",
+          "source": "16_RabbitMQ.pdf, стр. 13–14"
+        },
+        {
+          "id": "open-rabbitmq-messaging-rabbit-outbox-2",
+          "text": "Worker получил confirm и упал до отметки published. Что возможно?",
+          "block": "Transactional outbox",
+          "source": "16_RabbitMQ.pdf, стр. 13–14"
+        },
+        {
+          "id": "open-rabbitmq-messaging-rabbit-inbox-2",
+          "text": "Достаточно ли INSERT ... ON CONFLICT DO NOTHING, если бизнес-эффект выполняется без проверки результата вставки? Объясните ответ.",
+          "block": "Inbox, идемпотентность и схемы",
+          "source": "16_RabbitMQ.pdf, стр. 14–15"
+        },
+        {
+          "id": "open-rabbitmq-messaging-rabbit-backpressure-2",
+          "text": "Восстановилось соединение. Доказывает ли это отсутствие неопределённых публикаций до обрыва?",
+          "block": "Backlog, backpressure и восстановление",
+          "source": "16_RabbitMQ.pdf, стр. 15–16"
+        },
+        {
+          "id": "open-rabbitmq-messaging-rabbit-operations-1",
+          "text": "Очередь уменьшается. Достаточно ли этого для доказательства успешных бизнес-операций?",
+          "block": "Безопасность и диагностика RabbitMQ",
+          "source": "16_RabbitMQ.pdf, стр. 16–17"
+        },
+        {
+          "id": "open-rabbitmq-messaging-rabbit-operations-2",
+          "text": "Почему для DLQ тоже важна политика доступа и хранения?",
+          "block": "Безопасность и диагностика RabbitMQ",
+          "source": "16_RabbitMQ.pdf, стр. 16–17"
+        }
+      ]
+    },
+    {
+      "id": "testing-test-design",
+      "number": 18,
+      "title": "Теория тестирования и тест-дизайн",
+      "symbol": "QA",
+      "color": "blue",
+      "description": "Контракты, риски, граничные значения, состояния и проверка сложных backend-сценариев.",
+      "questions": [
+        {
+          "id": "open-testing-test-design-unit-01-1",
+          "text": "API отклонил перевод с превышением лимита и вернул ожидаемый статус. Чего ещё не хватает для проверки контракта? Обоснуйте ответ.",
+          "block": "Качество, границы тестов и риски",
+          "source": "17_Teoriya_Testirovaniya_i_Test_Dizayn.pdf, стр. 3–5"
+        },
+        {
+          "id": "open-testing-test-design-unit-01-2",
+          "text": "Как выбирать уровень тестирования для риска ошибки SQL-ограничения? Обоснуйте ответ.",
+          "block": "Качество, границы тестов и риски",
+          "source": "17_Teoriya_Testirovaniya_i_Test_Dizayn.pdf, стр. 3–5"
+        },
+        {
+          "id": "open-testing-test-design-unit-02-1",
+          "text": "Ожидаемый результат теста вычисляется копией production-формулы. Какой риск возникает? Обоснуйте ответ.",
+          "block": "Проверяемый контракт и независимый оракул",
+          "source": "17_Teoriya_Testirovaniya_i_Test_Dizayn.pdf, стр. 5–11"
+        },
+        {
+          "id": "open-testing-test-design-unit-02-2",
+          "text": "Все строки таблицы решений завершаются отказом из-за роли. Что нужно проверить? Обоснуйте ответ.",
+          "block": "Проверяемый контракт и независимый оракул",
+          "source": "17_Teoriya_Testirovaniya_i_Test_Dizayn.pdf, стр. 5–11"
+        },
+        {
+          "id": "open-testing-test-design-unit-03-1",
+          "text": "Количество товаров допустимо от 1 до 99 включительно. Какой набор лучше исследует обе границы? Обоснуйте ответ.",
+          "block": "Классы эквивалентности и границы",
+          "source": "17_Teoriya_Testirovaniya_i_Test_Dizayn.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-testing-test-design-unit-04-1",
+          "text": "Заказ Created нельзя отправить до оплаты. Что проверять при попытке Ship? Обоснуйте ответ.",
+          "block": "Таблицы решений и переходы состояний",
+          "source": "17_Teoriya_Testirovaniya_i_Test_Dizayn.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-testing-test-design-unit-04-2",
+          "text": "Что означает прочерк в условии согласованной таблицы решений? Обоснуйте ответ.",
+          "block": "Таблицы решений и переходы состояний",
+          "source": "17_Teoriya_Testirovaniya_i_Test_Dizayn.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-testing-test-design-unit-05-1",
+          "text": "Какое ограничение есть у попарного тестирования конфигураций? Обоснуйте ответ.",
+          "block": "Комбинации, свойства и защитные проверки",
+          "source": "17_Teoriya_Testirovaniya_i_Test_Dizayn.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-testing-test-design-unit-05-2",
+          "text": "Какое свойство сортировки обнаружит потерю повторяющихся элементов? Обоснуйте ответ.",
+          "block": "Комбинации, свойства и защитные проверки",
+          "source": "17_Teoriya_Testirovaniya_i_Test_Dizayn.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-testing-test-design-unit-06-1",
+          "text": "Два параллельных теста меняют одну строку общей базы. Как устранить зависимость от порядка? Обоснуйте ответ.",
+          "block": "Данные, изоляция и тестовые двойники",
+          "source": "17_Teoriya_Testirovaniya_i_Test_Dizayn.pdf, стр. 8"
+        },
+        {
+          "id": "open-testing-test-design-unit-06-2",
+          "text": "Mock внешнего платежа всегда возвращает успех. Какой риск остаётся непроверенным? Обоснуйте ответ.",
+          "block": "Данные, изоляция и тестовые двойники",
+          "source": "17_Teoriya_Testirovaniya_i_Test_Dizayn.pdf, стр. 8"
+        },
+        {
+          "id": "open-testing-test-design-unit-07-1",
+          "text": "Что наиболее полезно для воспроизведения периодического сбоя? Обоснуйте ответ.",
+          "block": "Исследование, баг-репорты и flaky-тесты",
+          "source": "17_Teoriya_Testirovaniya_i_Test_Dizayn.pdf, стр. 8–9"
+        },
+        {
+          "id": "open-testing-test-design-unit-07-2",
+          "text": "Тест проходит после второго запуска. Что означает добавление автоматического retry? Обоснуйте ответ.",
+          "block": "Исследование, баг-репорты и flaky-тесты",
+          "source": "17_Teoriya_Testirovaniya_i_Test_Dizayn.pdf, стр. 8–9"
+        },
+        {
+          "id": "open-testing-test-design-unit-08-1",
+          "text": "У критичной функции 100% покрытия строк. Что ещё может обнаружить mutation testing? Обоснуйте ответ.",
+          "block": "Метрики, прослеживаемость и выпуск",
+          "source": "17_Teoriya_Testirovaniya_i_Test_Dizayn.pdf, стр. 9–13"
+        },
+        {
+          "id": "open-testing-test-design-unit-08-2",
+          "text": "Изменился срок токена с 15 до 30 минут. Какие тесты следует пересмотреть в первую очередь? Обоснуйте ответ.",
+          "block": "Метрики, прослеживаемость и выпуск",
+          "source": "17_Teoriya_Testirovaniya_i_Test_Dizayn.pdf, стр. 9–13"
+        },
+        {
+          "id": "open-testing-test-design-unit-09-1",
+          "text": "Тест доступа к документам использует только одного пользователя. Какой сценарий принципиально отсутствует? Обоснуйте ответ.",
+          "block": "Восстановление доступа и изоляция арендаторов",
+          "source": "17_Teoriya_Testirovaniya_i_Test_Dizayn.pdf, стр. 10–12"
+        },
+        {
+          "id": "open-testing-test-design-unit-09-2",
+          "text": "Запрос к чужому документу запрещён, но экспорт раскрывает его содержимое. Как оценить результат? Обоснуйте ответ.",
+          "block": "Восстановление доступа и изоляция арендаторов",
+          "source": "17_Teoriya_Testirovaniya_i_Test_Dizayn.pdf, стр. 10–12"
+        },
+        {
+          "id": "open-testing-test-design-unit-10-1",
+          "text": "API вернул 202, а письмо появляется в пределах согласованного окна. Как построить устойчивую проверку? Обоснуйте ответ.",
+          "block": "Асинхронные эффекты и прикладные сценарии",
+          "source": "17_Teoriya_Testirovaniya_i_Test_Dizayn.pdf, стр. 11–13"
+        },
+        {
+          "id": "open-testing-test-design-unit-10-2",
+          "text": "Событие обработано, но подтверждение брокеру потеряно. Какое свойство проверять при повторе? Обоснуйте ответ.",
+          "block": "Асинхронные эффекты и прикладные сценарии",
+          "source": "17_Teoriya_Testirovaniya_i_Test_Dizayn.pdf, стр. 11–13"
+        }
+      ]
+    },
+    {
+      "id": "dotnet-xunit-testing",
+      "number": 19,
+      "title": "Автотесты .NET и xUnit",
+      "symbol": "xU",
+      "color": "violet",
+      "description": "Unit-, интеграционные и контрактные тесты, управляемое время, HTTP, БД и конкурентные сценарии.",
+      "questions": [
+        {
+          "id": "open-dotnet-xunit-testing-unit-01-1",
+          "text": "Какой тест лучше защищает бизнес-контракт отказа в оплате? Обоснуйте ответ.",
+          "block": "Тестовый проект и наблюдаемый контракт",
+          "source": "18_Avtotesty_DotNet_xUnit.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-dotnet-xunit-testing-unit-01-2",
+          "text": "Зачем в тесте отделять Arrange, Act и Assert? Обоснуйте ответ.",
+          "block": "Тестовый проект и наблюдаемый контракт",
+          "source": "18_Avtotesty_DotNet_xUnit.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-dotnet-xunit-testing-unit-02-1",
+          "text": "Когда Theory с набором данных полезнее нескольких одинаковых Fact? Обоснуйте ответ.",
+          "block": "Параметризация, инварианты и двойники",
+          "source": "18_Avtotesty_DotNet_xUnit.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-dotnet-xunit-testing-unit-02-2",
+          "text": "Тест чистого расчёта скидки ломается после изменения приватной структуры вызовов. Что стоит пересмотреть? Обоснуйте ответ.",
+          "block": "Параметризация, инварианты и двойники",
+          "source": "18_Avtotesty_DotNet_xUnit.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-dotnet-xunit-testing-unit-03-1",
+          "text": "Тест вызвал асинхронный метод без await и сразу завершился. Какой риск возникает? Обоснуйте ответ.",
+          "block": "Async-тесты, время и отмена",
+          "source": "18_Avtotesty_DotNet_xUnit.pdf, стр. 6–8"
+        },
+        {
+          "id": "open-dotnet-xunit-testing-unit-04-1",
+          "text": "Что позволяет проверить WebApplicationFactory сверх прямого вызова метода контроллера? Обоснуйте ответ.",
+          "block": "HTTP-конвейер и тестовое окружение",
+          "source": "18_Avtotesty_DotNet_xUnit.pdf, стр. 8–12"
+        },
+        {
+          "id": "open-dotnet-xunit-testing-unit-04-2",
+          "text": "API должен возвращать ProblemDetails. Какой assertion полезнее одной проверки 400? Обоснуйте ответ.",
+          "block": "HTTP-конвейер и тестовое окружение",
+          "source": "18_Avtotesty_DotNet_xUnit.pdf, стр. 8–12"
+        },
+        {
+          "id": "open-dotnet-xunit-testing-unit-05-1",
+          "text": "Почему успешный тест с EF InMemory не доказывает корректность запроса PostgreSQL? Обоснуйте ответ.",
+          "block": "Настоящая БД и контроль состояния",
+          "source": "18_Avtotesty_DotNet_xUnit.pdf, стр. 9–14"
+        },
+        {
+          "id": "open-dotnet-xunit-testing-unit-05-2",
+          "text": "Два интеграционных теста используют общий fixture базы. Что требуется дополнительно? Обоснуйте ответ.",
+          "block": "Настоящая БД и контроль состояния",
+          "source": "18_Avtotesty_DotNet_xUnit.pdf, стр. 9–14"
+        },
+        {
+          "id": "open-dotnet-xunit-testing-unit-06-1",
+          "text": "Как проверить защиту от lost update через If-Match? Обоснуйте ответ.",
+          "block": "Гонки, уникальность и ETag",
+          "source": "18_Avtotesty_DotNet_xUnit.pdf, стр. 10–13"
+        },
+        {
+          "id": "open-dotnet-xunit-testing-unit-06-2",
+          "text": "Как сделать воспроизводимой гонку двух операций? Обоснуйте ответ.",
+          "block": "Гонки, уникальность и ETag",
+          "source": "18_Avtotesty_DotNet_xUnit.pdf, стр. 10–13"
+        },
+        {
+          "id": "open-dotnet-xunit-testing-unit-07-1",
+          "text": "Что лучше проверяет завершение обработки сообщения фоновой службой? Обоснуйте ответ.",
+          "block": "Контракты интеграций и фоновая обработка",
+          "source": "18_Avtotesty_DotNet_xUnit.pdf, стр. 10–13"
+        },
+        {
+          "id": "open-dotnet-xunit-testing-unit-07-2",
+          "text": "Mock HTTP-клиента совпадает с ожиданиями unit-теста. Что ещё проверяет контрактный тест? Обоснуйте ответ.",
+          "block": "Контракты интеграций и фоновая обработка",
+          "source": "18_Avtotesty_DotNet_xUnit.pdf, стр. 10–13"
+        },
+        {
+          "id": "open-dotnet-xunit-testing-unit-08-1",
+          "text": "Мутация изменила < на <= в проверке срока, а тесты остались зелёными. Что вероятнее всего отсутствует? Обоснуйте ответ.",
+          "block": "Стабильность и чувствительность проверок",
+          "source": "18_Avtotesty_DotNet_xUnit.pdf, стр. 11–14"
+        },
+        {
+          "id": "open-dotnet-xunit-testing-unit-08-2",
+          "text": "Как расследовать flaky-тест до включения постоянного retry? Обоснуйте ответ.",
+          "block": "Стабильность и чувствительность проверок",
+          "source": "18_Avtotesty_DotNet_xUnit.pdf, стр. 11–14"
+        },
+        {
+          "id": "open-dotnet-xunit-testing-unit-09-1",
+          "text": "Unit-тесты зелёные, но HTTP API возвращает 500 при запуске. Где искать пробел проверок? Обоснуйте ответ.",
+          "block": "Fixtures, CI и ошибки сборки приложения",
+          "source": "18_Avtotesty_DotNet_xUnit.pdf, стр. 11–12"
+        },
+        {
+          "id": "open-dotnet-xunit-testing-unit-09-2",
+          "text": "Shared fixture уменьшил время подготовки. Что он не гарантирует? Обоснуйте ответ.",
+          "block": "Fixtures, CI и ошибки сборки приложения",
+          "source": "18_Avtotesty_DotNet_xUnit.pdf, стр. 11–12"
+        },
+        {
+          "id": "open-dotnet-xunit-testing-unit-10-1",
+          "text": "Для создания заказа проверяется только успешный запрос. Какой набор сильнее дополняет контракт? Обоснуйте ответ.",
+          "block": "Прикладной набор тестов сервиса",
+          "source": "18_Avtotesty_DotNet_xUnit.pdf, стр. 14–15"
+        },
+        {
+          "id": "open-dotnet-xunit-testing-unit-10-2",
+          "text": "Какой принцип помогает менять способ хранения без массовой переделки unit-тестов бизнес-правил? Обоснуйте ответ.",
+          "block": "Прикладной набор тестов сервиса",
+          "source": "18_Avtotesty_DotNet_xUnit.pdf, стр. 14–15"
+        }
+      ]
+    },
+    {
+      "id": "performance-load-testing",
+      "number": 20,
+      "title": "Производительность и нагрузочное тестирование",
+      "symbol": "RPS",
+      "color": "orange",
+      "description": "Распределения задержек, модели нагрузки, k6, очереди, профилирование и проверка восстановления.",
+      "questions": [
+        {
+          "id": "open-performance-load-testing-unit-01-1",
+          "text": "Средняя задержка снизилась, но p99 вырос. Как оценить изменение? Обоснуйте ответ.",
+          "block": "Latency, throughput и хвосты распределения",
+          "source": "19_Proizvoditelnost_i_Nagruzochnoe_Testirovanie.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-performance-load-testing-unit-01-2",
+          "text": "Число одновременно выполняющихся запросов равно 100. Доказывает ли это 100 RPS? Обоснуйте ответ.",
+          "block": "Latency, throughput и хвосты распределения",
+          "source": "19_Proizvoditelnost_i_Nagruzochnoe_Testirovanie.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-performance-load-testing-unit-02-1",
+          "text": "После увеличения конкуренции RPS почти не вырос, но очередь удвоилась. Что это может означать? Обоснуйте ответ.",
+          "block": "Закон Литтла и насыщение очередей",
+          "source": "19_Proizvoditelnost_i_Nagruzochnoe_Testirovanie.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-performance-load-testing-unit-03-1",
+          "text": "Клиент отправляет следующий запрос только после предыдущего ответа. Какое искажение возможно при замедлении сервера? Обоснуйте ответ.",
+          "block": "Модели нагрузки и coordinated omission",
+          "source": "19_Proizvoditelnost_i_Nagruzochnoe_Testirovanie.pdf, стр. 5"
+        },
+        {
+          "id": "open-performance-load-testing-unit-03-2",
+          "text": "Как проверить нагрузку с независимой от ответов интенсивностью поступления? Обоснуйте ответ.",
+          "block": "Модели нагрузки и coordinated omission",
+          "source": "19_Proizvoditelnost_i_Nagruzochnoe_Testirovanie.pdf, стр. 5"
+        },
+        {
+          "id": "open-performance-load-testing-unit-04-1",
+          "text": "Какой профиль лучше моделирует интернет-магазин? Обоснуйте ответ.",
+          "block": "Профиль, среда и сценарии k6",
+          "source": "19_Proizvoditelnost_i_Nagruzochnoe_Testirovanie.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-performance-load-testing-unit-04-2",
+          "text": "Какой критерий важен для измеряющей среды? Обоснуйте ответ.",
+          "block": "Профиль, среда и сценарии k6",
+          "source": "19_Proizvoditelnost_i_Nagruzochnoe_Testirovanie.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-performance-load-testing-unit-05-1",
+          "text": "API возвращает быстрый 200, но заказ не появляется. Что отсутствует в проверке производительности? Обоснуйте ответ.",
+          "block": "HTTP-успех, кеш и реалистичные данные",
+          "source": "19_Proizvoditelnost_i_Nagruzochnoe_Testirovanie.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-performance-load-testing-unit-05-2",
+          "text": "Почему нужно явно описывать состояние кеша в отчёте? Обоснуйте ответ.",
+          "block": "HTTP-успех, кеш и реалистичные данные",
+          "source": "19_Proizvoditelnost_i_Nagruzochnoe_Testirovanie.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-performance-load-testing-unit-06-1",
+          "text": "p95 вырос, CPU приложения низкий, растёт pool wait и число SQL на запрос. Какую гипотезу проверить? Обоснуйте ответ.",
+          "block": "Диагностика БД, пулов и перегрузки",
+          "source": "19_Proizvoditelnost_i_Nagruzochnoe_Testirovanie.pdf, стр. 8–11"
+        },
+        {
+          "id": "open-performance-load-testing-unit-06-2",
+          "text": "Что лучше ограничивает лавину работы при перегрузке? Обоснуйте ответ.",
+          "block": "Диагностика БД, пулов и перегрузки",
+          "source": "19_Proizvoditelnost_i_Nagruzochnoe_Testirovanie.pdf, стр. 8–11"
+        },
+        {
+          "id": "open-performance-load-testing-unit-07-1",
+          "text": "Микробенчмарк сериализатора ускорился на 20%. Что ещё нужно для вывода об API? Обоснуйте ответ.",
+          "block": "Микробенчмарки и профилирование",
+          "source": "19_Proizvoditelnost_i_Nagruzochnoe_Testirovanie.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-performance-load-testing-unit-07-2",
+          "text": "Длинная задержка вызвана ожиданием блокировки. Какой подход полезнее одной CPU flamegraph? Обоснуйте ответ.",
+          "block": "Микробенчмарки и профилирование",
+          "source": "19_Proizvoditelnost_i_Nagruzochnoe_Testirovanie.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-performance-load-testing-unit-08-1",
+          "text": "Можно ли сложить p95 отдельных зависимостей и получить p95 полного запроса? Обоснуйте ответ.",
+          "block": "SLO, границы измерения и критический путь",
+          "source": "19_Proizvoditelnost_i_Nagruzochnoe_Testirovanie.pdf, стр. 10–12"
+        },
+        {
+          "id": "open-performance-load-testing-unit-08-2",
+          "text": "HTTP 202 приходит за 30 мс, а фон растёт до часа ожидания. Какой SLI дополнить? Обоснуйте ответ.",
+          "block": "SLO, границы измерения и критический путь",
+          "source": "19_Proizvoditelnost_i_Nagruzochnoe_Testirovanie.pdf, стр. 10–12"
+        },
+        {
+          "id": "open-performance-load-testing-unit-09-1",
+          "text": "Ускорение составило 3%, разброс прогонов — 10%. Что обоснованно сделать? Обоснуйте ответ.",
+          "block": "Сравнение изменений и качество эксперимента",
+          "source": "19_Proizvoditelnost_i_Nagruzochnoe_Testirovanie.pdf, стр. 10–13"
+        },
+        {
+          "id": "open-performance-load-testing-unit-09-2",
+          "text": "Генератор загружен на 100%, растут dropped_iterations, API CPU низкий. Что проверить прежде предела API? Обоснуйте ответ.",
+          "block": "Сравнение изменений и качество эксперимента",
+          "source": "19_Proizvoditelnost_i_Nagruzochnoe_Testirovanie.pdf, стр. 10–13"
+        },
+        {
+          "id": "open-performance-load-testing-unit-10-1",
+          "text": "После восстановления БД API снова отвечает 200. Достаточно ли этого для завершения испытания? Обоснуйте ответ.",
+          "block": "Отказ, восстановление и прикладной план",
+          "source": "19_Proizvoditelnost_i_Nagruzochnoe_Testirovanie.pdf, стр. 13–14"
+        },
+        {
+          "id": "open-performance-load-testing-unit-10-2",
+          "text": "Как организовать проверку устойчивости к сбою зависимости? Обоснуйте ответ.",
+          "block": "Отказ, восстановление и прикладной план",
+          "source": "19_Proizvoditelnost_i_Nagruzochnoe_Testirovanie.pdf, стр. 13–14"
+        }
+      ]
+    },
+    {
+      "id": "git-workflow",
+      "number": 21,
+      "title": "Git: история и рабочий процесс",
+      "symbol": "Git",
+      "color": "orange",
+      "description": "Объекты, index и HEAD, слияние, rebase, восстановление истории и диагностика изменений.",
+      "questions": [
+        {
+          "id": "open-git-workflow-unit-01-1",
+          "text": "Чем ветка Git отличается от коммита? Обоснуйте ответ.",
+          "block": "Объекты, index, HEAD и ветки",
+          "source": "20_Git.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-git-workflow-unit-02-1",
+          "text": "Почему после rebase изменяются идентификаторы переносимых коммитов? Обоснуйте ответ.",
+          "block": "Merge и перестроение истории",
+          "source": "20_Git.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-git-workflow-unit-02-2",
+          "text": "Когда возможен fast-forward merge? Обоснуйте ответ.",
+          "block": "Merge и перестроение истории",
+          "source": "20_Git.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-git-workflow-unit-03-1",
+          "text": "Что обычно меняет git fetch origin без последующего merge или rebase? Обоснуйте ответ.",
+          "block": "Удалённые ссылки и отмена изменений",
+          "source": "20_Git.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-git-workflow-unit-03-2",
+          "text": "Как отменить эффект опубликованного коммита без переписывания общей истории? Обоснуйте ответ.",
+          "block": "Удалённые ссылки и отмена изменений",
+          "source": "20_Git.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-git-workflow-unit-04-1",
+          "text": "После ошибочного reset найден нужный SHA в reflog. Как сначала сохранить возможность вернуться к нему? Обоснуйте ответ.",
+          "block": "Восстановление ссылок и секреты",
+          "source": "20_Git.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-git-workflow-unit-04-2",
+          "text": "API-ключ удалили новым коммитом и добавили файл в .gitignore. Что ещё требуется при подтверждённой утечке? Обоснуйте ответ.",
+          "block": "Восстановление ссылок и секреты",
+          "source": "20_Git.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-git-workflow-unit-05-1",
+          "text": "Что нужно для надёжного применения git bisect? Обоснуйте ответ.",
+          "block": "История как инструмент расследования и review",
+          "source": "20_Git.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-git-workflow-unit-05-2",
+          "text": "Что полезнее для code review сложного изменения? Обоснуйте ответ.",
+          "block": "История как инструмент расследования и review",
+          "source": "20_Git.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-git-workflow-unit-06-1",
+          "text": "Merge прошёл без конфликтов, но клиент и сервер используют разные имена поля. Почему это возможно? Обоснуйте ответ.",
+          "block": "Семантические конфликты и безопасная интеграция",
+          "source": "20_Git.pdf, стр. 8–9"
+        },
+        {
+          "id": "open-git-workflow-unit-06-2",
+          "text": "Локальный hook проверяет секреты перед коммитом. Почему нужны защищённые серверные проверки? Обоснуйте ответ.",
+          "block": "Семантические конфликты и безопасная интеграция",
+          "source": "20_Git.pdf, стр. 8–9"
+        }
+      ]
+    },
+    {
+      "id": "linux-backend",
+      "number": 22,
+      "title": "Linux для backend-разработчика",
+      "symbol": "sh",
+      "color": "teal",
+      "description": "Файлы и права, процессы, systemd, сеть, ресурсы и последовательная диагностика сервиса.",
+      "questions": [
+        {
+          "id": "open-linux-backend-unit-01-1",
+          "text": "Процесс продолжает писать в удалённый открытый файл, а место не освобождается. Что объясняет ситуацию? Обоснуйте ответ.",
+          "block": "Файлы, inode и права доступа",
+          "source": "21_Linux_dlya_Backend.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-linux-backend-unit-02-1",
+          "text": "Почему SIGTERM подходит для корректного завершения, а SIGKILL не заменяет его? Обоснуйте ответ.",
+          "block": "Процессы, сигналы и дескрипторы",
+          "source": "21_Linux_dlya_Backend.pdf, стр. 4–6"
+        },
+        {
+          "id": "open-linux-backend-unit-02-2",
+          "text": "Сервис получает ошибку too many open files. Что исследовать? Обоснуйте ответ.",
+          "block": "Процессы, сигналы и дескрипторы",
+          "source": "21_Linux_dlya_Backend.pdf, стр. 4–6"
+        },
+        {
+          "id": "open-linux-backend-unit-03-1",
+          "text": "systemd показывает active. Доказывает ли это готовность API обслуживать запросы? Обоснуйте ответ.",
+          "block": "systemd и послойная проверка сети",
+          "source": "21_Linux_dlya_Backend.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-linux-backend-unit-03-2",
+          "text": "Как последовательнее расследовать недоступность API? Обоснуйте ответ.",
+          "block": "systemd и послойная проверка сети",
+          "source": "21_Linux_dlya_Backend.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-linux-backend-unit-04-1",
+          "text": "После ограничения памяти контейнера процесс завершается при свободной памяти хоста. Что проверить? Обоснуйте ответ.",
+          "block": "CPU, память, OOM и ввод-вывод",
+          "source": "21_Linux_dlya_Backend.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-linux-backend-unit-04-2",
+          "text": "Свободное место есть, но файловые операции сильно замедлились. Что ещё важно измерить? Обоснуйте ответ.",
+          "block": "CPU, память, OOM и ввод-вывод",
+          "source": "21_Linux_dlya_Backend.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-linux-backend-unit-05-1",
+          "text": "Сервис активен, CPU невысокий, запросы висят. Какой следующий шаг обоснован? Обоснуйте ответ.",
+          "block": "Shell и расследование зависших запросов",
+          "source": "21_Linux_dlya_Backend.pdf, стр. 8–10"
+        },
+        {
+          "id": "open-linux-backend-unit-05-2",
+          "text": "Почему опасно разбирать имена файлов простым разделением вывода ls по пробелам? Обоснуйте ответ.",
+          "block": "Shell и расследование зависших запросов",
+          "source": "21_Linux_dlya_Backend.pdf, стр. 8–10"
+        },
+        {
+          "id": "open-linux-backend-unit-06-1",
+          "text": "Почему backend-сервису не следует выдавать root ради удобства запуска? Обоснуйте ответ.",
+          "block": "Минимальные права, cgroups и namespaces",
+          "source": "21_Linux_dlya_Backend.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-linux-backend-unit-06-2",
+          "text": "Почему процесс в контейнере может видеть иной набор процессов и лимитов, чем хост? Обоснуйте ответ.",
+          "block": "Минимальные права, cgroups и namespaces",
+          "source": "21_Linux_dlya_Backend.pdf, стр. 9–10"
+        }
+      ]
+    },
+    {
+      "id": "docker-compose",
+      "number": 23,
+      "title": "Docker и Compose",
+      "symbol": "Dkr",
+      "color": "blue",
+      "description": "Образы и слои, сборка, сети, хранение данных, Compose и диагностика контейнеров.",
+      "questions": [
+        {
+          "id": "open-docker-compose-unit-01-1",
+          "text": "Что отличает Linux-контейнер от виртуальной машины в обычной модели? Обоснуйте ответ.",
+          "block": "Контейнер, образ и изменяемый слой",
+          "source": "22_Docker_i_Compose.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-docker-compose-unit-01-2",
+          "text": "Файл записан только в writable layer контейнера. Что произойдёт при его удалении и создании нового из образа? Обоснуйте ответ.",
+          "block": "Контейнер, образ и изменяемый слой",
+          "source": "22_Docker_i_Compose.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-docker-compose-unit-02-1",
+          "text": "Почему файлы зависимостей часто копируют и восстанавливают до остального исходного кода? Обоснуйте ответ.",
+          "block": "Dockerfile, кеш и multi-stage build",
+          "source": "22_Docker_i_Compose.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-docker-compose-unit-02-2",
+          "text": "Зачем отделять build stage от runtime stage? Обоснуйте ответ.",
+          "block": "Dockerfile, кеш и multi-stage build",
+          "source": "22_Docker_i_Compose.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-docker-compose-unit-03-1",
+          "text": "Почему удалить секрет в следующем RUN недостаточно? Обоснуйте ответ.",
+          "block": "Секреты сборки, PID 1 и завершение",
+          "source": "22_Docker_i_Compose.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-docker-compose-unit-03-2",
+          "text": "Что важно проверить у процесса PID 1 при остановке контейнера? Обоснуйте ответ.",
+          "block": "Секреты сборки, PID 1 и завершение",
+          "source": "22_Docker_i_Compose.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-docker-compose-unit-04-1",
+          "text": "Что означает localhost внутри api-контейнера? Обоснуйте ответ.",
+          "block": "Сеть контейнеров и публикация портов",
+          "source": "22_Docker_i_Compose.pdf, стр. 6"
+        },
+        {
+          "id": "open-docker-compose-unit-05-1",
+          "text": "Какое решение сохраняет файлы БД при пересоздании контейнера при корректном подключении? Обоснуйте ответ.",
+          "block": "Данные, volumes и модель Compose",
+          "source": "22_Docker_i_Compose.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-docker-compose-unit-05-2",
+          "text": "Приложение стартовало раньше готовности БД. Что нужно в дополнение к порядку запуска? Обоснуйте ответ.",
+          "block": "Данные, volumes и модель Compose",
+          "source": "22_Docker_i_Compose.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-docker-compose-unit-06-1",
+          "text": "Почему restart policy не заменяет readiness? Обоснуйте ответ.",
+          "block": "Healthcheck, ресурсы и минимальные права",
+          "source": "22_Docker_i_Compose.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-docker-compose-unit-06-2",
+          "text": "Какая мера уменьшает последствия компрометации контейнера? Обоснуйте ответ.",
+          "block": "Healthcheck, ресурсы и минимальные права",
+          "source": "22_Docker_i_Compose.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-docker-compose-unit-07-1",
+          "text": "Почему digest полезен для воспроизводимого развёртывания? Обоснуйте ответ.",
+          "block": "Идентичность образов и диагностика запуска",
+          "source": "22_Docker_i_Compose.pdf, стр. 8"
+        },
+        {
+          "id": "open-docker-compose-unit-07-2",
+          "text": "Контейнер немедленно завершается после запуска. С чего начать? Обоснуйте ответ.",
+          "block": "Идентичность образов и диагностика запуска",
+          "source": "22_Docker_i_Compose.pdf, стр. 8"
+        },
+        {
+          "id": "open-docker-compose-unit-08-1",
+          "text": "Внутри API connection refused к localhost:5432, БД в отдельном контейнере. Что проверить прежде всего? Обоснуйте ответ.",
+          "block": "Прикладная диагностика и совместимость",
+          "source": "22_Docker_i_Compose.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-docker-compose-unit-08-2",
+          "text": "Образ работает на ноутбуке, но на сервере другой CPU-архитектуры не запускается. Что учитывать? Обоснуйте ответ.",
+          "block": "Прикладная диагностика и совместимость",
+          "source": "22_Docker_i_Compose.pdf, стр. 9–10"
+        }
+      ]
+    },
+    {
+      "id": "ci-cd-delivery",
+      "number": 24,
+      "title": "CI/CD и безопасная доставка",
+      "symbol": "CI",
+      "color": "green",
+      "description": "Pipeline, артефакты, секреты, окружения, rollout, миграции и восстановление развёртывания.",
+      "questions": [
+        {
+          "id": "open-ci-cd-delivery-unit-01-1",
+          "text": "Чем Continuous Delivery отличается от обязательного автоматического deployment в production? Обоснуйте ответ.",
+          "block": "CI, доставка и граф pipeline",
+          "source": "23_CI_CD.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-ci-cd-delivery-unit-02-1",
+          "text": "Почему workflow из недоверенного pull request не должен безусловно получать production-секреты? Обоснуйте ответ.",
+          "block": "Runner, workflow и доверие к коду",
+          "source": "23_CI_CD.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-ci-cd-delivery-unit-02-2",
+          "text": "Как полезнее разделить проверки по скорости и стоимости? Обоснуйте ответ.",
+          "block": "Runner, workflow и доверие к коду",
+          "source": "23_CI_CD.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-ci-cd-delivery-unit-03-1",
+          "text": "Что следует продвигать из staging в production для воспроизводимого выпуска? Обоснуйте ответ.",
+          "block": "Артефакты, кеш и происхождение сборки",
+          "source": "23_CI_CD.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-ci-cd-delivery-unit-03-2",
+          "text": "Чем кеш зависимостей отличается от release-артефакта? Обоснуйте ответ.",
+          "block": "Артефакты, кеш и происхождение сборки",
+          "source": "23_CI_CD.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-ci-cd-delivery-unit-04-1",
+          "text": "Что даёт федерация OIDC при корректно ограниченной политике доверия? Обоснуйте ответ.",
+          "block": "Секреты, OIDC и окружения",
+          "source": "23_CI_CD.pdf, стр. 6"
+        },
+        {
+          "id": "open-ci-cd-delivery-unit-04-2",
+          "text": "Почему staging и production могут вести себя по-разному при одном артефакте? Обоснуйте ответ.",
+          "block": "Секреты, OIDC и окружения",
+          "source": "23_CI_CD.pdf, стр. 6"
+        },
+        {
+          "id": "open-ci-cd-delivery-unit-05-1",
+          "text": "Новая версия удаляет столбец, который читает старая версия во время rolling update. Как снизить риск? Обоснуйте ответ.",
+          "block": "Rollout и expand-contract",
+          "source": "23_CI_CD.pdf, стр. 7"
+        },
+        {
+          "id": "open-ci-cd-delivery-unit-05-2",
+          "text": "Что нужно для осмысленной canary-проверки? Обоснуйте ответ.",
+          "block": "Rollout и expand-contract",
+          "source": "23_CI_CD.pdf, стр. 7"
+        },
+        {
+          "id": "open-ci-cd-delivery-unit-06-1",
+          "text": "Какой release gate лучше связан с безопасностью выпуска? Обоснуйте ответ.",
+          "block": "Release gates и progressive delivery",
+          "source": "23_CI_CD.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-ci-cd-delivery-unit-06-2",
+          "text": "Что делать, если canary сохраняет 200 OK, но падает доля успешных оплат? Обоснуйте ответ.",
+          "block": "Release gates и progressive delivery",
+          "source": "23_CI_CD.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-ci-cd-delivery-unit-07-1",
+          "text": "Два pipeline одновременно меняют одно production-окружение. Какой риск возникает? Обоснуйте ответ.",
+          "block": "Конкурентность развёртываний",
+          "source": "23_CI_CD.pdf, стр. 8"
+        },
+        {
+          "id": "open-ci-cd-delivery-unit-07-2",
+          "text": "Когда опасно безусловно отменять job предыдущего deployment? Обоснуйте ответ.",
+          "block": "Конкурентность развёртываний",
+          "source": "23_CI_CD.pdf, стр. 8"
+        },
+        {
+          "id": "open-ci-cd-delivery-unit-08-1",
+          "text": "Сборка зелёная, production не стартует. Что исследовать вместе с артефактом? Обоснуйте ответ.",
+          "block": "Диагностика релиза и идемпотентное восстановление",
+          "source": "23_CI_CD.pdf, стр. 8–10"
+        },
+        {
+          "id": "open-ci-cd-delivery-unit-08-2",
+          "text": "Повторный deployment после обрыва pipeline должен прежде всего учитывать что? Обоснуйте ответ.",
+          "block": "Диагностика релиза и идемпотентное восстановление",
+          "source": "23_CI_CD.pdf, стр. 8–10"
+        }
+      ]
+    },
+    {
+      "id": "observability",
+      "number": 25,
+      "title": "Наблюдаемость: логи, метрики и трассы",
+      "symbol": "OTel",
+      "color": "teal",
+      "description": "Structured logging, гистограммы, OpenTelemetry, SLO, алерты и диагностика инцидентов.",
+      "questions": [
+        {
+          "id": "open-observability-unit-01-1",
+          "text": "Почему сообщение «ошибка запроса» без контекста плохо помогает расследованию? Обоснуйте ответ.",
+          "block": "Сигналы, структурированные логи и корреляция",
+          "source": "24_Observability.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-observability-unit-01-2",
+          "text": "Как сочетаются metrics и traces при росте задержки? Обоснуйте ответ.",
+          "block": "Сигналы, структурированные логи и корреляция",
+          "source": "24_Observability.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-observability-unit-02-1",
+          "text": "Какой тип метрики подходит для текущего числа ожидающих заданий? Обоснуйте ответ.",
+          "block": "Counter, gauge и гистограммы",
+          "source": "24_Observability.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-observability-unit-02-2",
+          "text": "Как корректнее получить общий p95 нескольких экземпляров с совместимыми histogram-бакетами? Обоснуйте ответ.",
+          "block": "Counter, gauge и гистограммы",
+          "source": "24_Observability.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-observability-unit-03-1",
+          "text": "Какая метка ограничивает число временных рядов HTTP-метрики? Обоснуйте ответ.",
+          "block": "Кардинальность и стоимость меток",
+          "source": "24_Observability.pdf, стр. 5"
+        },
+        {
+          "id": "open-observability-unit-03-2",
+          "text": "Что может произойти после добавления request_id в каждый metric label? Обоснуйте ответ.",
+          "block": "Кардинальность и стоимость меток",
+          "source": "24_Observability.pdf, стр. 5"
+        },
+        {
+          "id": "open-observability-unit-04-1",
+          "text": "Что нужно для связи HTTP-вызовов двух сервисов в одну трассу? Обоснуйте ответ.",
+          "block": "Trace context, sampling и OpenTelemetry",
+          "source": "24_Observability.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-observability-unit-04-2",
+          "text": "Чем tail sampling отличается от head sampling? Обоснуйте ответ.",
+          "block": "Trace context, sampling и OpenTelemetry",
+          "source": "24_Observability.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-observability-unit-05-1",
+          "text": "Почему SLI доступности процесса недостаточен для сервиса заказов? Обоснуйте ответ.",
+          "block": "RED, USE и пользовательский SLO",
+          "source": "24_Observability.pdf, стр. 7"
+        },
+        {
+          "id": "open-observability-unit-06-1",
+          "text": "Какой alert полезнее для срочного реагирования при согласованном SLO? Обоснуйте ответ.",
+          "block": "Алерты и диагностические панели",
+          "source": "24_Observability.pdf, стр. 8"
+        },
+        {
+          "id": "open-observability-unit-06-2",
+          "text": "Что делает dashboard пригодным для диагностики? Обоснуйте ответ.",
+          "block": "Алерты и диагностические панели",
+          "source": "24_Observability.pdf, стр. 8"
+        },
+        {
+          "id": "open-observability-unit-07-1",
+          "text": "После релиза p99 вырос при прежнем RPS. Что проверить до безусловного масштабирования? Обоснуйте ответ.",
+          "block": "Расследование роста p99",
+          "source": "24_Observability.pdf, стр. 8"
+        },
+        {
+          "id": "open-observability-unit-07-2",
+          "text": "Медленный span SQL включает ожидание пула. Почему важно различать эти интервалы? Обоснуйте ответ.",
+          "block": "Расследование роста p99",
+          "source": "24_Observability.pdf, стр. 8"
+        },
+        {
+          "id": "open-observability-unit-08-1",
+          "text": "Какой постмортем полезнее для снижения повторных отказов? Обоснуйте ответ.",
+          "block": "Инциденты, runbook и стоимость телеметрии",
+          "source": "24_Observability.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-observability-unit-08-2",
+          "text": "Что должно быть в рабочем runbook кроме команды перезапуска? Обоснуйте ответ.",
+          "block": "Инциденты, runbook и стоимость телеметрии",
+          "source": "24_Observability.pdf, стр. 9–10"
+        }
+      ]
+    },
+    {
+      "id": "architecture-solid-patterns",
+      "number": 26,
+      "title": "Архитектура, SOLID и паттерны",
+      "symbol": "ARC",
+      "color": "violet",
+      "description": "Границы модулей, контракты, композиция, DDD, порты и адаптеры, ADR и архитектурные компромиссы.",
+      "questions": [
+        {
+          "id": "open-architecture-solid-patterns-unit-01-1",
+          "text": "Почему одинаковая структура папок не доказывает одинаковую архитектуру двух сервисов? Обоснуйте ответ.",
+          "block": "Архитектурные решения и требования",
+          "source": "25_Arkhitektura_SOLID_Patterns.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-architecture-solid-patterns-unit-01-2",
+          "text": "Что нужно уточнить перед выбором архитектуры хранения? Обоснуйте ответ.",
+          "block": "Архитектурные решения и требования",
+          "source": "25_Arkhitektura_SOLID_Patterns.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-architecture-solid-patterns-unit-02-1",
+          "text": "Что точнее выражает SRP? Обоснуйте ответ.",
+          "block": "Связность, сцепление и SOLID",
+          "source": "25_Arkhitektura_SOLID_Patterns.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-architecture-solid-patterns-unit-02-2",
+          "text": "Сервисы постоянно требуют синхронных изменений друг друга из-за общих деталей. Что это может указывать? Обоснуйте ответ.",
+          "block": "Связность, сцепление и SOLID",
+          "source": "25_Arkhitektura_SOLID_Patterns.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-architecture-solid-patterns-unit-03-1",
+          "text": "Подтип отвергает входы, разрешённые базовым контрактом. Какой риск возникает? Обоснуйте ответ.",
+          "block": "LSP, наследование и композиция",
+          "source": "25_Arkhitektura_SOLID_Patterns.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-architecture-solid-patterns-unit-03-2",
+          "text": "Как выразить взаимозаменяемые способы расчёта доставки без разрастания иерархии сущностей? Обоснуйте ответ.",
+          "block": "LSP, наследование и композиция",
+          "source": "25_Arkhitektura_SOLID_Patterns.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-architecture-solid-patterns-unit-04-1",
+          "text": "Внешний провайдер имеет неудобный формат, а домен должен видеть стабильный порт. Какой паттерн соответствует границе? Обоснуйте ответ.",
+          "block": "Паттерны как ответы на конкретную проблему",
+          "source": "25_Arkhitektura_SOLID_Patterns.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-architecture-solid-patterns-unit-04-2",
+          "text": "Нужно добавить измерение времени к существующему компоненту, сохранив его контракт. Какой подход подходит? Обоснуйте ответ.",
+          "block": "Паттерны как ответы на конкретную проблему",
+          "source": "25_Arkhitektura_SOLID_Patterns.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-architecture-solid-patterns-unit-05-1",
+          "text": "В чём смысл направления зависимостей в Ports and Adapters? Обоснуйте ответ.",
+          "block": "Порты, адаптеры и модульный монолит",
+          "source": "25_Arkhitektura_SOLID_Patterns.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-architecture-solid-patterns-unit-05-2",
+          "text": "Что отличает модульный монолит от просто большого приложения без границ? Обоснуйте ответ.",
+          "block": "Порты, адаптеры и модульный монолит",
+          "source": "25_Arkhitektura_SOLID_Patterns.pdf, стр. 7–8"
+        },
+        {
+          "id": "open-architecture-solid-patterns-unit-06-1",
+          "text": "Что определяет entity по сравнению с value object? Обоснуйте ответ.",
+          "block": "DDD, агрегаты и публичные DTO",
+          "source": "25_Arkhitektura_SOLID_Patterns.pdf, стр. 8–9"
+        },
+        {
+          "id": "open-architecture-solid-patterns-unit-07-1",
+          "text": "Почему явная зависимость от часов повышает тестируемость бизнес-правил? Обоснуйте ответ.",
+          "block": "Тестируемость и безопасное изменение",
+          "source": "25_Arkhitektura_SOLID_Patterns.pdf, стр. 9"
+        },
+        {
+          "id": "open-architecture-solid-patterns-unit-07-2",
+          "text": "Что должно сохраняться при рефакторинге, если поведение менять не планируется? Обоснуйте ответ.",
+          "block": "Тестируемость и безопасное изменение",
+          "source": "25_Arkhitektura_SOLID_Patterns.pdf, стр. 9"
+        },
+        {
+          "id": "open-architecture-solid-patterns-unit-08-1",
+          "text": "Что важно сохранить в ADR кроме выбранного варианта? Обоснуйте ответ.",
+          "block": "ADR и уведомление после оплаты",
+          "source": "25_Arkhitektura_SOLID_Patterns.pdf, стр. 10"
+        },
+        {
+          "id": "open-architecture-solid-patterns-unit-08-2",
+          "text": "Платёж сохранён, но отправка письма упала. Какой подход отделяет устойчивое намерение уведомления от внешнего вызова? Обоснуйте ответ.",
+          "block": "ADR и уведомление после оплаты",
+          "source": "25_Arkhitektura_SOLID_Patterns.pdf, стр. 10"
+        },
+        {
+          "id": "open-architecture-solid-patterns-unit-09-1",
+          "text": "Небольшой CRUD-сервис получил множество слоёв и формальных интерфейсов без новых границ. Как оценить решение? Обоснуйте ответ.",
+          "block": "Ситуационный выбор и архитектурная проверка",
+          "source": "25_Arkhitektura_SOLID_Patterns.pdf, стр. 11"
+        },
+        {
+          "id": "open-architecture-solid-patterns-unit-09-2",
+          "text": "Когда общий компонент может стать вредной точкой сцепления? Обоснуйте ответ.",
+          "block": "Ситуационный выбор и архитектурная проверка",
+          "source": "25_Arkhitektura_SOLID_Patterns.pdf, стр. 11"
+        }
+      ]
+    },
+    {
+      "id": "distributed-systems",
+      "number": 27,
+      "title": "Распределённые системы и микросервисы",
+      "symbol": "DS",
+      "color": "blue",
+      "description": "Частичные отказы, границы сервисов, повторы, согласованность, Outbox, Saga и эволюция контрактов.",
+      "questions": [
+        {
+          "id": "open-distributed-systems-unit-01-1",
+          "text": "Клиент получил timeout после команды списания. Какой вывод корректен? Обоснуйте ответ.",
+          "block": "Модель отказов и границы сервисов",
+          "source": "26_Raspredelennye_Sistemy_Mikroservisy.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-distributed-systems-unit-01-2",
+          "text": "Почему выделение DatabaseService и ValidationService не гарантирует хорошие границы микросервисов? Обоснуйте ответ.",
+          "block": "Модель отказов и границы сервисов",
+          "source": "26_Raspredelennye_Sistemy_Mikroservisy.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-distributed-systems-unit-02-1",
+          "text": "У запроса общий deadline 800 мс, первый вызов занял 600 мс. Как планировать следующий? Обоснуйте ответ.",
+          "block": "Взаимодействие, дедлайны и повторные попытки",
+          "source": "26_Raspredelennye_Sistemy_Mikroservisy.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-distributed-systems-unit-02-2",
+          "text": "Как снизить риск retry storm при временной недоступности? Обоснуйте ответ.",
+          "block": "Взаимодействие, дедлайны и повторные попытки",
+          "source": "26_Raspredelennye_Sistemy_Mikroservisy.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-distributed-systems-unit-03-1",
+          "text": "Один idempotency key пришёл с другой суммой платежа. Как поступить? Обоснуйте ответ.",
+          "block": "Идемпотентность и защита зависимостей",
+          "source": "26_Raspredelennye_Sistemy_Mikroservisy.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-distributed-systems-unit-04-1",
+          "text": "Какое обещание ближе к read-your-writes? Обоснуйте ответ.",
+          "block": "Модели согласованности и CAP",
+          "source": "26_Raspredelennye_Sistemy_Mikroservisy.pdf, стр. 7"
+        },
+        {
+          "id": "open-distributed-systems-unit-04-2",
+          "text": "К какой ситуации непосредственно относится ограничение CAP? Обоснуйте ответ.",
+          "block": "Модели согласованности и CAP",
+          "source": "26_Raspredelennye_Sistemy_Mikroservisy.pdf, стр. 7"
+        },
+        {
+          "id": "open-distributed-systems-unit-05-1",
+          "text": "Два события имеют разные wall-clock timestamp на разных машинах. Доказывает ли это причинный порядок? Обоснуйте ответ.",
+          "block": "Репликация, порядок и доставка",
+          "source": "26_Raspredelennye_Sistemy_Mikroservisy.pdf, стр. 8"
+        },
+        {
+          "id": "open-distributed-systems-unit-05-2",
+          "text": "Что требует от обработчика доставка at-least-once? Обоснуйте ответ.",
+          "block": "Репликация, порядок и доставка",
+          "source": "26_Raspredelennye_Sistemy_Mikroservisy.pdf, стр. 8"
+        },
+        {
+          "id": "open-distributed-systems-unit-06-1",
+          "text": "Worker опубликовал outbox-событие, но упал до отметки published. Что должен учитывать consumer? Обоснуйте ответ.",
+          "block": "Outbox, Inbox и Saga",
+          "source": "26_Raspredelennye_Sistemy_Mikroservisy.pdf, стр. 9"
+        },
+        {
+          "id": "open-distributed-systems-unit-06-2",
+          "text": "Чем компенсация Saga отличается от отката одной локальной транзакции? Обоснуйте ответ.",
+          "block": "Outbox, Inbox и Saga",
+          "source": "26_Raspredelennye_Sistemy_Mikroservisy.pdf, стр. 9"
+        },
+        {
+          "id": "open-distributed-systems-unit-07-1",
+          "text": "Требует ли CQRS обязательного хранения всех событий как источника истины? Обоснуйте ответ.",
+          "block": "CQRS, Event Sourcing и эволюция",
+          "source": "26_Raspredelennye_Sistemy_Mikroservisy.pdf, стр. 10"
+        },
+        {
+          "id": "open-distributed-systems-unit-07-2",
+          "text": "Почему изменение события нужно проверять с несколькими версиями consumer? Обоснуйте ответ.",
+          "block": "CQRS, Event Sourcing и эволюция",
+          "source": "26_Raspredelennye_Sistemy_Mikroservisy.pdf, стр. 10"
+        },
+        {
+          "id": "open-distributed-systems-unit-08-1",
+          "text": "mTLS подтвердил сервис-отправитель. Что ещё нужно для изменения защищённого ресурса? Обоснуйте ответ.",
+          "block": "Доверие между сервисами и проверка отказов",
+          "source": "26_Raspredelennye_Sistemy_Mikroservisy.pdf, стр. 10–11"
+        },
+        {
+          "id": "open-distributed-systems-unit-08-2",
+          "text": "Какой тест исследует неизвестный исход удалённой операции? Обоснуйте ответ.",
+          "block": "Доверие между сервисами и проверка отказов",
+          "source": "26_Raspredelennye_Sistemy_Mikroservisy.pdf, стр. 10–11"
+        },
+        {
+          "id": "open-distributed-systems-unit-09-1",
+          "text": "Поисковая проекция ещё показывает старую цену. Где следует подтвердить цену окончательной оплаты? Обоснуйте ответ.",
+          "block": "Двойное списание и устаревшая проекция",
+          "source": "26_Raspredelennye_Sistemy_Mikroservisy.pdf, стр. 11–12"
+        },
+        {
+          "id": "open-distributed-systems-unit-09-2",
+          "text": "Как дедупликация должна вести себя при конкурентных запросах одного платежа на разные реплики? Обоснуйте ответ.",
+          "block": "Двойное списание и устаревшая проекция",
+          "source": "26_Raspredelennye_Sistemy_Mikroservisy.pdf, стр. 11–12"
+        },
+        {
+          "id": "open-distributed-systems-unit-10-1",
+          "text": "Какой вопрос важнее перед вынесением модуля в микросервис? Обоснуйте ответ.",
+          "block": "Проверка выбранных гарантий",
+          "source": "26_Raspredelennye_Sistemy_Mikroservisy.pdf, стр. 12"
+        },
+        {
+          "id": "open-distributed-systems-unit-10-2",
+          "text": "Что включить в описание eventual consistency кроме названия модели? Обоснуйте ответ.",
+          "block": "Проверка выбранных гарантий",
+          "source": "26_Raspredelennye_Sistemy_Mikroservisy.pdf, стр. 12"
+        }
+      ]
+    },
+    {
+      "id": "system-design-reliability",
+      "number": 28,
+      "title": "System Design и надёжность",
+      "symbol": "SD",
+      "color": "green",
+      "description": "Оценка нагрузки, масштабирование, данные, очереди, RPO/RTO и разбор архитектуры целиком.",
+      "questions": [
+        {
+          "id": "open-system-design-reliability-unit-01-1",
+          "text": "Почему начинать дизайн с выбора Kubernetes и Redis недостаточно? Обоснуйте ответ.",
+          "block": "Уточнение задачи и оценка масштаба",
+          "source": "27_System_Design_Reliability.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-system-design-reliability-unit-01-2",
+          "text": "Среднесуточный RPS равен 500. Что нужно для оценки ёмкости помимо среднего? Обоснуйте ответ.",
+          "block": "Уточнение задачи и оценка масштаба",
+          "source": "27_System_Design_Reliability.pdf, стр. 3–4"
+        },
+        {
+          "id": "open-system-design-reliability-unit-02-1",
+          "text": "Две обязательные независимые операции выполняются параллельно. Как оценивать их вклад в длительность без очередей? Обоснуйте ответ.",
+          "block": "Очереди, закон Литтла и критический путь",
+          "source": "27_System_Design_Reliability.pdf, стр. 4–5"
+        },
+        {
+          "id": "open-system-design-reliability-unit-03-1",
+          "text": "API масштабировали с 5 до 20 реплик, а узкое место — диск БД. Что вероятно без изменения работы с данными? Обоснуйте ответ.",
+          "block": "Горизонтальное масштабирование и БД",
+          "source": "27_System_Design_Reliability.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-system-design-reliability-unit-03-2",
+          "text": "Почему read replica не всегда подходит для чтения сразу после подтверждённой записи? Обоснуйте ответ.",
+          "block": "Горизонтальное масштабирование и БД",
+          "source": "27_System_Design_Reliability.pdf, стр. 5–6"
+        },
+        {
+          "id": "open-system-design-reliability-unit-04-1",
+          "text": "Ключ шардинга распределил большую часть нагрузки на один узел. Что нужно пересмотреть? Обоснуйте ответ.",
+          "block": "Шардинг, горячие ключи и кеш",
+          "source": "27_System_Design_Reliability.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-system-design-reliability-unit-04-2",
+          "text": "Что необходимо определить перед добавлением cache-aside? Обоснуйте ответ.",
+          "block": "Шардинг, горячие ключи и кеш",
+          "source": "27_System_Design_Reliability.pdf, стр. 6–7"
+        },
+        {
+          "id": "open-system-design-reliability-unit-05-1",
+          "text": "Как разгрузить API при загрузке больших файлов с сохранением контроля доступа? Обоснуйте ответ.",
+          "block": "Крупные файлы и фоновая работа",
+          "source": "27_System_Design_Reliability.pdf, стр. 7"
+        },
+        {
+          "id": "open-system-design-reliability-unit-05-2",
+          "text": "Почему очередь не делает обработку безгранично масштабируемой? Обоснуйте ответ.",
+          "block": "Крупные файлы и фоновая работа",
+          "source": "27_System_Design_Reliability.pdf, стр. 7"
+        },
+        {
+          "id": "open-system-design-reliability-unit-06-1",
+          "text": "Две обязательные независимые зависимости имеют доступность по 99,9%. Что верно для последовательного пути? Обоснуйте ответ.",
+          "block": "Композиция доступности и error budget",
+          "source": "27_System_Design_Reliability.pdf, стр. 8"
+        },
+        {
+          "id": "open-system-design-reliability-unit-06-2",
+          "text": "Можно ли перевести бюджет неуспешных запросов в минуты простоя без дополнительных условий? Обоснуйте ответ.",
+          "block": "Композиция доступности и error budget",
+          "source": "27_System_Design_Reliability.pdf, стр. 8"
+        },
+        {
+          "id": "open-system-design-reliability-unit-07-1",
+          "text": "Почему репликация не заменяет резервное копирование? Обоснуйте ответ.",
+          "block": "Multi-AZ, резервирование и восстановление",
+          "source": "27_System_Design_Reliability.pdf, стр. 8–9"
+        },
+        {
+          "id": "open-system-design-reliability-unit-07-2",
+          "text": "Что точнее отличает RPO от RTO? Обоснуйте ответ.",
+          "block": "Multi-AZ, резервирование и восстановление",
+          "source": "27_System_Design_Reliability.pdf, стр. 8–9"
+        },
+        {
+          "id": "open-system-design-reliability-unit-08-1",
+          "text": "Почему общего лимита на весь сервис может быть недостаточно? Обоснуйте ответ.",
+          "block": "Лимиты, справедливость и безопасность",
+          "source": "27_System_Design_Reliability.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-system-design-reliability-unit-08-2",
+          "text": "Как учитывать безопасность загрузки документов в системном дизайне? Обоснуйте ответ.",
+          "block": "Лимиты, справедливость и безопасность",
+          "source": "27_System_Design_Reliability.pdf, стр. 9–10"
+        },
+        {
+          "id": "open-system-design-reliability-unit-09-1",
+          "text": "После канареечного выпуска выросли ошибки только новой версии. Какой механизм нужен для уменьшения воздействия? Обоснуйте ответ.",
+          "block": "Наблюдаемость и безопасный rollout",
+          "source": "27_System_Design_Reliability.pdf, стр. 10"
+        },
+        {
+          "id": "open-system-design-reliability-unit-09-2",
+          "text": "Как связать жалобу «всё тормозит» с технической причиной? Обоснуйте ответ.",
+          "block": "Наблюдаемость и безопасный rollout",
+          "source": "27_System_Design_Reliability.pdf, стр. 10"
+        },
+        {
+          "id": "open-system-design-reliability-unit-10-1",
+          "text": "Статистика переходов URL может отставать, а redirect должен быть быстрым. Как разделить требования? Обоснуйте ответ.",
+          "block": "Дизайн сокращателя ссылок и загрузки файлов",
+          "source": "27_System_Design_Reliability.pdf, стр. 11"
+        },
+        {
+          "id": "open-system-design-reliability-unit-10-2",
+          "text": "Какая модель лучше поддерживает прерванную загрузку файла 5 ГБ? Обоснуйте ответ.",
+          "block": "Дизайн сокращателя ссылок и загрузки файлов",
+          "source": "27_System_Design_Reliability.pdf, стр. 11"
+        },
+        {
+          "id": "open-system-design-reliability-unit-11-1",
+          "text": "Какое утверждение о надёжности требует дополнительных доказательств? Обоснуйте ответ.",
+          "block": "Архитектурная проверка целого решения",
+          "source": "27_System_Design_Reliability.pdf, стр. 12"
+        },
+        {
+          "id": "open-system-design-reliability-unit-11-2",
+          "text": "Что должно завершать разбор системного дизайна? Обоснуйте ответ.",
+          "block": "Архитектурная проверка целого решения",
+          "source": "27_System_Design_Reliability.pdf, стр. 12"
+        }
+      ]
     }
-  ]
+  ],
+  "revision": 4
 }

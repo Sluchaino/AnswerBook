@@ -1,0 +1,21 @@
+.coin-wallet,.course-purchase { margin:20px 0 24px; padding:20px; border:1px solid var(--line-dfe5d8); border-radius:20px; background:var(--surface-fff); }
+.coin-wallet-heading { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.coin-wallet-heading h2,.coin-offer h3 { font-size:17px; font-weight:500; margin:0; }
+.coin-wallet-heading p { font-size:11px; color:var(--ink-74856a); margin-top:5px; }
+.coin-wallet-heading > strong { color:var(--ink-607d48); font-size:28px; white-space:nowrap; }
+.coin-wallet details { font-size:12px; line-height:1.8; margin-top:16px; }
+.coin-wallet summary { cursor:pointer; min-height:36px; padding:6px 0; }
+.coin-wallet details p,.course-purchase p { margin:12px 0; }
+.coin-reward-days { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:5px; margin:16px 0; }
+.coin-reward-days > span { padding:8px 2px; border:1px solid var(--line-dfe5d8); border-radius:8px; text-align:center; }
+.coin-reward-days small { display:block; font-size:9px; }
+.coin-reward-days .current { background:var(--surface-edf2e5); border-color:var(--line-66884c); }
+.coin-offer { border-top:1px solid var(--line-dfe5d8); padding-top:16px; margin-top:18px; }
+.coin-offer button,.course-purchase button { padding:12px 16px; min-height:48px; }
+.coin-history ul { list-style:none; padding:0; }
+.coin-history li { display:flex; justify-content:space-between; align-items:center; gap:16px; padding:12px 0; border-bottom:1px solid var(--line-dfe5d8); }
+.coin-history small { display:block; color:var(--ink-74856a); }
+.course-purchase h2 { font-size:22px; }
+.course-purchase { line-height:1.8; }
+.learning-course-card .course-access { font-size:12px; color:var(--ink-607d48); margin-top:12px; }
+@media(max-width:380px) { .coin-reward-days small { font-size:8px; white-space:nowrap; } }

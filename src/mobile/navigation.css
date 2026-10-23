@@ -1,0 +1,8 @@
+.topic-item { display:flex; flex-direction:column; min-width:0; overflow:hidden; border:1px solid var(--line-e1e5dc); border-radius:15px; background:var(--surface-fff); }
+.topic-item.selected { border-color:var(--line-779361); background:var(--surface-f0f4e8); box-shadow:inset 0 0 0 .5px var(--line-779361); }
+.topic-item .topic-card { border:0; border-radius:0; width:100%; flex:1; background:transparent; }
+.topic-item .topic-card.selected { background:transparent; box-shadow:none; }
+.topic-settings-button { display:flex; align-items:center; justify-content:center; gap:8px; min-height:44px; width:100%; border:0; border-top:1px solid var(--line-e1e5dc); background:var(--surface-f8faf5); color:var(--ink-6a805b); padding:10px 14px; font-size:11px; }
+.topic-settings-button:hover { background:var(--surface-edf2e5); }
+.topic-item.selected .topic-settings-button { background:var(--surface-eaf0df); }
+.knowledge-topic-title { font-size:14px; color:var(--ink-6a805b); margin:8px 0 18px; }

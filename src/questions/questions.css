@@ -1,0 +1,44 @@
+.test-settings { margin:0 0 26px; padding:22px; border:1px solid var(--line-dfe5d8); border-radius:14px; background:var(--surface-fff); }
+.custom-topic-fields { border:0; padding:0; margin:0; min-width:0; }
+.custom-topic-fields label { display:block; font-size:13px; margin:18px 0 8px; }
+.custom-topic-fields input,.custom-topic-fields textarea { display:block; width:100%; min-width:0; border:1px solid var(--line-dfe5d8); padding:12px; background:var(--surface-fff); color:var(--ink-304536); font:inherit; font-size:16px; border-radius:12px; margin-top:8px; }
+.custom-topic-fields textarea { resize:vertical; }
+.custom-topic-fields h3 { font-size:16px; margin-top:24px; }
+.custom-question-field { border-bottom:1px solid var(--line-dfe5d8); padding-bottom:12px; }
+.custom-question-field .text-button { min-height:44px; }
+.custom-topic-fields > .secondary { min-height:48px; margin-top:16px; }
+.custom-topic-actions { display:flex; gap:12px; justify-content:flex-end; padding-top:24px; }
+.custom-topic-actions button { min-height:48px; padding:12px 16px; }
+.content-provenance { font-size:11px; color:var(--ink-7b8870); margin:8px 0 12px; }
+.result-close-note { padding:14px 18px; margin:20px 0; border-radius:12px; background:var(--surface-eaf0df); color:var(--ink-647b53); font-size:12px; }
+.test-settings-heading { display:flex; justify-content:space-between; align-items:center; gap:18px; }
+.test-settings h2 { font-size:17px; font-weight:500; }
+.test-settings-heading p { font-size:11px; color:var(--ink-7b886d); margin-top:6px; }
+.include-known { display:flex; align-items:flex-start; gap:12px; margin-top:18px; font-size:13px; cursor:pointer; }
+.include-known small { display:block; margin-top:4px; color:var(--ink-8b957f); font-size:11px; }
+.include-known input, .knowledge-question input { accent-color:var(--accent-607d48); width:21px; height:21px; flex-shrink:0; margin:1px 0 0; cursor:pointer; }
+.knowledge-empty { margin-top:14px; color:var(--ink-7b7555); font-size:12px; }
+.knowledge-error { margin-top:14px; color:var(--ink-a45c42); font-size:12px; }
+.knowledge-error button { margin-left:12px; }
+.knowledge-dialog { width:calc(100% - 32px); max-width:740px; max-height:88dvh; margin:auto; padding:24px; border:1px solid var(--line-dce4d2); border-radius:20px; background:var(--surface-f7f8f4); color:var(--ink-304536); overflow-y:auto; overscroll-behavior:contain; }
+.knowledge-dialog::backdrop { background:var(--surface-21352a77); }
+.knowledge-dialog-heading { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.knowledge-dialog-heading h2 { font-size:23px; font-weight:500; }
+.knowledge-hint { font-size:12px; color:var(--ink-829172); margin:10px 0 16px; }
+.knowledge-search { width:100%; padding:12px; min-height:46px; border:1px solid var(--line-dfe5d8); border-radius:10px; font:inherit; font-size:16px; color:var(--ink-304536); background:var(--surface-fff); }
+.knowledge-search:focus-visible { outline:3px solid var(--line-87aa80); outline-offset:2px; }
+.knowledge-list { margin-top:12px; }
+.knowledge-list h3 { font-weight:500; font-size:16px; padding:16px 0 10px; }
+.knowledge-question { display:flex; align-items:flex-start; gap:12px; padding:14px 0; border-bottom:1px solid var(--line-e1e6da); cursor:pointer; font-size:13px; }
+.knowledge-question span { overflow-wrap:anywhere; }
+.knowledge-question small { display:block; color:var(--ink-8b987e); font-size:10px; margin-top:6px; }
+.knowledge-dialog-footer { position:sticky; bottom:-24px; display:flex; justify-content:space-between; align-items:center; gap:12px; margin:16px -24px -24px; padding:16px 24px; background:var(--surface-f7f8f4); border-top:1px solid var(--line-dfe5d8); font-size:12px; }
+@media(max-width:760px) {
+  .test-settings { padding:18px; margin-bottom:22px; }
+  .test-settings-heading { align-items:stretch; flex-direction:column; gap:12px; }
+  .test-settings-heading .secondary { min-height:46px; }
+  .knowledge-dialog { padding:18px; }
+  .knowledge-dialog-heading h2 { font-size:21px; }
+  .knowledge-dialog-footer { bottom:-18px; margin:16px -18px -18px; padding:14px 18px; }
+  .knowledge-dialog-footer .primary { min-height:48px; }
+}

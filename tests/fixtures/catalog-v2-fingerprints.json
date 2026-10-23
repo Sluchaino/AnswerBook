@@ -1,0 +1,50 @@
+{
+  "revision": 2,
+  "topics": [
+    {
+      "id": "csharp",
+      "count": 34,
+      "sha256": "58a8724da9f5bd429cd9ad3495566dd94195ea0825a9e886f4927da0a8860fb9"
+    },
+    {
+      "id": "oop-design",
+      "count": 26,
+      "sha256": "4299a0b4b7ff4a180389fa1147ee7e1d73f739304cda22e0d9c4396550fbfb67"
+    },
+    {
+      "id": "collections-linq",
+      "count": 35,
+      "sha256": "2eecb7e137f26ad27af91eda0b22e21d0c05cf6acf9e9f0182a910c0c6f9359d"
+    },
+    {
+      "id": "dotnet-memory",
+      "count": 32,
+      "sha256": "92a9af7c07a1c6dc5b891524cd885e309e4330b528cf5195d664dc4b54081e99"
+    },
+    {
+      "id": "async-threading",
+      "count": 44,
+      "sha256": "aa7af189cc85d35370d8315b5d84a750a44ab44e8ed6a7a0710678cc04c272b8"
+    },
+    {
+      "id": "algorithms",
+      "count": 20,
+      "sha256": "dfe513f31788de8e8008706d3bc51a4bec1797a5d729863675930787de69dabf"
+    },
+    {
+      "id": "databases",
+      "count": 23,
+      "sha256": "ddc020f9f4b0a53aab1b0d41cc99f66c36586c954dfabc72aa728a4a8c3d21c0"
+    },
+    {
+      "id": "http",
+      "count": 22,
+      "sha256": "12d513f309124b45d182adef296b402171da959f532fa1821c688f228323d356"
+    },
+    {
+      "id": "dotnet-practical",
+      "count": 12,
+      "sha256": "48db31429903f0a89b6a9689130a06396fe83b3df1dd2adb4e016d4ac1016d76"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+.app-navigation { display:flex; gap:6px; width:fit-content; padding:5px; margin:24px 0 0; background:var(--surface-eaf0e3); border:1px solid var(--line-dfe6d7); border-radius:12px; }
+.app-navigation button { min-height:42px; padding:9px 20px; border:0; border-radius:8px; color:var(--ink-78876b); background:transparent; font-size:12px; }
+.app-navigation button[aria-current="page"] { color:var(--ink-304f3a); background:var(--surface-fff); box-shadow:0 2px 8px var(--line-263b3208); }
+.profile-page { padding-bottom:42px; }
+.profile-intro { padding:38px 0 28px; }
+.profile-intro p { color:var(--ink-7e877a); font-size:14px; }
+.profile-overview { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+.profile-identity { display:flex; align-items:center; gap:20px; padding:25px; background:var(--surface-ffffff); border:1px solid var(--line-e1e5dc); border-radius:15px; min-width:0; }
+.profile-avatar { flex-shrink:0; width:64px; height:64px; display:grid; place-items:center; background:var(--surface-eaf0df); color:var(--ink-607d48); font-size:28px; border-radius:20px; }
+.profile-identity > div { flex:1; min-width:0; }
+.profile-identity label { display:block; font-size:12px; color:var(--ink-6c7e61); margin-bottom:6px; }
+.profile-page input:not([type="checkbox"]) { display:block; width:100%; min-height:44px; padding:10px 12px; border:1px solid var(--line-dfe5d8); border-radius:8px; background:var(--surface-fafbf7); color:var(--ink-304536); font:inherit; font-size:14px; }
+.profile-page input:focus-visible { outline:3px solid var(--line-87aa80); outline-offset:2px; }
+.profile-identity p { font-size:10px; color:var(--ink-8a957e); margin-top:7px; }
+.profile-totals { display:flex; align-items:center; justify-content:space-around; gap:18px; background:var(--surface-eaf0df); border:1px solid var(--line-dfe7d2); border-radius:15px; padding:24px; }
+.profile-totals strong { display:block; font-size:32px; font-weight:400; color:var(--ink-304f3a); }
+.profile-totals strong small { font-size:17px; color:var(--ink-879575); }
+.profile-totals span { color:var(--ink-7b886d); font-size:11px; }
+.profile-storage { font-size:11px; color:var(--ink-879575); margin:13px 0 32px; }
+.profile-storage button { margin-left:12px; }
+.profession-heading { display:flex; justify-content:space-between; align-items:center; gap:18px; margin-bottom:20px; }
+.profession-heading h2 { font-size:21px; font-weight:500; }
+.profession-heading p { font-size:12px; color:var(--ink-879575); margin-top:4px; }
+.profession-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start; gap:20px; }
+.profession-card { border:1px solid var(--line-e1e5dc); border-radius:15px; background:var(--surface-fff); padding:24px; min-width:0; }
+.profession-card-heading { display:flex; justify-content:space-between; gap:16px; align-items:flex-start; }
+.profession-card-heading h3 { font-size:20px; font-weight:500; line-height:1.5; overflow-wrap:anywhere; }
+.profession-card-heading .text-button { flex-shrink:0; }
+.profession-card-heading h3 { flex:1; min-width:0; }
+.profession-toggle { display:flex; align-items:center; justify-content:space-between; gap:12px; width:100%; min-height:44px; padding:0; border:0; background:transparent; color:inherit; text-align:left; font:inherit; }
+.profession-toggle > span { min-width:0; overflow-wrap:anywhere; }
+.profession-toggle[aria-expanded=true] > svg { transform:rotate(180deg); }
+.profession-progress-label { display:flex; justify-content:space-between; gap:10px; margin:20px 0 8px; color:var(--ink-7b886d); font-size:11px; }
+.profession-progress-label strong { font-weight:500; color:var(--ink-607d48); }
+.profession-card progress { appearance:none; display:block; width:100%; height:5px; border:0; border-radius:5px; overflow:hidden; background:var(--surface-e9eee3); }
+.profession-card progress::-webkit-progress-bar { background:var(--surface-e9eee3); }
+.profession-card progress::-webkit-progress-value { background:var(--surface-7b965f); border-radius:5px; }
+.profession-card progress::-moz-progress-bar { background:var(--surface-7b965f); }
+.profession-courses { list-style:none; padding:0; margin:18px 0 0; }
+.profession-courses li { display:flex; align-items:center; gap:12px; padding:15px 0; border-bottom:1px solid var(--line-edf0e8); }
+.profession-courses label { display:flex; flex:1; gap:12px; align-items:flex-start; min-width:0; cursor:pointer; }
+.profile-page input[type="checkbox"] { width:20px; height:20px; flex-shrink:0; margin:1px 0 0; accent-color:var(--accent-607d48); cursor:pointer; }
+.profession-courses label span { min-width:0; }
+.profession-courses strong { display:block; font-size:13px; font-weight:400; overflow-wrap:anywhere; }
+.profession-courses small { display:block; font-size:10px; color:var(--ink-97a089); margin-top:4px; }
+.course-completed strong { color:var(--ink-728662); }
+.course-completed small { color:var(--ink-698950); }
+.course-open { flex-shrink:0; min-height:44px; padding:5px 0 5px 8px; border:0; color:var(--ink-60784f); background:transparent; font-size:11px; }
+.profession-delete { color:var(--ink-929b86); margin-top:14px; }
+.profile-empty { text-align:center; border:1px dashed var(--line-cdd9c1); border-radius:16px; background:var(--surface-f0f4e9); padding:45px 24px; }
+.profile-empty > span { font-size:32px; color:var(--ink-839e65); }
+.profile-empty h3 { font-size:23px; font-weight:500; margin:8px 0; }
+.profile-empty p { max-width:430px; font-size:13px; margin:0 auto 24px; color:var(--ink-829172); }
+.profile-undo { display:flex; justify-content:space-between; align-items:center; gap:16px; padding:14px 18px; background:var(--surface-eaf0df); border-radius:10px; margin-bottom:16px; font-size:12px; overflow-wrap:anywhere; }
+.profession-editor { width:calc(100% - 32px); max-width:600px; max-height:88dvh; overflow-y:auto; overscroll-behavior:contain; margin:auto; padding:28px; border:1px solid var(--line-dce4d2); border-radius:20px; background:var(--surface-f7f8f4); color:var(--ink-304536); }
+.profession-editor::backdrop { background:var(--surface-21352a77); }
+.profession-editor-heading { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:18px; }
+.profession-editor-heading h2 { font-weight:500; font-size:24px; }
+.profile-field { display:block; font-size:12px; color:var(--ink-6c7e61); }
+.profile-field input { margin-top:8px; }
+.profession-editor fieldset { border:0; padding:0; margin:24px 0; min-width:0; }
+.profession-editor legend { font-size:15px; font-weight:500; }
+.editor-hint { color:var(--ink-89967c); font-size:11px; margin:4px 0 12px; }
+.editor-course { display:flex; align-items:center; gap:12px; min-height:46px; font-size:13px; cursor:pointer; }
+.editor-course input { margin:0!important; }
+.custom-course { display:flex; justify-content:space-between; gap:12px; align-items:center; font-size:13px; padding:8px 0; border-bottom:1px solid var(--line-e1e6da); overflow-wrap:anywhere; }
+.custom-course-input { display:flex; gap:10px; margin-top:12px; }
+.custom-course-input > input { flex:1; min-width:0; }
+.profession-editor-actions { display:flex; justify-content:flex-end; gap:12px; margin-top:22px; }
+.profile-error { color:var(--ink-a45c42); font-size:12px; }
+@media(max-width:760px) {
+  .app-navigation { display:flex; width:100%; margin-top:16px; }
+  .app-navigation button { flex:1; min-height:44px; padding:9px 8px; }
+  .profile-intro { padding:25px 0 22px; }
+  .profile-intro .eyebrow { display:none; }
+  .profile-intro h1 { font-size:30px; letter-spacing:-1px; margin:0 0 12px; }
+  .profile-intro p { font-size:13px; }
+  .profile-overview { grid-template-columns:minmax(0,1fr); gap:12px; }
+  .profile-identity { padding:18px; gap:14px; }
+  .profile-avatar { width:50px; height:50px; border-radius:15px; font-size:24px; }
+  .profile-totals { padding:17px; gap:10px; }
+  .profile-totals strong { font-size:28px; }
+  .profile-totals span { font-size:10px; }
+  .profile-storage { font-size:10px; margin-bottom:24px; }
+  .profession-heading { align-items:stretch; flex-direction:column; gap:14px; }
+  .profession-heading .primary { min-height:48px; }
+  .profession-grid { grid-template-columns:minmax(0,1fr); gap:14px; }
+  .profession-card { padding:18px; }
+  .profession-card-heading h3 { font-size:19px; }
+  .profession-card-heading .text-button { min-height:44px; }
+  .profession-courses li { gap:8px; }
+  .profession-courses strong { font-size:13px; }
+  .profession-courses small { font-size:11px; }
+  .profession-delete { min-height:44px; }
+  .profession-editor { padding:20px; }
+  .profession-editor-heading h2 { font-size:21px; }
+  .profile-page input:not([type="checkbox"]) { font-size:16px; }
+  .profession-editor-actions > button { flex:1; min-height:48px; padding:10px; }
+  .custom-course-input { flex-direction:column; }
+  .custom-course-input .secondary { min-height:44px; }
+}
+@media print { .app-navigation, .profile-page { display:none!important; } }

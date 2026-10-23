@@ -1,0 +1,90 @@
+{
+  "revision": 3,
+  "topics": [
+    {
+      "id": "csharp",
+      "count": 50,
+      "sha256": "487d86c229e83852e2a3a71cfbe65f2bb2f9335d2b5522ab3bc653ab5d34d7ca"
+    },
+    {
+      "id": "oop-design",
+      "count": 37,
+      "sha256": "296b02d8170126fbc21ddf385fba3e21e42f54440a298b823ce9622381e4d94c"
+    },
+    {
+      "id": "collections-linq",
+      "count": 49,
+      "sha256": "c3f12f83bb2e2c4a877bfe46979153ed448b7b07c98622c180ff4c1cc503793c"
+    },
+    {
+      "id": "dotnet-memory",
+      "count": 49,
+      "sha256": "00df36fc73470c1426bcb6b167aaf02ccb96dbdd8548436b7a084bfb05bf13c9"
+    },
+    {
+      "id": "async-threading",
+      "count": 66,
+      "sha256": "77a2d83fbec4d67da92fb2196789dbeaad03ab1bcde7b9c8040b33ec2e5e0fa8"
+    },
+    {
+      "id": "algorithms",
+      "count": 39,
+      "sha256": "72d369bf9a907e68b72e96d94b028d72a3c13eb47266cbf434721ceffca37b6c"
+    },
+    {
+      "id": "databases",
+      "count": 40,
+      "sha256": "4066655cde219e70e2e480419a0286a5ebf6544d68112d0aef19c30350ddd8b8"
+    },
+    {
+      "id": "http",
+      "count": 22,
+      "sha256": "12d513f309124b45d182adef296b402171da959f532fa1821c688f228323d356"
+    },
+    {
+      "id": "dotnet-practical",
+      "count": 31,
+      "sha256": "a9774a6dd5641333d8530c6b4a6eafd69f1057b6713217ab6b9b2f23bfa539c5"
+    },
+    {
+      "id": "postgresql",
+      "count": 19,
+      "sha256": "7eb627959b6344ec26f8cc7d9b6793bae63e99f619396639b01634f067d820d2"
+    },
+    {
+      "id": "ef-core",
+      "count": 19,
+      "sha256": "6349468d6bc05329af102fd9f12014f0036d9c5e849e358271c56e1506748e5a"
+    },
+    {
+      "id": "redis-caching",
+      "count": 19,
+      "sha256": "7ee9a624741a5bd975fbaf1bc81866007259117f17357b2993f1ec1a8e16fe09"
+    },
+    {
+      "id": "networks-http-tls",
+      "count": 22,
+      "sha256": "718e854801152aa89d32156824c13caa24f38cf9849119768ee10e3266402bfc"
+    },
+    {
+      "id": "aspnet-core",
+      "count": 23,
+      "sha256": "6b5a22b4abba268464753652476e4f5b61562b5e87df0d316472b441e1db88ee"
+    },
+    {
+      "id": "rest-api-design",
+      "count": 23,
+      "sha256": "144891b6d3d642cc66dfa027b7aadb29509d6a96b1dc0a668b84e947652a3625"
+    },
+    {
+      "id": "backend-security",
+      "count": 27,
+      "sha256": "881f228b5b91a520d79ce802f54ae3f6233ca4519232e9abfdb83edf08b0df6a"
+    },
+    {
+      "id": "rabbitmq-messaging",
+      "count": 22,
+      "sha256": "c1680ee1ce4cd546e0fc09bd5aefee916bffbd36ed7efb2d01bcf8be1f3d4e47"
+    }
+  ]
+}

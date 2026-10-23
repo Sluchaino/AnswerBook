@@ -17,6 +17,9 @@ dist-ssr
 .env.*
 !.env.example
 artifacts/
+.tools/
+*.jks
+*.keystore
 
 # Editor directories and files
 .vscode/*
@@ -28,3 +31,8 @@ artifacts/
 *.njsproj
 *.sln
 *.sw?
+
+# PDF extraction intermediates
+__pycache__/
+*.py[cod]
+tmp/pdfs/

@@ -1,2 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap');
-:root{font-family:'Golos Text','Segoe UI',sans-serif;color:#263b32;background:#f7f8f4;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-size:14px;line-height:1.6}*{box-sizing:border-box}body{margin:0;min-width:320px}button,textarea{font:inherit}button{cursor:pointer;transition:background .15s,border-color .15s}button:disabled{cursor:not-allowed;opacity:.45}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible,textarea:focus-visible{outline:3px solid #87aa80;outline-offset:4px}h1,h2,h3,h4,p{margin:0}h1:focus{outline:none}button svg{flex-shrink:0}::selection{background:#d9e6b7;color:#263b32}
+@import "@fontsource/golos-text/cyrillic-400.css";
+@import "@fontsource/golos-text/cyrillic-500.css";
+@import "@fontsource/golos-text/cyrillic-600.css";
+@import "@fontsource/golos-text/latin-400.css";
+@import "@fontsource/golos-text/latin-500.css";
+@import "@fontsource/golos-text/latin-600.css";
+:root{font-family:'Golos Text','Segoe UI',sans-serif;color:var(--ink-263b32);background:var(--surface-f7f8f4);font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-size:14px;line-height:1.6}*{box-sizing:border-box}body{margin:0;min-width:320px}button,textarea{font:inherit}button{cursor:pointer;transition:background .15s,border-color .15s}button:disabled{cursor:not-allowed;opacity:.45}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible,textarea:focus-visible{outline:3px solid var(--line-87aa80);outline-offset:4px}h1,h2,h3,h4,p{margin:0}h1:focus{outline:none}button svg{flex-shrink:0}::selection{background:var(--surface-d9e6b7);color:var(--ink-263b32)}
