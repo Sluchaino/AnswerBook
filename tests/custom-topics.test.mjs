@@ -12,7 +12,7 @@ test('custom topics persist independently, merge with catalog updates and enter 
   const all=mergeTopics(bundled,restored)
   assert.equal(all.length,bundled.length+1)
   assert.deepEqual(filterTopics(all,'моя','custom').map(t=>t.id),[topic.id])
-  assert.equal(all.at(-1).number,29)
+  assert.equal(all.at(-1).number,Math.max(...bundled.map(t=>t.number))+1)
   const session=beginSession(freshSession(),all,[topic.id],[topic.questions[0].id])
   assert.deepEqual(restoreSession(JSON.stringify(session),all).questionIds,session.questionIds)
   assert.equal(session.topicSnapshot.find(t=>t.id===topic.id).questions[0].text,'Мой вопрос?')

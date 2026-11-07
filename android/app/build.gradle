@@ -1,14 +1,23 @@
 apply plugin: 'com.android.application'
 
+def releaseSigningFile = rootProject.file('../.tools/signing/release.properties')
+def releaseSigning = new Properties()
+if (releaseSigningFile.exists()) {
+    releaseSigningFile.withReader('UTF-8') { releaseSigning.load(it) }
+}
+def signingReady = ['storeFile', 'storePassword', 'keyAlias', 'keyPassword'].every { releaseSigning.getProperty(it)?.trim() }
+
 android {
     namespace = "ru.sluchaino.answerbook"
     compileSdk = rootProject.ext.compileSdkVersion
+    buildFeatures { buildConfig true }
     defaultConfig {
         applicationId "ru.sluchaino.answerbook"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 34
-        versionName "1.33"
+        versionCode 59
+        versionName "1.58"
+        buildConfigField 'boolean', 'ADS_ENABLED', 'true'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
@@ -16,11 +25,33 @@ android {
             ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
+    signingConfigs {
+        if (signingReady) {
+            release {
+                storeFile new File(releaseSigningFile.parentFile, releaseSigning.getProperty('storeFile'))
+                storePassword releaseSigning.getProperty('storePassword')
+                keyAlias releaseSigning.getProperty('keyAlias')
+                keyPassword releaseSigning.getProperty('keyPassword')
+            }
+        }
+    }
     buildTypes {
         release {
+            if (signingReady) signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        screenshots {
+            initWith release
+            matchingFallbacks = ['release']
+            buildConfigField 'boolean', 'ADS_ENABLED', 'false'
+        }
+    }
+}
+
+tasks.matching { it.name in ['validateSigningRelease', 'packageRelease', 'validateSigningScreenshots', 'packageScreenshots'] }.configureEach {
+    doFirst {
+        if (!signingReady) throw new GradleException('Заполните локальный файл .tools/signing/release.properties. Пароли не передавайте в чат.')
     }
 }
 
@@ -31,13 +62,16 @@ repositories {
 }
 
 dependencies {
+    implementation 'com.yandex.android:mobileads:8.6.0'
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
     implementation "androidx.webkit:webkit:$androidxWebkitVersion"
     implementation "androidx.coordinatorlayout:coordinatorlayout:$androidxCoordinatorLayoutVersion"
     implementation "androidx.core:core-splashscreen:$coreSplashScreenVersion"
     implementation project(':capacitor-android')
+    implementation "androidx.work:work-runtime:2.11.2"
     testImplementation "junit:junit:$junitVersion"
+    testImplementation "org.json:json:20240303"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
     implementation project(':capacitor-cordova-android-plugins')

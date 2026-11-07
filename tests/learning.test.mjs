@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs'
 import { checkLearningAnswer, validateLearningCourse, freshLearningAttempt, restoreLearningAttempt, learningScore, finishLearningAttempt, isLearningCorrect, nextLearningStep, previousLearningStep } from '../src/lib/learning.ts'
 import { newerCatalog, validateCatalog } from '../src/lib/catalog.ts'
 
-const course = validateLearningCourse(JSON.parse(readFileSync(new URL('../src/data/csharp-foundations-course.json', import.meta.url), 'utf8')))
+import {course} from './fixtures/synthetic-course.mjs'
 const catalog = validateCatalog(JSON.parse(readFileSync(new URL('../src/data/questions.json', import.meta.url), 'utf8')))
 
 test('course alternates theory and block practice, preserves answers and waits for a complete block', () => {
@@ -43,11 +43,7 @@ test('sequential course finishes after the last practice and sends skipped quest
   assert.equal(nextLearningStep(course, skipped).view, 'all')
   assert.equal(nextLearningStep(course, skipped).finished, false)
 })
-test('sources 01 and 02 form a combined language and OOP course with both task types', () => {
-  assert.equal(course.lessons.length, 20)
-  assert.equal(course.lessons.flatMap(l => l.questions).length, 40)
-  assert.ok(course.lessons.flatMap(l => l.questions).filter(q => q.kind === 'output').length >= 8)
-  assert.ok(course.lessons.some(l => l.source.startsWith('02_') && l.id === 'events'))
+test('invalid choices and duplicate question IDs are rejected', () => {
   const invalid = structuredClone(course)
   invalid.lessons[0].questions[0].correct = 4
   assert.throws(() => validateLearningCourse(invalid))
@@ -82,10 +78,10 @@ test('offline progress and finished results survive restart', () => {
   assert.deepEqual(restoreLearningAttempt(JSON.stringify(invalidChoice), course).answers, {})
 })
 test('expanded catalog preserves original IDs and cannot be downgraded by an older feed', () => {
-  assert.equal(catalog.topics.length, 28)
-  assert.equal(catalog.topics.reduce((sum,t) => sum+t.questions.length,0), 738)
+  assert.equal(catalog.topics.length, 29)
+  assert.equal(catalog.topics.reduce((sum,t) => sum+t.questions.length,0), 702)
   assert.equal(catalog.topics[0].questions[0].id, 'csharp-001')
   const old = { topics: catalog.topics.slice(0,8) }
   assert.equal(newerCatalog(catalog, old), catalog)
-  assert.equal(newerCatalog(catalog, { ...old, revision: 5 }).revision, 5)
+  assert.equal(newerCatalog(catalog, { ...old, revision: catalog.revision - 1 }), catalog)
 })

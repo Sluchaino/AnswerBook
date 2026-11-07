@@ -17,6 +17,16 @@ dist-ssr
 .env.*
 !.env.example
 artifacts/
+# Private course library: source materials and cloud upload packages
+/course-library/
+/server/theory-source/
+/server/course-source/
+/server/exercise-source/
+/server/exercise-drafts/
+# Historical content snapshots are part of the private course materials too.
+/tests/fixtures/aspnet-*.json
+/tests/fixtures/csharp-*.json
+/tests/fixtures/exercises-before-*.json
 .tools/
 *.jks
 *.keystore
@@ -36,3 +46,9 @@ artifacts/
 __pycache__/
 *.py[cod]
 tmp/pdfs/
+server/**/bin/
+server/**/obj/
+server/AnswerBook.ContentApi/content/
+
+# Atomic content writes (drafts themselves remain project data)
+server/**/*.tmp

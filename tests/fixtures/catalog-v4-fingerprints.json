@@ -1,0 +1,173 @@
+{
+  "revision": 4,
+  "topics": [
+    {
+      "id": "csharp",
+      "count": 50,
+      "sha256": "487d86c229e83852e2a3a71cfbe65f2bb2f9335d2b5522ab3bc653ab5d34d7ca",
+      "structureSha256": "a250afbbd0794d9bf1ab38e136a289c20424c83bb35181a0d6e67b51524cbe07"
+    },
+    {
+      "id": "oop-design",
+      "count": 37,
+      "sha256": "296b02d8170126fbc21ddf385fba3e21e42f54440a298b823ce9622381e4d94c",
+      "structureSha256": "60ee73dd20259edee599e17e8717e693ee60cf02397f80cd2fea92ca46375f78"
+    },
+    {
+      "id": "collections-linq",
+      "count": 49,
+      "sha256": "c3f12f83bb2e2c4a877bfe46979153ed448b7b07c98622c180ff4c1cc503793c",
+      "structureSha256": "6d689e345a8f00026d50fa5509cb2dea78e8f7d910b5ea34f56838474e51776f"
+    },
+    {
+      "id": "dotnet-memory",
+      "count": 49,
+      "sha256": "00df36fc73470c1426bcb6b167aaf02ccb96dbdd8548436b7a084bfb05bf13c9",
+      "structureSha256": "57d0cec59ad91af5af9d261180bde63bf0bc4ab725d42187572e1925b4f1712a"
+    },
+    {
+      "id": "async-threading",
+      "count": 66,
+      "sha256": "77a2d83fbec4d67da92fb2196789dbeaad03ab1bcde7b9c8040b33ec2e5e0fa8",
+      "structureSha256": "4db218132abb3b90d85d47c4ede66f0088ee128beb5dafbcfd1b61a486e289ec"
+    },
+    {
+      "id": "algorithms",
+      "count": 39,
+      "sha256": "72d369bf9a907e68b72e96d94b028d72a3c13eb47266cbf434721ceffca37b6c",
+      "structureSha256": "e93bdacf0a051f69b96aa907e2cba283e6b961042cf76db2eab141cc7a533523"
+    },
+    {
+      "id": "databases",
+      "count": 40,
+      "sha256": "4066655cde219e70e2e480419a0286a5ebf6544d68112d0aef19c30350ddd8b8",
+      "structureSha256": "6ad6db25714bbd859ec9cedc0807d3f7cc0677c91d226342bd4962ec6804afe2"
+    },
+    {
+      "id": "http",
+      "count": 22,
+      "sha256": "12d513f309124b45d182adef296b402171da959f532fa1821c688f228323d356",
+      "structureSha256": "3ad07721d414426356fd2e9213c98bb0a1798b00ce420e056cb69ec285370a1e"
+    },
+    {
+      "id": "dotnet-practical",
+      "count": 31,
+      "sha256": "a9774a6dd5641333d8530c6b4a6eafd69f1057b6713217ab6b9b2f23bfa539c5",
+      "structureSha256": "d94a79fab6799b123f576d72fbdf3bcac6f72ea40ce7dd44bca63731bc570825"
+    },
+    {
+      "id": "postgresql",
+      "count": 19,
+      "sha256": "7eb627959b6344ec26f8cc7d9b6793bae63e99f619396639b01634f067d820d2",
+      "structureSha256": "4a773b1d806c989675590c5da95a2724eb06304a5824a2793a9aa9670d931cf9"
+    },
+    {
+      "id": "ef-core",
+      "count": 19,
+      "sha256": "6349468d6bc05329af102fd9f12014f0036d9c5e849e358271c56e1506748e5a",
+      "structureSha256": "6f92f49117392989b5b20044680db94f31950d08517188044d5148f5173f9893"
+    },
+    {
+      "id": "redis-caching",
+      "count": 19,
+      "sha256": "7ee9a624741a5bd975fbaf1bc81866007259117f17357b2993f1ec1a8e16fe09",
+      "structureSha256": "18f1906913632993a174397edc5b5ca8e9d74b6f6f0732c9d563669d6c4ff882"
+    },
+    {
+      "id": "networks-http-tls",
+      "count": 22,
+      "sha256": "718e854801152aa89d32156824c13caa24f38cf9849119768ee10e3266402bfc",
+      "structureSha256": "3389c7bce584f80971805db2554032189957c9ad2ed73b0985d4ba527da1766b"
+    },
+    {
+      "id": "aspnet-core",
+      "count": 23,
+      "sha256": "6b5a22b4abba268464753652476e4f5b61562b5e87df0d316472b441e1db88ee",
+      "structureSha256": "ad181dea16a2753cb0b62ef2b3f53aebe44219f43c9831b34d74f0446a380041"
+    },
+    {
+      "id": "rest-api-design",
+      "count": 23,
+      "sha256": "144891b6d3d642cc66dfa027b7aadb29509d6a96b1dc0a668b84e947652a3625",
+      "structureSha256": "1bebc2e8bcc95818fcdf04a5839320161494e01e2a78df31f746b30bdd144e51"
+    },
+    {
+      "id": "backend-security",
+      "count": 27,
+      "sha256": "881f228b5b91a520d79ce802f54ae3f6233ca4519232e9abfdb83edf08b0df6a",
+      "structureSha256": "7602dc337fd83551e2515b27b09edb6a1c69e971341968fe28f5dad6877d915d"
+    },
+    {
+      "id": "rabbitmq-messaging",
+      "count": 22,
+      "sha256": "c1680ee1ce4cd546e0fc09bd5aefee916bffbd36ed7efb2d01bcf8be1f3d4e47",
+      "structureSha256": "fe0dc42516d742f3db9d16f546378688e56754e30473d5db96a02be6565d076d"
+    },
+    {
+      "id": "testing-test-design",
+      "count": 19,
+      "sha256": "a8cc6377512ba5f22e54e166466cafc54d553e3fe4cf61715f5733dd8b12586e",
+      "structureSha256": "665ee99162ad20284c6d8d0fbe41139a0af905b010c1f36bfa4bb6b419395b7a"
+    },
+    {
+      "id": "dotnet-xunit-testing",
+      "count": 19,
+      "sha256": "e85b35f4f9ca6908979102dbcea6bd58cb748e022036b55990ccf2813ca56e6e",
+      "structureSha256": "180a667f49149efed83cbafecb12a0d79203f326f56d7e7851ec822acd7ae128"
+    },
+    {
+      "id": "performance-load-testing",
+      "count": 19,
+      "sha256": "6df398e416d775cc20bd90a7636c767958e172d1a6713d17d6a3e891e7f84adf",
+      "structureSha256": "54864260ca8b48f046b72fef09af922913ec550c2b89143e5b1590f731f16181"
+    },
+    {
+      "id": "git-workflow",
+      "count": 11,
+      "sha256": "091a16b58814288de5cf15717a052328153de0966ca720f6770b5b14b3c006d5",
+      "structureSha256": "f559fd51a152481c58df77e1a72f1116302401d6a4c7af66feff2e1143bddcc4"
+    },
+    {
+      "id": "linux-backend",
+      "count": 11,
+      "sha256": "1ffa74081ff823f579dc442c2dbdceefaa6ef656f1cdb298a4892520e41ff3f5",
+      "structureSha256": "7cfb94b694481fae605f3ceb8bafaad0907e2bc45244057a30911f9bd66b55c7"
+    },
+    {
+      "id": "docker-compose",
+      "count": 15,
+      "sha256": "55d2bcd456ea31f4b6943c248af3f5e170194d358e8df0c20dacdab15656f344",
+      "structureSha256": "db76223c7f5ba95c66a3d247bf6380150a8b2d041ae715cb1d477dc84a917732"
+    },
+    {
+      "id": "ci-cd-delivery",
+      "count": 15,
+      "sha256": "7c5561f02bad37e6598a67635a4b81e63621342156ac4afcf2e1ecf807d43602",
+      "structureSha256": "191ddb11dd8fc5a9b1eb04d4b0c6aee52f8d07a0dd25030507d41a0afe972d5a"
+    },
+    {
+      "id": "observability",
+      "count": 15,
+      "sha256": "be52275d799af33ee22b24854083ac2dc5bc55d448457746217ad819d08d38be",
+      "structureSha256": "34f0e7a4570dd4131c97aa044dc4a00af94b8b97b7cd420a1b8641dda6cd0685"
+    },
+    {
+      "id": "architecture-solid-patterns",
+      "count": 17,
+      "sha256": "33426b104ff93a0cce8cc948a078c371e10d1ee86a800f3bcf6829277fc38be7",
+      "structureSha256": "b59260f3362d1f5074ce9dae2f11db8edc485ce2fb8aba7f7c6fcff5760bb9e6"
+    },
+    {
+      "id": "distributed-systems",
+      "count": 19,
+      "sha256": "44c463e810255da5a35fbfadb0963d0b7fcd58352aa8c26b48cdb39f98636bf2",
+      "structureSha256": "857636f3def0391289c18a4d367697cb524449d0f592d5baa26f05d9f1993b32"
+    },
+    {
+      "id": "system-design-reliability",
+      "count": 21,
+      "sha256": "42f8e29a791e5e387bc80a380410cd33a750542148c5340f55f3bd4765090a4a",
+      "structureSha256": "1039e2ce011bc566db3087dceaea6f6c2439c7e7b42f3c3db548a65e2ee553f3"
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import {retiredCourseSet} from './retiredCourses.ts'
 export type Course = { id: string; title: string; topicId?: string; learningCourseId?: string }
 export type Profession = { id: string; title: string; courses: Course[] }
 export type Profile = { version: 1; name: string; professions: Profession[]; completedCourseIds: string[] }
@@ -23,7 +24,8 @@ export function parseProfile(raw: string | null): Profile {
     }
   }
   if (profile.completedCourseIds.some(id => typeof id !== 'string' || !id)) throw new Error('Неверные отметки прохождения')
-  return { version: 1, name: profile.name, professions: profile.professions, completedCourseIds: [...new Set(profile.completedCourseIds)] }
+  const retiredIds=new Set(profile.professions.flatMap(p=>p.courses.filter(c=>c.learningCourseId && retiredCourseSet.has(c.learningCourseId)).map(c=>c.id)))
+  return { version: 1, name: profile.name, professions: profile.professions.map(p=>({...p,courses:p.courses.filter(c=>!retiredIds.has(c.id))})), completedCourseIds: [...new Set(profile.completedCourseIds)].filter(id=>!retiredIds.has(id)) }
 }
 
 export function toggleCompleted(profile: Profile, id: string): Profile {
@@ -31,8 +33,14 @@ export function toggleCompleted(profile: Profile, id: string): Profile {
   return { ...profile, completedCourseIds: profile.completedCourseIds.includes(id) ? profile.completedCourseIds.filter(value => value !== id) : [...profile.completedCourseIds, id] }
 }
 
+export function clearCourseCompletion(profile:Profile,courseId:string):Profile {
+  const ids=new Set(profile.professions.flatMap(p=>p.courses.filter(c=>c.learningCourseId===courseId).map(c=>c.id)))
+  ids.add(`learning:${courseId}`)
+  return {...profile,completedCourseIds:profile.completedCourseIds.filter(id=>!ids.has(id))}
+}
+
 export function courseProgress(courses: Course[], completed: string[], learning:Record<string,{percent:number;completed:boolean}> = {}) {
-  const unique = [...new Map(courses.filter(course => !course.topicId || course.learningCourseId).map(course => [course.id,course])).values()]
+  const unique = [...new Map(courses.filter(course => course.learningCourseId).map(course => [course.id,course])).values()]
   const completedIds = new Set(completed)
   const states=unique.map(course=>{
     const saved=course.learningCourseId ? learning[course.learningCourseId] : undefined

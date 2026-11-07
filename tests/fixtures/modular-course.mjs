@@ -1,0 +1,5 @@
+// Synthetic structure fixture. It is never published or shipped in the catalog.
+const question=id=>({id,kind:'choice',prompt:'Fixture question',options:['A','B','C','D'],correct:0,explanation:'Fixture explanation'})
+const theory=id=>({id,kind:'theory',title:'Fixture theory',content:[{kind:'paragraph',text:'Fixture paragraph'},{kind:'code',text:'TEST'}]})
+const lesson=id=>({id,title:`Fixture lesson ${id}`,blocks:[theory('intro'),{id:'check',kind:'test',title:'Fixture check',questions:[question(`${id}-inline`)]},theory('example')],finalTest:{id:'final',title:'Fixture final',questions:[question(`${id}-final`)]}})
+export const modularDocument={formatVersion:2,id:'modular-fixture',version:1,title:'Fixture course',description:'Engine structure fixture',direction:'fundamentals',scope:'universal',symbol:'T',color:'blue',topicIds:[],modules:[{id:'first-module',title:'Fixture module one',lessons:[lesson('first'),lesson('second')]},{id:'second-module',title:'Fixture module two',lessons:[lesson('third')]}]}

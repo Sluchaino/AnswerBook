@@ -1,0 +1,32 @@
+// Removed by the owner. Keep identifiers to purge old downloads and stale links.
+export const retiredCourseIds = [
+  "python-foundations-v1",
+  "aspnet-core-foundations-v1",
+  "csharp-language-oop",
+  "csharp-collections-linq-events",
+  "csharp-exceptions-memory",
+  "dotnet-async-practical",
+  "dotnet-engineering-tools",
+  "algorithms-data-structures",
+  "sql-relational",
+  "postgresql",
+  "ef-core",
+  "redis-caching",
+  "networks-http-tls",
+  "aspnet-core",
+  "rest-api-design",
+  "backend-security",
+  "rabbitmq-messaging",
+  "testing-test-design",
+  "dotnet-xunit-testing",
+  "performance-load-testing",
+  "git-workflow",
+  "linux-backend",
+  "docker-compose",
+  "ci-cd-delivery",
+  "observability",
+  "architecture-solid-patterns",
+  "distributed-systems",
+  "system-design-reliability"
+] as const
+export const retiredCourseSet:ReadonlySet<string>=new Set(retiredCourseIds)

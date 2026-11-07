@@ -1,9 +1,11 @@
-export type CourseFact={id:string;title?:string;started:boolean;completed:boolean}
+import {retiredCourseSet} from './retiredCourses.ts'
+export type CourseFact={id:string;title?:string;started:boolean;completed:boolean;rewardEligible?:boolean}
 export type CoinTransaction={id:string;day:string;label:string;amount:number}
 export type Economy={version:1;balance:number;unlockedIds:string[];purchasedIds:string[];completedIds:string[];rewardedDays:string[];history:CoinTransaction[]}
 export const dailyRewards=[5,6,7,8,9,10,25] as const
 export const freezePrice=30
 export const completionReward=100
+export const courseRewardPercent=80
 export function parseEconomy(input:unknown):Economy {
   const e=input as Economy
   if(!e || e.version!==1 || !Number.isSafeInteger(e.balance) || e.balance<0)throw new Error('Неверное сохранение монет')
@@ -13,7 +15,7 @@ export function parseEconomy(input:unknown):Economy {
   if(e.purchasedIds.some(id=>!e.unlockedIds.includes(id)) || e.completedIds.some(id=>!e.unlockedIds.includes(id)))throw new Error('Неверный доступ к курсам')
   if(e.rewardedDays.some(day=>!/^\d{4}-\d{2}-\d{2}$/.test(day)||new Date(day+'T00:00:00Z').toISOString().slice(0,10)!==day))throw new Error('Неверные даты наград')
   if(!Array.isArray(e.history)||e.history.length>100 || e.history.some(t=>!t||typeof t.id!=='string'||typeof t.day!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(t.day)||typeof t.label!=='string'||!Number.isSafeInteger(t.amount)))throw new Error('Неверная история монет')
-  return e
+  return {...e,unlockedIds:e.unlockedIds.filter(id=>!retiredCourseSet.has(id)),purchasedIds:e.purchasedIds.filter(id=>!retiredCourseSet.has(id)),completedIds:e.completedIds.filter(id=>!retiredCourseSet.has(id))}
 }
 export function freshEconomy(facts:CourseFact[],day:string):Economy {
   return {version:1,balance:100,unlockedIds:facts.filter(f=>f.started||f.completed).map(f=>f.id),purchasedIds:[],completedIds:facts.filter(f=>f.completed).map(f=>f.id),rewardedDays:[],history:[{id:'welcome',day,label:'Стартовый подарок',amount:100}]}
@@ -40,7 +42,7 @@ export function rewardStudy(e:Economy,day:string,streak:number):Economy {
 export function rewardCompletions(e:Economy,facts:CourseFact[],day:string):Economy {
   let next=e
   for(const fact of facts) {
-    if(fact.completed && next.unlockedIds.includes(fact.id) && !next.completedIds.includes(fact.id)) {
+    if(fact.completed && fact.rewardEligible===true && next.unlockedIds.includes(fact.id) && !next.completedIds.includes(fact.id)) {
       next={...coinChange(next,`complete:${fact.id}`,day,fact.title ? `Курс пройден: ${fact.title}` : 'Первое завершение курса',completionReward),completedIds:[...next.completedIds,fact.id]}
     }
   }

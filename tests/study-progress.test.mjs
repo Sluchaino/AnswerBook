@@ -1,11 +1,9 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import {readFileSync} from 'node:fs'
 import {freshLearningAttempt,restoreLearningAttempt,openLearningAttempt,nextLearningStep,checkLearningAnswer,isAnswerChecked,finishLearningAttempt,restartLearningAttempt,learningProgress,resultItems,isLearningCorrect} from '../src/lib/learning.ts'
 import {courseProgress} from '../src/lib/profile.ts'
 import {emptyActivity,parseActivity,recordStudyDay,studyStreak,localStudyDay} from '../src/lib/activity.ts'
-const read=name=>JSON.parse(readFileSync(new URL('../src/data/'+name,import.meta.url),'utf8'))
-const entries=read('learning-catalog.json'),course=read(entries[0].file),previous=read('learning-previous-editions.json')[0]
+import {course,previousCourse as previous} from './fixtures/synthetic-course.mjs'
 const questions=course.lessons.flatMap(l=>l.questions)
 function filled(source=course) {const a=freshLearningAttempt(source);for(const q of source.lessons.flatMap(l=>l.questions))a.answers[q.id]=q.kind==='choice' ? String(q.correct) : q.answers[0];return a}
 
@@ -71,12 +69,12 @@ test('course progress and profession completion are distinct from accuracy and k
  assert.deepEqual(learningProgress(course,a),{started:true,percent:2.5,completed:false})
  const linked={id:'learning:'+course.id,title:course.title,learningCourseId:course.id},custom={id:'custom:one',title:'Own'}
  const learning={[course.id]:learningProgress(course,a)}
- assert.deepEqual(courseProgress([linked,custom],[],learning),{total:2,done:0,percent:1.25})
- assert.deepEqual(courseProgress([linked,custom],[custom.id],learning),{total:2,done:1,percent:51.25})
+ assert.deepEqual(courseProgress([linked,custom],[],learning),{total:1,done:0,percent:2.5})
+ assert.deepEqual(courseProgress([linked,custom],[custom.id],learning),{total:1,done:0,percent:2.5})
  const finished=finishLearningAttempt(course,filled())
  assert.deepEqual(courseProgress([linked],[],{[course.id]:learningProgress(course,finished)}),{total:1,done:1,percent:100})
  const oneThird=courseProgress([linked,{id:'other',title:'Other',learningCourseId:'other'},custom],[],{[course.id]:{percent:100,completed:true}})
- assert.equal(oneThird.percent,33.33)
+ assert.equal(oneThird.percent,50)
 })
 test('history keeps the last twenty scores and rejects corrupt results',()=>{
  let a=filled()
@@ -85,18 +83,6 @@ test('history keeps the last twenty scores and rejects corrupt results',()=>{
  assert.deepEqual(restoreLearningAttempt(JSON.stringify(a),course),a)
  const broken=structuredClone(a);broken.lastResult.correct=-1
  assert.throws(()=>restoreLearningAttempt(JSON.stringify(broken),course))
-})
-test('every block has substantial sourced reading and revised question IDs',()=>{
- const library=read('learning-readings.json'),old=read('learning-previous-editions.json')
- let lessons=0,codes=0,choices=0
- for(const entry of entries.slice(0,15)){const c=read(entry.file),prior=old.find(o=>o.id===c.id);assert.equal(c.version,prior.version+1)
-  for(const l of c.lessons){lessons++;const sections=library[c.id][l.id];assert.ok(sections.length)
-   assert.ok(sections.flatMap(s=>s.content).reduce((n,p)=>n+p.text.length,0)>=400,c.id+'/'+l.id)
-   for(const section of sections){assert.ok(entry.sources.some(s=>s.file===section.source));codes+=section.content.filter(p=>p.kind==='code').length}
-   for(const q of l.questions)if(q.kind==='choice'){choices++;assert.ok(q.id.endsWith('-v2'));assert.equal(new Set(q.options).size,4)}
-  }
- }
- assert.equal(lessons,181);assert.equal(choices,309);assert.ok(codes>100)
 })
 test('study activity counts a local calendar day once and survives reload',()=>{
  const morning=new Date(2026,9,23,0,1),evening=new Date(2026,9,23,23,59)

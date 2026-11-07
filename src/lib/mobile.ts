@@ -6,9 +6,9 @@ export const isAndroid = Capacitor.getPlatform() === 'android'
 const PrintDocument = registerPlugin<{ print(): Promise<void> }>('PrintDocument')
 
 export async function shareText(text: string) {
-  const path = `answerbook-${new Date().toISOString().slice(0, 10)}.txt`
+  const path = `kodshag-${new Date().toISOString().slice(0, 10)}.txt`
   const { uri } = await Filesystem.writeFile({ path, data: text, directory: Directory.Cache, encoding: Encoding.UTF8 })
-  await Share.share({ title: 'Мои ответы — AnswerBook', files: [uri], dialogTitle: 'Сохранить или отправить конспект' })
+  await Share.share({ title: 'Мои ответы — КодШаг', files: [uri], dialogTitle: 'Сохранить или отправить конспект' })
 }
 
 export async function printDocument() {

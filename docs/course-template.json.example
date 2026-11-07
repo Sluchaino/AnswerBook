@@ -1,0 +1,96 @@
+{
+  "formatVersion": 2,
+  "id": "new-course",
+  "version": 1,
+  "title": "Название курса",
+  "description": "Описание курса",
+  "direction": "fundamentals",
+  "scope": "universal",
+  "symbol": "T",
+  "color": "blue",
+  "topicIds": [],
+  "modules": [
+    {
+      "id": "first-module",
+      "title": "Название модуля",
+      "lessons": [
+        {
+          "id": "first",
+          "title": "Название урока",
+          "blocks": [
+            {
+              "id": "intro",
+              "kind": "theory",
+              "title": "Часть теории",
+              "content": [
+                {
+                  "kind": "paragraph",
+                  "text": "Текст теории"
+                },
+                {
+                  "kind": "code",
+                  "text": "// Пример кода"
+                }
+              ]
+            },
+            {
+              "id": "check",
+              "kind": "test",
+              "title": "Проверка по прочитанному",
+              "questions": [
+                {
+                  "id": "first-inline",
+                  "kind": "choice",
+                  "prompt": "Вопрос по прочитанному",
+                  "options": [
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                  ],
+                  "correct": 0,
+                  "explanation": "Объяснение правильного ответа"
+                }
+              ]
+            },
+            {
+              "id": "example",
+              "kind": "theory",
+              "title": "Часть теории",
+              "content": [
+                {
+                  "kind": "paragraph",
+                  "text": "Текст теории"
+                },
+                {
+                  "kind": "code",
+                  "text": "// Пример кода"
+                }
+              ]
+            }
+          ],
+          "finalTest": {
+            "id": "final",
+            "title": "Итоговый тест урока",
+            "questions": [
+              {
+                "id": "first-final",
+                "kind": "choice",
+                "prompt": "Итоговый вопрос по уроку",
+                "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "correct": 0,
+                "explanation": "Объяснение ответа"
+              }
+            ]
+          }
+        }
+      ],
+      "description": "Цель модуля"
+    }
+  ]
+}

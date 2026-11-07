@@ -4,47 +4,56 @@
     {
       "id": "csharp",
       "count": 34,
-      "sha256": "58a8724da9f5bd429cd9ad3495566dd94195ea0825a9e886f4927da0a8860fb9"
+      "sha256": "58a8724da9f5bd429cd9ad3495566dd94195ea0825a9e886f4927da0a8860fb9",
+      "structureSha256": "0620469b321ddec8baadb8c70af1241453380ca15a3dc806ab4b4206a19963d1"
     },
     {
       "id": "oop-design",
       "count": 26,
-      "sha256": "4299a0b4b7ff4a180389fa1147ee7e1d73f739304cda22e0d9c4396550fbfb67"
+      "sha256": "4299a0b4b7ff4a180389fa1147ee7e1d73f739304cda22e0d9c4396550fbfb67",
+      "structureSha256": "1dc700389d597ae555d5c0ce96250c6a7b79b1c563d5835c8b5cb565e3af1e2e"
     },
     {
       "id": "collections-linq",
       "count": 35,
-      "sha256": "2eecb7e137f26ad27af91eda0b22e21d0c05cf6acf9e9f0182a910c0c6f9359d"
+      "sha256": "2eecb7e137f26ad27af91eda0b22e21d0c05cf6acf9e9f0182a910c0c6f9359d",
+      "structureSha256": "e5989ef061315c105a69037cfb1b4e94672d76e60ae4aac7c6ca432829a22ad4"
     },
     {
       "id": "dotnet-memory",
       "count": 32,
-      "sha256": "92a9af7c07a1c6dc5b891524cd885e309e4330b528cf5195d664dc4b54081e99"
+      "sha256": "92a9af7c07a1c6dc5b891524cd885e309e4330b528cf5195d664dc4b54081e99",
+      "structureSha256": "eb0f5ae4e69bcbab41dad132bcd6fea98bcf161ca241b7930d74f73114307b8b"
     },
     {
       "id": "async-threading",
       "count": 44,
-      "sha256": "aa7af189cc85d35370d8315b5d84a750a44ab44e8ed6a7a0710678cc04c272b8"
+      "sha256": "aa7af189cc85d35370d8315b5d84a750a44ab44e8ed6a7a0710678cc04c272b8",
+      "structureSha256": "0bb34341972ef8e48761ead126e374a05d4f9de8b2afaaa45e022bda5307c894"
     },
     {
       "id": "algorithms",
       "count": 20,
-      "sha256": "dfe513f31788de8e8008706d3bc51a4bec1797a5d729863675930787de69dabf"
+      "sha256": "dfe513f31788de8e8008706d3bc51a4bec1797a5d729863675930787de69dabf",
+      "structureSha256": "4bbda5f73685aaaf1997b1cfcf467edddff9e8086862177f9018435aa8fc9ffd"
     },
     {
       "id": "databases",
       "count": 23,
-      "sha256": "ddc020f9f4b0a53aab1b0d41cc99f66c36586c954dfabc72aa728a4a8c3d21c0"
+      "sha256": "ddc020f9f4b0a53aab1b0d41cc99f66c36586c954dfabc72aa728a4a8c3d21c0",
+      "structureSha256": "0b2fa7702bb97aec7a8a59b21f58f750823bcd76b9940b6b338d4ad13046254d"
     },
     {
       "id": "http",
       "count": 22,
-      "sha256": "12d513f309124b45d182adef296b402171da959f532fa1821c688f228323d356"
+      "sha256": "12d513f309124b45d182adef296b402171da959f532fa1821c688f228323d356",
+      "structureSha256": "3ad07721d414426356fd2e9213c98bb0a1798b00ce420e056cb69ec285370a1e"
     },
     {
       "id": "dotnet-practical",
       "count": 12,
-      "sha256": "48db31429903f0a89b6a9689130a06396fe83b3df1dd2adb4e016d4ac1016d76"
+      "sha256": "48db31429903f0a89b6a9689130a06396fe83b3df1dd2adb4e016d4ac1016d76",
+      "structureSha256": "d77c0255abba76d28229fe645e8601e2209c7f4702dd2721dd7473a2680b6e86"
     }
   ]
 }

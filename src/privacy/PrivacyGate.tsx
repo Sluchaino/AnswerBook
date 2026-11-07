@@ -1,0 +1,19 @@
+import {useState} from 'react'
+import type {ReactNode} from 'react'
+import policy from '../data/privacy-policy.json'
+import {privacyKey,privacyAcknowledged,privacyAcknowledgement} from '../lib/privacy'
+import {readStored,writeStored} from '../lib/storage'
+import {PrivacyPolicy} from './PrivacyPolicy'
+import '../profile/profile-info.css'
+import './privacy.css'
+
+export function PrivacyPage(){return <main className="privacy-page"><a href="#">← К КодШаг</a><h1>Политика конфиденциальности</h1><PrivacyPolicy/></main>}
+export function PrivacyGate({children}:{children:ReactNode}){
+ const [accepted,setAccepted]=useState(()=>privacyAcknowledged(readStored(privacyKey),policy.version))
+ const [checked,setChecked]=useState(false),[showPolicy,setShowPolicy]=useState(false),[declined,setDeclined]=useState(false)
+ const [saving,setSaving]=useState(false),[error,setError]=useState('')
+ async function accept(){if(!checked||saving)return;setSaving(true);setError('');try{await writeStored(privacyKey,JSON.stringify(privacyAcknowledgement(policy.version)));setAccepted(true)}catch{setError('Не удалось сохранить подтверждение. Проверьте доступность хранилища и повторите.')}finally{setSaving(false)}}
+ if(accepted)return children
+ if(showPolicy)return <main className="privacy-page"><button className="secondary" onClick={()=>setShowPolicy(false)}>← К информации перед началом</button><h1>Политика конфиденциальности</h1><PrivacyPolicy/><button className="secondary" onClick={()=>setShowPolicy(false)}>Вернуться</button></main>
+ return <main className="privacy-page privacy-onboarding" aria-labelledby="privacy-welcome-title"><span className="privacy-brand">КодШаг</span><h1 id="privacy-welcome-title">Перед началом обучения</h1><p className="privacy-intro">Несколько важных вещей о материалах и ваших данных.</p><ul className="privacy-notes"><li>КодШаг — самостоятельный учебный проект. Материалы подготовлены с помощью ИИ и могут содержать ошибки. Сверяйте важные решения с документацией; прохождение не гарантирует трудоустройство или сертификацию.</li><li>Ответы, профессии и прогресс хранятся на этом устройстве. Общего аккаунта между устройствами сейчас нет. Очистка хранилища удаляет локальные сохранения.</li><li>Для получения новых материалов нужен интернет. Каталог проверяется при подключении; курсы скачиваются по вашему выбору. Сетевые сервисы получают технические данные запросов, включая IP-адрес.</li><li>В приложении показывается реклама Яндекса. Рекламный сервис может обрабатывать технические данные устройства и соединения; подробнее — в политике конфиденциальности. Ответы и учебный прогресс ему не передаются. Платежи не подключены. Системные уведомления включаются отдельно.</li></ul><button className="privacy-policy-link" onClick={()=>setShowPolicy(true)}>Прочитать политику конфиденциальности ↗</button>{declined?<div><p role="status">Вы можете вернуться к ознакомлению в любое время. Сохранённые учебные данные не удалены; обучение пока не открыто.</p><button className="secondary" onClick={()=>setDeclined(false)}>Вернуться к ознакомлению</button></div>:<><label className="privacy-confirm"><input type="checkbox" checked={checked} onChange={e=>setChecked(e.target.checked)} disabled={saving}/><span>Я ознакомился с дисклеймером и политикой конфиденциальности КодШаг редакции от {policy.date}.</span></label><p className="privacy-hint">Это подтверждение ознакомления, а не согласие на любые виды обработки данных. Разрешение на уведомления запрашивается отдельно.</p>{error&&<p role="alert" className="privacy-error">{error}</p>}<div className="privacy-actions"><button className="primary" disabled={!checked||saving} onClick={()=>void accept()}>{saving?'Сохраняем…':'Понятно, продолжить'}</button><button className="text-button" disabled={saving} onClick={()=>setDeclined(true)}>Не сейчас</button></div></>}<p className="privacy-hint">Подтверждение сохраняется только на этом устройстве.</p></main>
+}

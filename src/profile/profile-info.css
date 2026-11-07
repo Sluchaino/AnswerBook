@@ -4,6 +4,16 @@
 .profile-info-links button { display:flex; align-items:center; justify-content:space-between; gap:16px; width:100%; min-height:60px; padding:16px 20px; border:0; background:transparent; color:var(--ink-304536); text-align:left; font:inherit; font-size:14px; }
 .profile-info-links button+button { border-top:1px solid var(--line-dfe5d8); }
 .profile-info-links button:hover { background:var(--surface-edf2e5); }
+.profile-faq { border-top:1px solid var(--line-dfe5d8); }
+.profile-faq summary,.profile-faq-item summary { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:60px; padding:16px 20px; color:var(--ink-304536); font-size:14px; line-height:1.6; text-align:left; list-style:none; cursor:pointer; }
+.profile-faq summary::-webkit-details-marker { display:none; }
+.profile-faq summary:hover { background:var(--surface-edf2e5); }
+.profile-faq summary:focus-visible { outline:2px solid currentColor; outline-offset:-3px; }
+.profile-faq-chevron { flex-shrink:0; }
+.profile-faq[open]>summary>.profile-faq-chevron,.profile-faq-item[open]>summary>.profile-faq-chevron { transform:rotate(180deg); }
+.profile-faq-list { border-top:1px solid var(--line-dfe5d8); }
+.profile-faq-item+.profile-faq-item { border-top:1px solid var(--line-dfe5d8); }
+.profile-faq-item>p { margin:0; padding:0 20px 20px; color:var(--ink-74856a); font-size:14px; line-height:1.85; overflow-wrap:anywhere; }
 .profile-info-dialog h2 { overflow-wrap:anywhere; }
 .profile-info-dialog .knowledge-dialog-heading { align-items:flex-start; }
 .profile-info-dialog .icon-button { flex-shrink:0; }

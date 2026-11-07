@@ -1,5 +1,4 @@
 export type StudyEventInput = {kind:'block'|'answer'|'review'|'course';id:string}
-import {parseEconomy} from './economy.ts'
 import type {Economy} from './economy'
 export type StudyActivity = { version:1; days:string[]; frozenDays?:string[]; freezeTokens?:number; events?: (StudyEventInput & {day:string})[];economy?:Economy }
 export const emptyActivity = ():StudyActivity => ({version:1,days:[]})
@@ -21,7 +20,7 @@ export function parseActivity(raw:string|null):StudyActivity {
   if(value.frozenDays!==undefined && (!Array.isArray(value.frozenDays) || value.frozenDays.length>36600 || !value.frozenDays.every(validDay)))throw new Error('Неверная история заморозок')
   if(value.freezeTokens!==undefined && (!Number.isInteger(value.freezeTokens) || value.freezeTokens<0 || value.freezeTokens>2))throw new Error('Неверный запас заморозок')
   if(value.events!==undefined && (!Array.isArray(value.events) || value.events.length>100000 || value.events.some(e=>!e || !validDay(e.day) || !['block','answer','review','course'].includes(e.kind) || typeof e.id!=='string' || !e.id || e.id.length>500)))throw new Error('Неверная статистика занятий')
-  return {version:1,days:[...new Set(value.days)].sort(),...(value.frozenDays!==undefined ? {frozenDays:[...new Set(value.frozenDays)].filter(day=>!value.days.includes(day)).sort()} : {}),...(value.freezeTokens!==undefined ? {freezeTokens:value.freezeTokens} : {}),...(value.events!==undefined ? {events:value.events} : {}),...(value.economy!==undefined ? {economy:parseEconomy(value.economy)} : {})}
+  return {version:1,days:[...new Set(value.days)].sort(),...(value.frozenDays!==undefined ? {frozenDays:[...new Set(value.frozenDays)].filter(day=>!value.days.includes(day)).sort()} : {}),...(value.freezeTokens!==undefined ? {freezeTokens:value.freezeTokens} : {}),...(value.events!==undefined ? {events:value.events} : {})}
 }
 export function recordStudyDay(activity:StudyActivity,now=new Date()):StudyActivity {
   const day=localStudyDay(now)

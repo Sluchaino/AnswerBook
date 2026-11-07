@@ -11,6 +11,8 @@ public class MainActivity extends BridgeActivity {
     public void onCreate(Bundle savedInstanceState) {
         registerPlugin(PrintDocumentPlugin.class);
         registerPlugin(AppearancePlugin.class);
+        registerPlugin(CourseNotificationsPlugin.class);
+        registerPlugin(YandexBannerPlugin.class);
         super.onCreate(savedInstanceState);
         AppearancePlugin.applyTheme(this, "dark".equals(getSharedPreferences("CapacitorStorage", MODE_PRIVATE).getString("answerbook.theme.v1", "light")));
         // Web content owns both palettes; prevent Android from recoloring them.
@@ -21,4 +23,6 @@ public class MainActivity extends BridgeActivity {
             WebSettingsCompat.setAlgorithmicDarkeningAllowed(getBridge().getWebView().getSettings(), false);
         }
     }
+    @Override public void onStart(){super.onStart();CourseNotificationsStore.foreground=true;}
+    @Override public void onStop(){CourseNotificationsStore.foreground=false;super.onStop();}
 }

@@ -1,0 +1,2072 @@
+[
+  {
+    "name": "first launch has no historical flood",
+    "now": "2026-11-02T12:00:00.000Z",
+    "previous": null,
+    "manifest": {
+      "schemaVersion": 1,
+      "revision": 1,
+      "directions": [
+        {
+          "id": "web",
+          "title": "Web",
+          "description": "Описание"
+        }
+      ],
+      "courses": [
+        {
+          "id": "course-one",
+          "version": 1,
+          "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 1,
+          "summary": {
+            "id": "course-one",
+            "version": 1,
+            "title": "Курс 1",
+            "description": "Описание",
+            "direction": "web",
+            "scope": "dotnet",
+            "symbol": "API",
+            "color": "blue",
+            "lessonCount": 1,
+            "questionCount": 7,
+            "modules": [
+              {
+                "id": "m01",
+                "title": "Модуль 1",
+                "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "lessons": [
+                  {
+                    "id": "m01-l01",
+                    "title": "Урок 1",
+                    "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 1,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 1,
+            "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 1,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": []
+    }
+  },
+  {
+    "name": "new course",
+    "now": "2026-11-02T12:00:00.000Z",
+    "previous": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 1,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 1,
+            "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 1,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": []
+    },
+    "manifest": {
+      "schemaVersion": 1,
+      "revision": 2,
+      "directions": [
+        {
+          "id": "web",
+          "title": "Web",
+          "description": "Описание"
+        }
+      ],
+      "courses": [
+        {
+          "id": "course-one",
+          "version": 1,
+          "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 1,
+          "summary": {
+            "id": "course-one",
+            "version": 1,
+            "title": "Курс 1",
+            "description": "Описание",
+            "direction": "web",
+            "scope": "dotnet",
+            "symbol": "API",
+            "color": "blue",
+            "lessonCount": 1,
+            "questionCount": 7,
+            "modules": [
+              {
+                "id": "m01",
+                "title": "Модуль 1",
+                "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "lessons": [
+                  {
+                    "id": "m01-l01",
+                    "title": "Урок 1",
+                    "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "course-two",
+          "version": 1,
+          "file": "course-two-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 1,
+          "summary": {
+            "id": "course-two",
+            "version": 1,
+            "title": "Курс 2",
+            "description": "Описание",
+            "direction": "web",
+            "scope": "dotnet",
+            "symbol": "API",
+            "color": "blue",
+            "lessonCount": 1,
+            "questionCount": 7,
+            "modules": [
+              {
+                "id": "m01",
+                "title": "Модуль 1",
+                "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "lessons": [
+                  {
+                    "id": "m01-l01",
+                    "title": "Урок 1",
+                    "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 2,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 1,
+            "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 1,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "id": "course-two",
+            "version": 1,
+            "file": "course-two-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-two",
+              "version": 1,
+              "title": "Курс 2",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "course-two:v1",
+          "courseId": "course-two",
+          "version": 1,
+          "title": "Курс 2",
+          "createdAt": "2026-11-02T12:00:00.000Z",
+          "read": false,
+          "changes": [
+            "Новый курс"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "new module does not repeat all its lessons",
+    "now": "2026-11-02T12:00:00.000Z",
+    "previous": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 1,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 1,
+            "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 1,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": []
+    },
+    "manifest": {
+      "schemaVersion": 1,
+      "revision": 2,
+      "directions": [
+        {
+          "id": "web",
+          "title": "Web",
+          "description": "Описание"
+        }
+      ],
+      "courses": [
+        {
+          "id": "course-one",
+          "version": 2,
+          "file": "course-one-v2-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 1,
+          "summary": {
+            "id": "course-one",
+            "version": 2,
+            "title": "Курс 1",
+            "description": "Описание",
+            "direction": "web",
+            "scope": "dotnet",
+            "symbol": "API",
+            "color": "blue",
+            "lessonCount": 1,
+            "questionCount": 7,
+            "modules": [
+              {
+                "id": "m01",
+                "title": "Модуль 1",
+                "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "lessons": [
+                  {
+                    "id": "m01-l01",
+                    "title": "Урок 1",
+                    "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  }
+                ]
+              },
+              {
+                "id": "m02",
+                "title": "Модуль 2",
+                "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "lessons": [
+                  {
+                    "id": "m02-l01",
+                    "title": "Новый урок",
+                    "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 2,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 2,
+            "file": "course-one-v2-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 2,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                },
+                {
+                  "id": "m02",
+                  "title": "Модуль 2",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m02-l01",
+                      "title": "Новый урок",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "course-one:v2",
+          "courseId": "course-one",
+          "version": 2,
+          "title": "Курс 1",
+          "createdAt": "2026-11-02T12:00:00.000Z",
+          "read": false,
+          "changes": [
+            "Новый модуль: Модуль 2"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "new lesson",
+    "now": "2026-11-02T12:00:00.000Z",
+    "previous": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 1,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 1,
+            "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 1,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": []
+    },
+    "manifest": {
+      "schemaVersion": 1,
+      "revision": 2,
+      "directions": [
+        {
+          "id": "web",
+          "title": "Web",
+          "description": "Описание"
+        }
+      ],
+      "courses": [
+        {
+          "id": "course-one",
+          "version": 2,
+          "file": "course-one-v2-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 1,
+          "summary": {
+            "id": "course-one",
+            "version": 2,
+            "title": "Курс 1",
+            "description": "Описание",
+            "direction": "web",
+            "scope": "dotnet",
+            "symbol": "API",
+            "color": "blue",
+            "lessonCount": 1,
+            "questionCount": 7,
+            "modules": [
+              {
+                "id": "m01",
+                "title": "Модуль 1",
+                "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "lessons": [
+                  {
+                    "id": "m01-l01",
+                    "title": "Урок 1",
+                    "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  },
+                  {
+                    "id": "m01-l02",
+                    "title": "Урок 2",
+                    "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 2,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 2,
+            "file": "course-one-v2-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 2,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    },
+                    {
+                      "id": "m01-l02",
+                      "title": "Урок 2",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "course-one:v2",
+          "courseId": "course-one",
+          "version": 2,
+          "title": "Курс 1",
+          "createdAt": "2026-11-02T12:00:00.000Z",
+          "read": false,
+          "changes": [
+            "Новый урок: Урок 2"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "updated lesson content",
+    "now": "2026-11-02T12:00:00.000Z",
+    "previous": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 1,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 1,
+            "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 1,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": []
+    },
+    "manifest": {
+      "schemaVersion": 1,
+      "revision": 2,
+      "directions": [
+        {
+          "id": "web",
+          "title": "Web",
+          "description": "Описание"
+        }
+      ],
+      "courses": [
+        {
+          "id": "course-one",
+          "version": 2,
+          "file": "course-one-v2-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 1,
+          "summary": {
+            "id": "course-one",
+            "version": 2,
+            "title": "Курс 1",
+            "description": "Описание",
+            "direction": "web",
+            "scope": "dotnet",
+            "symbol": "API",
+            "color": "blue",
+            "lessonCount": 1,
+            "questionCount": 7,
+            "modules": [
+              {
+                "id": "m01",
+                "title": "Модуль 1",
+                "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "lessons": [
+                  {
+                    "id": "m01-l01",
+                    "title": "Урок 1",
+                    "contentHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 2,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 2,
+            "file": "course-one-v2-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 2,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "course-one:v2",
+          "courseId": "course-one",
+          "version": 2,
+          "title": "Курс 1",
+          "createdAt": "2026-11-02T12:00:00.000Z",
+          "read": false,
+          "changes": [
+            "Обновлён урок: Урок 1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "updated module exam",
+    "now": "2026-11-02T12:00:00.000Z",
+    "previous": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 1,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 1,
+            "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 1,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": []
+    },
+    "manifest": {
+      "schemaVersion": 1,
+      "revision": 2,
+      "directions": [
+        {
+          "id": "web",
+          "title": "Web",
+          "description": "Описание"
+        }
+      ],
+      "courses": [
+        {
+          "id": "course-one",
+          "version": 2,
+          "file": "course-one-v2-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 1,
+          "summary": {
+            "id": "course-one",
+            "version": 2,
+            "title": "Курс 1",
+            "description": "Описание",
+            "direction": "web",
+            "scope": "dotnet",
+            "symbol": "API",
+            "color": "blue",
+            "lessonCount": 1,
+            "questionCount": 7,
+            "modules": [
+              {
+                "id": "m01",
+                "title": "Модуль 1",
+                "contentHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                "lessons": [
+                  {
+                    "id": "m01-l01",
+                    "title": "Урок 1",
+                    "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 2,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 2,
+            "file": "course-one-v2-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 2,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "course-one:v2",
+          "courseId": "course-one",
+          "version": 2,
+          "title": "Курс 1",
+          "createdAt": "2026-11-02T12:00:00.000Z",
+          "read": false,
+          "changes": [
+            "Обновлён модуль: Модуль 1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "renamed lesson",
+    "now": "2026-11-02T12:00:00.000Z",
+    "previous": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 1,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 1,
+            "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 1,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": []
+    },
+    "manifest": {
+      "schemaVersion": 1,
+      "revision": 2,
+      "directions": [
+        {
+          "id": "web",
+          "title": "Web",
+          "description": "Описание"
+        }
+      ],
+      "courses": [
+        {
+          "id": "course-one",
+          "version": 2,
+          "file": "course-one-v2-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 1,
+          "summary": {
+            "id": "course-one",
+            "version": 2,
+            "title": "Курс 1",
+            "description": "Описание",
+            "direction": "web",
+            "scope": "dotnet",
+            "symbol": "API",
+            "color": "blue",
+            "lessonCount": 1,
+            "questionCount": 7,
+            "modules": [
+              {
+                "id": "m01",
+                "title": "Модуль 1",
+                "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "lessons": [
+                  {
+                    "id": "m01-l01",
+                    "title": "Другое название",
+                    "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 2,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 2,
+            "file": "course-one-v2-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 2,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Другое название",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "course-one:v2",
+          "courseId": "course-one",
+          "version": 2,
+          "title": "Курс 1",
+          "createdAt": "2026-11-02T12:00:00.000Z",
+          "read": false,
+          "changes": [
+            "Обновлён урок: Другое название"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "generic update with legacy metadata",
+    "now": "2026-11-02T12:00:00.000Z",
+    "previous": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 1,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 1,
+            "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 1,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": []
+    },
+    "manifest": {
+      "schemaVersion": 1,
+      "revision": 2,
+      "directions": [
+        {
+          "id": "web",
+          "title": "Web",
+          "description": "Описание"
+        }
+      ],
+      "courses": [
+        {
+          "id": "course-one",
+          "version": 2,
+          "file": "course-one-v2-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 1,
+          "summary": {
+            "id": "course-one",
+            "version": 2,
+            "title": "Курс 1",
+            "description": "Описание",
+            "direction": "web",
+            "scope": "dotnet",
+            "symbol": "API",
+            "color": "blue",
+            "lessonCount": 1,
+            "questionCount": 7,
+            "modules": [
+              {
+                "id": "m01",
+                "title": "Модуль 1",
+                "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "lessons": [
+                  {
+                    "id": "m01-l01",
+                    "title": "Урок 1",
+                    "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 2,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 2,
+            "file": "course-one-v2-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 2,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "course-one:v2",
+          "courseId": "course-one",
+          "version": 2,
+          "title": "Курс 1",
+          "createdAt": "2026-11-02T12:00:00.000Z",
+          "read": false,
+          "changes": [
+            "Обновлены материалы курса"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "revision tick is not a content notification",
+    "now": "2026-11-02T12:00:00.000Z",
+    "previous": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 1,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 1,
+            "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 1,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": []
+    },
+    "manifest": {
+      "schemaVersion": 1,
+      "revision": 2,
+      "directions": [
+        {
+          "id": "web",
+          "title": "Web",
+          "description": "Описание"
+        }
+      ],
+      "courses": [
+        {
+          "id": "course-one",
+          "version": 1,
+          "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 1,
+          "summary": {
+            "id": "course-one",
+            "version": 1,
+            "title": "Курс 1",
+            "description": "Описание",
+            "direction": "web",
+            "scope": "dotnet",
+            "symbol": "API",
+            "color": "blue",
+            "lessonCount": 1,
+            "questionCount": 7,
+            "modules": [
+              {
+                "id": "m01",
+                "title": "Модуль 1",
+                "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "lessons": [
+                  {
+                    "id": "m01-l01",
+                    "title": "Урок 1",
+                    "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 2,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 1,
+            "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 1,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": []
+    }
+  },
+  {
+    "name": "first hash metadata does not notify",
+    "now": "2026-11-02T12:00:00.000Z",
+    "previous": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 1,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 1,
+            "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 1,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": []
+    },
+    "manifest": {
+      "schemaVersion": 1,
+      "revision": 2,
+      "directions": [
+        {
+          "id": "web",
+          "title": "Web",
+          "description": "Описание"
+        }
+      ],
+      "courses": [
+        {
+          "id": "course-one",
+          "version": 1,
+          "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 1,
+          "summary": {
+            "id": "course-one",
+            "version": 1,
+            "title": "Курс 1",
+            "description": "Описание",
+            "direction": "web",
+            "scope": "dotnet",
+            "symbol": "API",
+            "color": "blue",
+            "lessonCount": 1,
+            "questionCount": 7,
+            "modules": [
+              {
+                "id": "m01",
+                "title": "Модуль 1",
+                "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "lessons": [
+                  {
+                    "id": "m01-l01",
+                    "title": "Урок 1",
+                    "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 2,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 1,
+            "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 1,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": []
+    }
+  },
+  {
+    "name": "read state survives repeated refresh",
+    "now": "2026-11-02T12:00:00.000Z",
+    "previous": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 2,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 2,
+            "file": "course-one-v2-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 2,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "course-one:v2",
+          "courseId": "course-one",
+          "version": 2,
+          "title": "Курс 1",
+          "createdAt": "2026-11-02T12:00:00.000Z",
+          "read": true,
+          "changes": [
+            "Обновлён урок: Урок 1"
+          ]
+        }
+      ]
+    },
+    "manifest": {
+      "schemaVersion": 1,
+      "revision": 2,
+      "directions": [
+        {
+          "id": "web",
+          "title": "Web",
+          "description": "Описание"
+        }
+      ],
+      "courses": [
+        {
+          "id": "course-one",
+          "version": 2,
+          "file": "course-one-v2-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 1,
+          "summary": {
+            "id": "course-one",
+            "version": 2,
+            "title": "Курс 1",
+            "description": "Описание",
+            "direction": "web",
+            "scope": "dotnet",
+            "symbol": "API",
+            "color": "blue",
+            "lessonCount": 1,
+            "questionCount": 7,
+            "modules": [
+              {
+                "id": "m01",
+                "title": "Модуль 1",
+                "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "lessons": [
+                  {
+                    "id": "m01-l01",
+                    "title": "Урок 1",
+                    "contentHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 2,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 2,
+            "file": "course-one-v2-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 2,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "course-one:v2",
+          "courseId": "course-one",
+          "version": 2,
+          "title": "Курс 1",
+          "createdAt": "2026-11-02T12:00:00.000Z",
+          "read": true,
+          "changes": [
+            "Обновлён урок: Урок 1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "older manifest ignored",
+    "now": "2026-11-02T12:00:00.000Z",
+    "previous": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 3,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 1,
+            "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 1,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": []
+    },
+    "manifest": {
+      "schemaVersion": 1,
+      "revision": 1,
+      "directions": [
+        {
+          "id": "web",
+          "title": "Web",
+          "description": "Описание"
+        }
+      ],
+      "courses": [
+        {
+          "id": "course-one",
+          "version": 1,
+          "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 1,
+          "summary": {
+            "id": "course-one",
+            "version": 1,
+            "title": "Курс 1",
+            "description": "Описание",
+            "direction": "web",
+            "scope": "dotnet",
+            "symbol": "API",
+            "color": "blue",
+            "lessonCount": 1,
+            "questionCount": 7,
+            "modules": [
+              {
+                "id": "m01",
+                "title": "Модуль 1",
+                "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "lessons": [
+                  {
+                    "id": "m01-l01",
+                    "title": "Урок 1",
+                    "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 3,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 1,
+            "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 1,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": []
+    }
+  },
+  {
+    "name": "course version rollback rejected",
+    "now": "2026-11-02T12:00:00.000Z",
+    "previous": {
+      "schemaVersion": 1,
+      "baseline": {
+        "schemaVersion": 1,
+        "revision": 2,
+        "directions": [
+          {
+            "id": "web",
+            "title": "Web",
+            "description": "Описание"
+          }
+        ],
+        "courses": [
+          {
+            "id": "course-one",
+            "version": 2,
+            "file": "course-one-v2-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 1,
+            "summary": {
+              "id": "course-one",
+              "version": 2,
+              "title": "Курс 1",
+              "description": "Описание",
+              "direction": "web",
+              "scope": "dotnet",
+              "symbol": "API",
+              "color": "blue",
+              "lessonCount": 1,
+              "questionCount": 7,
+              "modules": [
+                {
+                  "id": "m01",
+                  "title": "Модуль 1",
+                  "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "lessons": [
+                    {
+                      "id": "m01-l01",
+                      "title": "Урок 1",
+                      "contentHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "course-one:v2",
+          "courseId": "course-one",
+          "version": 2,
+          "title": "Курс 1",
+          "createdAt": "2026-11-02T12:00:00.000Z",
+          "read": true,
+          "changes": [
+            "Обновлён урок: Урок 1"
+          ]
+        }
+      ]
+    },
+    "manifest": {
+      "schemaVersion": 1,
+      "revision": 3,
+      "directions": [
+        {
+          "id": "web",
+          "title": "Web",
+          "description": "Описание"
+        }
+      ],
+      "courses": [
+        {
+          "id": "course-one",
+          "version": 1,
+          "file": "course-one-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 1,
+          "summary": {
+            "id": "course-one",
+            "version": 1,
+            "title": "Курс 1",
+            "description": "Описание",
+            "direction": "web",
+            "scope": "dotnet",
+            "symbol": "API",
+            "color": "blue",
+            "lessonCount": 1,
+            "questionCount": 7,
+            "modules": [
+              {
+                "id": "m01",
+                "title": "Модуль 1",
+                "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "lessons": [
+                  {
+                    "id": "m01-l01",
+                    "title": "Урок 1",
+                    "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "reject": true
+  }
+]

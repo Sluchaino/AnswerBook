@@ -1,20 +1,16 @@
-import {CoinWallet} from '../components/CoinWallet'
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react'
 import type { Topic } from '../lib/catalog'
 import { courseProgress, toggleCompleted } from '../lib/profile'
 import type { Course, Profession, Profile } from '../lib/profile'
-import { learningCourses, learningDirections } from '../lib/learningContent'
-import { learningProgress, restoreLearningAttempt } from '../lib/learning'
-import { learningStorageKey, readStored, subscribeStorage, storageRevision } from '../lib/storage'
+import { courseCatalog, learningDirections } from '../lib/learningContent'
+import {readCourseProgress} from '../lib/courseUpdates'
+import { subscribeStorage, storageRevision } from '../lib/storage'
 import { StudyStreak } from '../components/StudyStreak'
 import type { StudyActivity } from '../lib/activity'
 import './profile.css'
 import { ProfileInfo } from './ProfileInfo'
 
 type Props = {
-  retrySave:()=>Promise<void>
-  purchaseFreeze:()=>Promise<void>
-  busy:boolean
   activity:StudyActivity
   activityError:string
   profile: Profile
@@ -28,10 +24,11 @@ type Props = {
 
 const percentFormat = new Intl.NumberFormat('ru-RU', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 
-export function ProfilePage({ profile, topics, onChange, onOpenCourse, onOpenLearning, saveState, loadFailed,activity,activityError,purchaseFreeze,retrySave,busy }: Props) {
+export function ProfilePage({ profile, topics, onChange, onOpenCourse, onOpenLearning, saveState, loadFailed,activity,activityError }: Props) {
   useSyncExternalStore(subscribeStorage,storageRevision,storageRevision)
+  const learningCourses=courseCatalog.flatMap(e=>e.summary?[e.summary]:[])
   const learningLoads=learningCourses.map(course=>{
-    try {return {id:course.id,status:learningProgress(course,restoreLearningAttempt(readStored(learningStorageKey(course.id)),course,course.previous))}}
+    try {return {id:course.id,status:readCourseProgress(course.id)??{started:false,completed:false,percent:0}}}
     catch {return {id:course.id,status:null}}
   })
   const learningFailed=learningLoads.some(item=>item.status===null)
@@ -40,7 +37,6 @@ export function ProfilePage({ profile, topics, onChange, onOpenCourse, onOpenLea
   const [showEditor, setShowEditor] = useState(false)
   const [title, setTitle] = useState('')
   const [selected, setSelected] = useState<Course[]>([])
-  const [customTitle, setCustomTitle] = useState('')
   const [error, setError] = useState('')
   const [removed, setRemoved] = useState<Profession | null>(null)
   const [expandedIds, setExpandedIds] = useState<string[]>([])
@@ -61,26 +57,15 @@ export function ProfilePage({ profile, topics, onChange, onOpenCourse, onOpenLea
   function openEditor(profession: Profession | null) {
     setEditing(profession)
     setTitle(profession?.title ?? '')
-    setSelected(profession?.courses.map(course => ({ ...course })) ?? [])
-    setCustomTitle('')
+    setSelected(profession?.courses.filter(course => course.learningCourseId).map(course => ({ ...course })) ?? [])
     setError('')
     setShowEditor(true)
   }
   function toggleCourse(course: Course) {
     setSelected(current => current.some(item => item.id === course.id) ? current.filter(item => item.id !== course.id) : current.length < 300 ? [...current, course] : current)
   }
-  function addCustom() {
-    const name = customTitle.trim()
-    if (!name) { setError('Введите название своего курса.'); return }
-    if (selected.some(course => course.title.toLocaleLowerCase('ru') === name.toLocaleLowerCase('ru'))) { setError('Этот курс уже добавлен.'); return }
-    if (selected.length >= 300) { setError('Можно добавить не более 300 курсов.'); return }
-    setSelected(current => [...current, { id: `custom:${crypto.randomUUID()}`, title: name }])
-    setCustomTitle('')
-    setError('')
-  }
   function saveProfession(event: React.FormEvent) {
     event.preventDefault()
-    if (customTitle.trim()) { setError('Нажмите «Добавить», чтобы включить свой курс в профессию, или очистите поле.'); return }
     if (!title.trim()) { setError('Введите название профессии.'); return }
     if (!selected.length) { setError('Добавьте хотя бы один курс.'); return }
     if (!editing && profile.professions.length >= 100) { setError('Можно создать не более 100 профессий.'); return }
@@ -90,11 +75,9 @@ export function ProfilePage({ profile, topics, onChange, onOpenCourse, onOpenLea
     setShowEditor(false)
   }
   const catalogCourses: Course[] = learningCourses.map(course => ({ id: `learning:${course.id}`, title: course.title, learningCourseId: course.id }))
-  const otherCourses = selected.filter(course => !catalogCourses.some(item => item.id === course.id))
 
   return <section className="profile-page" aria-labelledby="profile-title">
     <div className="profile-intro"><span className="eyebrow">ВАШ ПУТЬ В ОБУЧЕНИИ</span><h1 ref={heading} tabIndex={-1} id="profile-title">Личный <span className="serif">кабинет.</span></h1><p>Соберите курсы под свою цель и отмечайте каждый пройденный шаг.</p></div>
-    <CoinWallet activity={activity} error={activityError} retrySave={retrySave} purchaseFreeze={purchaseFreeze} busy={busy}/>
     <StudyStreak activity={activity} error={activityError} />
     {learningFailed && <p className="profile-error" role="alert">Не удалось прочитать часть сохранений курсов. Прогресс может отображаться не полностью; перезапустите приложение.</p>}
     <div className="profile-overview">
@@ -110,7 +93,7 @@ export function ProfilePage({ profile, topics, onChange, onOpenCourse, onOpenLea
         <div className="profession-card-heading"><h3><button className="profession-toggle" aria-expanded={expanded} aria-controls={`profession-courses-${profession.id}`} onClick={() => setExpandedIds(ids => ids.includes(profession.id) ? ids.filter(id => id !== profession.id) : [...ids, profession.id])}><span>{profession.title}</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button></h3><button className="text-button" disabled={loadFailed} onClick={() => openEditor(profession)} aria-label={`Изменить профессию ${profession.title}`}>Изменить</button></div>
         <div className="profession-progress-label"><span>Пройдено {current.done} из {current.total} курсов</span><strong>{percentFormat.format(current.percent)}%</strong></div><progress max={100} value={current.percent} aria-label={`Прогресс профессии ${profession.title}`} />
         <div id={`profession-courses-${profession.id}`} hidden={!expanded}>
-        <ul className="profession-courses">{profession.courses.map(course => {
+        <ul className="profession-courses">{profession.courses.filter(course => course.learningCourseId).map(course => {
           const topic = topics.find(item => item.id === course.topicId)
           const manualCompleted = profile.completedCourseIds.includes(course.id)
           const savedProgress=course.learningCourseId ? learning[course.learningCourseId] : undefined
@@ -128,11 +111,10 @@ export function ProfilePage({ profile, topics, onChange, onOpenCourse, onOpenLea
       <div className="profession-editor-heading"><h2 id="profession-editor-title">{editing ? 'Изменить профессию' : 'Новая профессия'}</h2><button className="icon-button" aria-label="Закрыть редактор профессии" onClick={() => setShowEditor(false)}>×</button></div>
       <form onSubmit={saveProfession}><label className="profile-field" htmlFor="profession-title">Название профессии<input id="profession-title" value={title} onChange={event => setTitle(event.target.value)} maxLength={100} placeholder="Например, C# backend-разработчик" autoFocus required /></label>
         <p className="editor-hint">Добавьте учебные курсы с теорией и заданиями, которые нужны для этой профессии.</p>
-        {learningDirections.map(direction => <fieldset key={direction.id}><legend>{direction.title}</legend>{learningCourses.filter(course => course.direction === direction.id).map(item => {
+        {learningDirections.filter(direction => learningCourses.some(course => course.direction === direction.id)).map(direction => <fieldset key={direction.id}><legend>{direction.title}</legend>{learningCourses.filter(course => course.direction === direction.id).map(item => {
           const course = catalogCourses.find(course => course.learningCourseId === item.id)!
           return <label className="editor-course" key={course.id}><input type="checkbox" checked={selected.some(item => item.id === course.id)} onChange={() => toggleCourse(course)} /><span>{course.title}</span></label>
         })}</fieldset>)}
-        <fieldset><legend>{otherCourses.some(course => course.topicId) ? 'Свои курсы и прежние темы' : 'Свои курсы'}</legend><p className="editor-hint">{otherCourses.some(course => course.topicId) ? 'Ранее выбранные темы сохранены. Их можно убрать и выбрать учебные курсы выше.' : 'Можно добавить курс с другой платформы или собственный учебный материал.'}</p>{otherCourses.map(course => <div className="custom-course" key={course.id}><span>{course.title}</span><button type="button" className="text-button" onClick={() => toggleCourse(course)} aria-label={`Убрать курс ${course.title}`}>Убрать</button></div>)}<div className="custom-course-input"><input aria-label="Название своего курса" value={customTitle} maxLength={150} onChange={event => setCustomTitle(event.target.value)} onKeyDown={event => { if (event.key === 'Enter') { event.preventDefault(); addCustom() } }} placeholder="Название курса" /><button type="button" className="secondary" onClick={addCustom}>Добавить</button></div></fieldset>
         {error && <p className="profile-error" role="alert">{error}</p>}<div className="profession-editor-actions"><button type="button" className="secondary" onClick={() => setShowEditor(false)}>Отмена</button><button type="submit" className="primary">{editing ? 'Сохранить изменения' : 'Создать профессию'}</button></div>
       </form>
     </dialog>

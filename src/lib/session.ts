@@ -1,6 +1,8 @@
 import type { Topic } from './catalog'
 import { sessionTopics } from './catalog.ts'
 import { shuffled } from './shuffle.ts'
+import { questionRedirects } from './questionRedirects.ts'
+import {mergedTopicIds,mergeTopicSettings} from './topicMerges.ts'
 
 export type Session = { stage: 'topics' | 'questions' | 'result'; selected: string[]; answers: Record<string, string>; index: number; completedAt: string | null; topicSnapshot?: Topic[]; questionIds?: string[]; lastQuestionIds?:string[] }
 export const freshSession = (): Session => ({ stage: 'topics', selected: [], answers: {}, index: 0, completedAt: null })
@@ -14,7 +16,8 @@ export function restoreSession(raw: string | null, available: Topic[]): Session 
     // Only a running survey uses its frozen catalogue to restore the selection.
     // The catalogue screen can select topics introduced after that snapshot.
     const choices = saved.stage === 'questions' || saved.stage === 'result' ? snapshot : available
-    const selected = Array.isArray(saved.selected) ? choices.filter(t => saved.selected?.includes(t.id)).map(t => t.id) : []
+    const selectedIds=Array.isArray(saved.selected) ? (saved.stage==='questions'||saved.stage==='result' ? saved.selected : mergedTopicIds(saved.selected)) : []
+    const selected = choices.filter(t => selectedIds.includes(t.id)).map(t => t.id)
     const answers: Record<string, string> = {}
     if (saved.answers && typeof saved.answers === 'object') for (const [id, answer] of Object.entries(saved.answers)) {
       if (typeof answer === 'string') answers[id] = answer
@@ -26,8 +29,8 @@ export function restoreSession(raw: string | null, available: Topic[]): Session 
 }
 
 export function leaveSession(session: Session): Session {
-  if (session.completedAt || session.stage === 'result') return { ...freshSession(), selected: session.selected, lastQuestionIds:session.questionIds }
-  return { ...session, stage: 'topics' }
+  if (session.completedAt || session.stage === 'result') return { ...freshSession(), selected: mergedTopicIds(session.selected), lastQuestionIds:session.questionIds }
+  return { ...session, selected:mergedTopicIds(session.selected), stage: 'topics' }
 }
 
 export function testTopics(topics: Topic[], selected: string[], ids: string[]) {
@@ -36,7 +39,7 @@ export function testTopics(topics: Topic[], selected: string[], ids: string[]) {
 }
 
 export function eligibleIds(topics: Topic[], selected: string[], known: string[], includeKnown: boolean, includeKnownByTopic: Record<string, boolean> = {}): string[] {
-  const excluded = new Set(known)
+  const excluded = new Set(known.map(id=>questionRedirects[id] ?? id))
   return topics.filter(topic => selected.includes(topic.id)).flatMap(topic => {
     const include = Object.hasOwn(includeKnownByTopic, topic.id) ? includeKnownByTopic[topic.id] : includeKnown
     return topic.questions.filter(q => include || !excluded.has(q.id)).map(q => q.id)
@@ -60,5 +63,5 @@ export function parseKnowledge(raw: string | null): Knowledge {
   const value = JSON.parse(raw) as Knowledge
   if (!value || !Array.isArray(value.knownIds) || value.knownIds.some(id => typeof id !== 'string' || !id) || typeof value.includeKnown !== 'boolean') throw new Error('Неверные отметки знаний')
   if (value.includeKnownByTopic !== undefined && (!value.includeKnownByTopic || typeof value.includeKnownByTopic !== 'object' || Array.isArray(value.includeKnownByTopic) || Object.values(value.includeKnownByTopic).some(flag => typeof flag !== 'boolean'))) throw new Error('Неверные настройки тем')
-  return { knownIds: [...new Set(value.knownIds)], includeKnown: value.includeKnown, ...(value.includeKnownByTopic !== undefined ? { includeKnownByTopic: value.includeKnownByTopic } : {}) }
+  return { knownIds: [...new Set(value.knownIds.map(id=>questionRedirects[id] ?? id))], includeKnown: value.includeKnown, ...(value.includeKnownByTopic !== undefined ? { includeKnownByTopic: mergeTopicSettings(value.includeKnownByTopic) } : {}) }
 }

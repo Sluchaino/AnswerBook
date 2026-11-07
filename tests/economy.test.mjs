@@ -6,13 +6,14 @@ import {createTransactionQueue} from '../src/lib/transactionQueue.ts'
 const day='2026-10-24'
 
 test('migration preserves started/finished courses, grants 100 once and never rewards old completions',()=>{
-  const e=freshEconomy([{id:'started',started:true,completed:false},{id:'done',started:true,completed:true},{id:'new',started:false,completed:false}],day)
+  const e=freshEconomy([{id:'started',started:true,completed:false},{id:'done',started:true,completed:true,rewardEligible:true},{id:'new',started:false,completed:false}],day)
   assert.equal(e.balance,100);assert.deepEqual(e.unlockedIds,['started','done']);assert.deepEqual(e.completedIds,['done'])
-  assert.equal(rewardCompletions(e,[{id:'done',completed:true}],day),e)
+  assert.equal(rewardCompletions(e,[{id:'done',completed:true,rewardEligible:true}],day),e)
   assert.equal(coursePrice(e),100)
   assert.deepEqual(parseEconomy(e),e)
   const restored=parseActivity(JSON.stringify({version:1,days:[],economy:e}))
-  assert.deepEqual(restored.economy,e)
+  // The retired economy is ignored when migrating current activity records.
+  assert.equal(restored.economy,undefined)
 })
 test('buying is permanent, duplicate purchase is free, insufficient funds and stale quotes change nothing',()=>{
   const e=freshEconomy([],day),bought=buyCourse(e,'a',day,100)
@@ -26,14 +27,14 @@ test('price counts only unfinished paid courses, caps at 200, and first completi
   for(const id of ['a','b','c','d','e'])e=buyCourse(e,id,day)
   assert.equal(pendingPurchases(e),5);assert.equal(coursePrice(e),200)
   const before=e.balance
-  e=rewardCompletions(e,[{id:'a',completed:true},{id:'b',completed:true}],day)
+  e=rewardCompletions(e,[{id:'a',completed:true,rewardEligible:true},{id:'b',completed:true,rewardEligible:true}],day)
   assert.equal(e.balance,before+200);assert.equal(coursePrice(e),175)
-  assert.equal(rewardCompletions(e,[{id:'a',completed:true}],day),e)
-  assert.equal(rewardCompletions(e,[{id:'locked',completed:true}],day),e)
+  assert.equal(rewardCompletions(e,[{id:'a',completed:true,rewardEligible:true}],day),e)
+  assert.equal(rewardCompletions(e,[{id:'locked',completed:true,rewardEligible:true}],day),e)
   for(let i=0;i<110;i++)e=coinChange(e,`test${i}`,day,'test',1)
   assert.equal(e.history.length,100)
-  assert.equal(rewardCompletions(e,[{id:'a',completed:true}],day),e)
-  e=rewardCompletions(e,['c','d','e'].map(id=>({id,completed:true})),day)
+  assert.equal(rewardCompletions(e,[{id:'a',completed:true,rewardEligible:true}],day),e)
+  e=rewardCompletions(e,['c','d','e'].map(id=>({id,completed:true,rewardEligible:true})),day)
   assert.equal(coursePrice(e),100);assert.equal(e.unlockedIds.length,5)
 })
 test('study cycle grants 70 per seven actual streak days, never pays twice or on clock rollback',()=>{

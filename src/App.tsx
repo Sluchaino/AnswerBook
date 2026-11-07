@@ -1,20 +1,24 @@
+import {QuestionText} from './components/CodeExample'
+import privacyPolicy from './data/privacy-policy.json'
+import {Select} from './components/Select'
 import {DirectionGroup} from './components/DirectionGroup'
+import {CourseNotifications} from './components/CourseNotifications'
 import {useTheme} from './lib/useTheme'
 import {ThemeToggle} from './components/ThemeToggle'
 import { CustomTopicEditor } from './questions/CustomTopicEditor'
 import { isCustomTopic, parseCustomTopics, mergeTopics } from './lib/customTopics'
 import { customTopicsKey } from './lib/storage'
 import type { Topic } from './lib/catalog'
-import { Select } from './components/Select'
-import { groupTopics,filterTopics, topicDirections } from './lib/topicFilters'
-import { learningDirections } from './lib/learningContent'
+import { groupTopics,filterTopics } from './lib/topicFilters'
+import { learningDirections,subscribeLearning,learningContentRevision } from './lib/learningContent'
+import {refreshLearningContent} from './lib/courseUpdates'
 import { useStudyActivity } from './lib/useStudyActivity'
 import { Arrow } from './components/Arrow'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState,useSyncExternalStore } from 'react'
 import { App as NativeApp } from '@capacitor/app'
 import { readCatalog, refreshCatalog } from './lib/content'
 import { sessionTopics } from './lib/catalog'
-import { readStored, writeStored, sessionKey, profileKey, knowledgeKey } from './lib/storage'
+import { readStored, readStorageSnapshot, readStorageToken, writeStored, StorageWriteError, sessionKey, profileKey, knowledgeKey } from './lib/storage'
 import { freshSession, restoreSession, leaveSession, beginSession, eligibleIds, testTopics, parseKnowledge } from './lib/session'
 import type { Session } from './lib/session'
 import { KnowledgeSettings } from './questions/KnowledgeSettings'
@@ -39,8 +43,9 @@ function readSession(): Session {
   return restoreSession(readStored(sessionKey), mergeTopics(readCatalog().topics,custom))
 }
 function App() {
+  useSyncExternalStore(subscribeLearning,learningContentRevision,learningContentRevision)
   const {theme,toggleTheme,themeError}=useTheme()
-  const {activity,recordStudy,activityError,purchaseCourse,purchaseFreeze,retrySave,busy}=useStudyActivity()
+  const {activity,recordStudy,activityError}=useStudyActivity()
   const mobileLayout = useMobileLayout()
   const [view, setView] = useState<AppView>('catalog')
   const [topicQuery, setTopicQuery] = useState('')
@@ -48,10 +53,12 @@ function App() {
   const [learningStart, setLearningStart] = useState<{ id:string | null; key:number }>({ id:null, key:0 })
   const [settingsTopicId, setSettingsTopicId] = useState<string | null>(null)
   const [profileLoad] = useState(() => {
-    try { return { profile: parseProfile(readStored(profileKey)), failed: false } }
-    catch { return { profile: emptyProfile(), failed: true } }
+    try { const snapshot=readStorageSnapshot(profileKey);return { profile: parseProfile(snapshot.value), failed: false, token:snapshot.token } }
+    catch { return { profile: emptyProfile(), failed: true, token:'' } }
   })
   const [profile, setProfile] = useState(profileLoad.profile)
+  const profileToken=useRef(profileLoad.token)
+  const [profileError,setProfileError]=useState('')
   const [profileSave, setProfileSave] = useState<'saved' | 'saving' | 'error'>('saved')
   const [nativeVersion, setNativeVersion] = useState('')
   const [session, setSession] = useState<Session>(readSession)
@@ -70,6 +77,26 @@ function App() {
   const [topicEditor,setTopicEditor] = useState<Topic | 'new' | null>(null)
   const availableTopics = mergeTopics(baseTopics,customTopics)
   const [syncStatus, setSyncStatus] = useState('Вопросы доступны офлайн')
+  const [courseSyncStatus,setCourseSyncStatus]=useState('Курсы доступны офлайн')
+  async function syncCourses() {
+    setCourseSyncStatus('Проверяем обновления курсов…')
+    try {setCourseSyncStatus(await refreshLearningContent())}
+    catch {setCourseSyncStatus('Нет связи с сервером курсов · загруженные материалы доступны офлайн')}
+  }
+  useEffect(()=>{
+    let active=true
+    const sync=async()=>{
+      if(!active)return
+      setCourseSyncStatus('Проверяем обновления курсов…')
+      try {const message=await refreshLearningContent();if(active)setCourseSyncStatus(message)}
+      catch {if(active)setCourseSyncStatus('Не удалось обновить курсы · загруженные материалы доступны офлайн')}
+    }
+    const resume=()=>{if(document.visibilityState==='visible')void sync()}
+    void sync();window.addEventListener('online',sync);document.addEventListener('visibilitychange',resume)
+    const interval=window.setInterval(()=>{if(document.visibilityState==='visible')void sync()},15*60*1000)
+    const listener=isAndroid ? NativeApp.addListener('appStateChange',({isActive})=>{if(isActive)void sync()}) : null
+    return()=>{active=false;window.clearInterval(interval);window.removeEventListener('online',sync);document.removeEventListener('visibilitychange',resume);if(listener)void listener.then(handle=>handle.remove())}
+  },[])
   const topics = session.stage === 'topics' ? availableTopics : sessionTopics(session.topicSnapshot, availableTopics)
   const visibleTopics = filterTopics(topics, topicQuery, topicDirection)
   const filtersActive = Boolean(topicQuery.trim()) || topicDirection !== 'all'
@@ -100,12 +127,12 @@ function App() {
     return () => { active = false }
   }, [knowledge, knowledgeLoad.failed])
   useEffect(() => {
-    if (profileLoad.failed) return
+    if (profileLoad.failed || profile===profileLoad.profile) return
     let active = true
     setProfileSave('saving')
-    void writeStored(profileKey, JSON.stringify(profile)).then(() => { if (active) setProfileSave('saved') }, () => { if (active) setProfileSave('error') })
+    void writeStored(profileKey, JSON.stringify(profile),()=>profileToken.current).then(token => { profileToken.current=token;if (active) {setProfileSave('saved');setProfileError('')} }, error => { if(error instanceof StorageWriteError)profileToken.current=error.retryToken;if (active) {setProfileSave('error');setProfileError(error instanceof Error?error.message:'Не удалось сохранить профиль.')} })
     return () => { active = false }
-  }, [profile, profileLoad.failed])
+  }, [profile, profileLoad.failed, profileLoad.profile])
   useEffect(() => {
     if (isAndroid) void NativeApp.getInfo().then(info => setNativeVersion(info.version)).catch(() => {})
   }, [])
@@ -139,7 +166,8 @@ function App() {
   useEffect(() => {
     if (!isAndroid) return
     const listener = NativeApp.addListener('backButton', () => {
-      if (showQuestions) setShowQuestions(false)
+      if (document.querySelector<HTMLDialogElement>('.course-notice-dialog[open]')) document.querySelector<HTMLDialogElement>('.course-notice-dialog[open]')?.close()
+      else if (showQuestions) setShowQuestions(false)
       else if (showExport) setShowExport(false)
       else if (showReset) setShowReset(false)
       else if (document.querySelector<HTMLDialogElement>('.custom-topic-editor[open]')) document.querySelector<HTMLDialogElement>('.custom-topic-editor[open]')?.close()
@@ -170,12 +198,6 @@ function App() {
     if (!mobileLayout) { setShowQuestions(false); setShowExport(false) }
   }, [mobileLayout])
   useEffect(() => { if (!notice) return; const timer = window.setTimeout(() => setNotice(''), 4500); return () => window.clearTimeout(timer) }, [notice])
-  const shownCoinTransaction=useRef(activity.economy?.history[0]?.id)
-  useEffect(()=>{
-    const transaction=activity.economy?.history[0]
-    if(transaction && transaction.id!==shownCoinTransaction.current && transaction.amount>0)setNotice(`+${transaction.amount} монет · ${transaction.label}`)
-    shownCoinTransaction.current=transaction?.id
-  },[activity.economy])
   function toggleTopic(id: string) { setSession(s => ({ ...s, selected: s.selected.includes(id) ? s.selected.filter(v => v !== id) : [...s.selected, id], index: 0 })) }
   function finish() {
     questionsDialog.current?.close()
@@ -204,7 +226,7 @@ function App() {
   }
   function closeExport() { exportDialog.current?.close(); setShowExport(false) }
   function documentText() {
-    const lines = ['Answerbook — мои ответы', session.completedAt ? new Date(session.completedAt).toLocaleString('ru-RU') : '', `Заполнено: ${answered} из ${questions.length}`, '']
+    const lines = ['КодШаг — мои ответы', session.completedAt ? new Date(session.completedAt).toLocaleString('ru-RU') : '', `Заполнено: ${answered} из ${questions.length}`, '']
     for (const topic of activeTopics) {
       lines.push(`${topic.number}. ${topic.title}`, '')
       for (const [number, q] of topic.questions.entries()) lines.push(`${number + 1}. ${q.text}`, session.answers[q.id]?.trim() || 'Ответ не указан.', '')
@@ -218,7 +240,7 @@ function App() {
       return
     }
     const url = URL.createObjectURL(new Blob(['\uFEFF' + documentText()], { type: 'text/plain;charset=utf-8' }))
-    const link = document.createElement('a'); link.href = url; link.download = `answerbook-${new Date().toISOString().slice(0, 10)}.txt`; link.click()
+    const link = document.createElement('a'); link.href = url; link.download = `kodshag-${new Date().toISOString().slice(0, 10)}.txt`; link.click()
     window.setTimeout(() => URL.revokeObjectURL(url), 1000)
   }
   async function copyText() {
@@ -229,31 +251,39 @@ function App() {
     try { await printDocument() }
     catch { setNotice('Не удалось открыть печать. Можно сохранить конспект как текст.') }
   }
-  return <div data-layout={mobileLayout ? 'mobile' : 'desktop'} className={`app-shell screen-${view !== 'catalog' ? view : session.stage}`}>
+  return <div data-surface={isAndroid ? 'app' : 'web'} data-layout={mobileLayout ? 'mobile' : 'desktop'} className={`app-shell screen-${view !== 'catalog' ? view : session.stage}`}>
     <MobileLayoutStyles enabled={mobileLayout} />
     <header className="mobile-appbar mobile-only no-print">
-      {view !== 'catalog' || session.stage === 'topics' ? <a className="brand mobile-brand" href="#" onClick={e => { e.preventDefault(); goHome() }} aria-label="AnswerBook — главная"><span className="brand-mark" aria-hidden="true">a<span>.</span></span><span>answerbook<span className="brand-dot">.</span></span></a> : <>
+      {view !== 'catalog' || session.stage === 'topics' ? <a className="brand mobile-brand" href="#" onClick={e => { e.preventDefault(); goHome() }} aria-label="КодШаг — главная"><span className="brand-mark" aria-hidden="true"><img src="/favicon.svg" width="35" height="35" alt="" /></span><span>КодШаг</span></a> : <>
         {session.stage === 'questions' && <button className="icon-button" onClick={goHome} aria-label="На главную"><Arrow back /></button>}
         <div className="appbar-title"><h1 ref={mobileHeading} tabIndex={-1}>{session.stage === 'questions' ? 'Опрос' : 'Результаты'}</h1><span>{session.stage === 'questions' ? `Вопрос ${index + 1} из ${questions.length}` : 'Ваш личный конспект'}</span></div>
       </>}
       {view !== 'catalog' || session.stage === 'topics' ? <span className="mobile-offline"><i /><span>Офлайн-доступ{nativeVersion && <small>Версия {nativeVersion} · Android</small>}</span></span> : session.stage === 'questions' ? <button className="appbar-action" onClick={finish}>Завершить</button> : null}
+      {mobileLayout&&isAndroid&&<CourseNotifications onCourse={id=>{setLearningStart(current=>({id,key:current.key+1}));setView('learning')}}/>}
       <ThemeToggle theme={theme} onToggle={toggleTheme} />
     </header>
     <header className="site-header no-print">
-      <a className="brand" href="#" onClick={e => { e.preventDefault(); goHome() }} aria-label="Answerbook — выбор тем"><span className="brand-mark" aria-hidden="true">a<span>.</span></span><span>answerbook<span className="brand-dot">.</span></span></a>
+      <a className="brand" href="#" onClick={e => { e.preventDefault(); goHome() }} aria-label="КодШаг — выбор тем"><span className="brand-mark" aria-hidden="true"><img src="/favicon.svg" width="35" height="35" alt="" /></span><span>КодШаг</span></a>
+      {!isAndroid&&<nav className="web-navigation" aria-label="Разделы сайта"><button aria-current={view==='catalog'?'page':undefined} onClick={()=>navigate('catalog')}>Каталог</button><button aria-current={view==='learning'?'page':undefined} onClick={()=>navigate('learning')}>Курсы</button><button aria-current={view==='profile'?'page':undefined} onClick={()=>navigate('profile')}>Личный кабинет</button></nav>}
       <span className="header-caption">Пространство для ваших знаний</span><span className="local-badge"><i />Без регистрации</span>
+      {(!isAndroid||!mobileLayout)&&<CourseNotifications onCourse={id=>{setLearningStart(current=>({id,key:current.key+1}));setView('learning')}}/>}
       <ThemeToggle theme={theme} onToggle={toggleTheme} />
     </header>
-    {(view !== 'catalog' || session.stage === 'topics') && <nav className="app-navigation no-print" aria-label="Разделы приложения"><button aria-current={view === 'catalog' ? 'page' : undefined} onClick={() => navigate('catalog')}>Каталог</button><button aria-current={view === 'learning' ? 'page' : undefined} onClick={() => navigate('learning')}>Курсы</button><button aria-current={view === 'profile' ? 'page' : undefined} onClick={() => navigate('profile')}>Личный кабинет</button></nav>}
+    {isAndroid&&(view !== 'catalog' || session.stage === 'topics') && <nav className="app-navigation no-print" aria-label="Разделы приложения"><button aria-current={view === 'catalog' ? 'page' : undefined} onClick={() => navigate('catalog')}>Каталог</button><button aria-current={view === 'learning' ? 'page' : undefined} onClick={() => navigate('learning')}>Курсы</button><button aria-current={view === 'profile' ? 'page' : undefined} onClick={() => navigate('profile')}>Личный кабинет</button></nav>}
     {view === 'catalog' && session.stage === 'questions' && <div className="mobile-actionbar mobile-only no-print" aria-label="Управление опросом">
       <button className="secondary mobile-previous" onClick={previousQuestion} aria-label={index === 0 ? 'К выбору тем' : 'Предыдущий вопрос'}><Arrow back /></button><button className="primary" onClick={() => index < questions.length - 1 ? setSession(s => ({ ...s, index: index + 1 })) : finish()}>{index < questions.length - 1 ? 'Следующий вопрос' : 'К результатам'}<Arrow /></button>
     </div>}
+    {profileError && <p className="profile-error" role="alert">{profileError}</p>}
     {themeError && <p className="theme-error" role="alert">{themeError}</p>}
     <main>
-      {view === 'profile' ? <ProfilePage retrySave={retrySave} purchaseFreeze={purchaseFreeze} busy={busy} activity={activity} activityError={activityError} profile={profile} topics={availableTopics} onChange={setProfile} saveState={profileSave} loadFailed={profileLoad.failed} onOpenCourse={topicId => {
+      {view === 'profile' ? <ProfilePage activity={activity} activityError={activityError} profile={profile} topics={availableTopics} onChange={setProfile} saveState={profileSave} loadFailed={profileLoad.failed} onOpenCourse={topicId => {
         setSession(s => ({ ...leaveSession(s), selected: [topicId], stage: 'topics' }))
         setView('catalog')
-      }} onOpenLearning={courseId => { setLearningStart(current => ({ id:courseId, key:current.key + 1 })); setView('learning') }} /> : view === 'learning' ? <LearningPage retrySave={retrySave} purchaseCourse={purchaseCourse} purchaseFreeze={purchaseFreeze} busy={busy} activity={activity} activityError={activityError} onStudy={recordStudy} key={learningStart.key} initialCourseId={learningStart.id} /> : <>
+      }} onOpenLearning={courseId => { setLearningStart(current => ({ id:courseId, key:current.key + 1 })); setView('learning') }} /> : view === 'learning' ? <LearningPage courseSyncStatus={courseSyncStatus} onRefreshCourses={syncCourses} onResetCourse={async () => {
+        if(profileLoad.failed)return
+        profileToken.current=readStorageToken(profileKey)
+        setProfile(parseProfile(readStored(profileKey)))
+      }} activity={activity} activityError={activityError} onStudy={recordStudy} key={learningStart.key} initialCourseId={learningStart.id} /> : <>
       <nav className="steps no-print" aria-label="Этапы опроса">{['Выбор тем', 'Ваши ответы', 'Результат'].map((title, i) => {
         const current = ['topics', 'questions', 'result'].indexOf(session.stage)
         return <div key={title} className={`step ${current === i ? 'active' : ''} ${current > i ? 'done' : ''}`} aria-current={current === i ? 'step' : undefined}><span>{current > i ? '✓' : `0${i + 1}`}</span>{title}</div>
@@ -269,7 +299,7 @@ function App() {
             <div className="topic-create-row"><span>Открытые вопросы · отвечайте своими словами</span><button className="secondary" disabled={customLoad.failed || customTopics.length>=100} onClick={()=>setTopicEditor('new')}>+ Создать тему</button></div>
             <div className="course-discovery topic-discovery">
               <label className="course-search"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input type="search" placeholder="Найти тему" aria-label="Найти тему" value={topicQuery} onChange={event => setTopicQuery(event.target.value)} /></label>
-              <Select label="Направление тем" value={topicDirection} onChange={setTopicDirection} options={[{value:'all',label:'Все направления'}, ...learningDirections.map(direction => ({value:direction.id,label:direction.title})), {value:'custom',label:'Свои темы'}, ...(topics.some(topic => !isCustomTopic(topic) && !topicDirections[topic.id]) ? [{value:'other',label:'Другие темы'}] : [])]} />
+              <Select label="Направление тем" hideLabel menuClassName="course-direction-menu" value={topicDirection} onChange={setTopicDirection} options={[{value:'all',label:'Все направления'},...groupTopics(topics,[...learningDirections,{id:'custom',title:'Свои темы'},{id:'other',title:'Другие темы'}]).map(group=>({value:group.direction.id,label:group.direction.title}))]}/>
             </div>
             {filtersActive && <div className="topic-filter-status"><span role="status">Найдено тем: {visibleTopics.length} из {topics.length}. Выбрано всего: {chosenTopics.length}.</span><button className="text-button" onClick={() => { setTopicQuery(''); setTopicDirection('all') }}>Сбросить фильтры</button></div>}
             <div className="section-heading"><h2 id="topics-title">Выберите темы</h2><button className="text-button" disabled={!visibleTopics.length} onClick={() => setSession(s => ({ ...s, selected: visibleSelected === visibleTopics.length ? s.selected.filter(id => !visibleTopics.some(topic => topic.id === id)) : [...new Set([...s.selected, ...visibleTopics.map(topic => topic.id)])], index: 0 }))}>{visibleTopics.length > 0 && visibleSelected === visibleTopics.length ? (filtersActive ? 'Снять выбор найденных' : 'Снять выбор') : filtersActive ? 'Выбрать найденные' : 'Выбрать все'}</button></div>
@@ -291,7 +321,7 @@ function App() {
         {answered === questions.length && <div className="test-ready no-print"><span>Вы ответили на все вопросы. Можно завершить тест прямо сейчас.</span><button className="primary" onClick={finish}>Завершить тест</button></div>}
         <div className="mobile-question-progress mobile-only"><div><span>{answered} из {questions.length} с ответом</span><button className="text-button" onClick={() => setShowQuestions(true)}>Все вопросы <span aria-hidden="true">▦</span></button></div><progress value={answered} max={questions.length} aria-label="Прогресс опроса" /></div>
         <section className="page-intro"><span className="eyebrow">ВРЕМЯ ПОДУМАТЬ</span><h1 ref={heading} tabIndex={-1}>Сформулируйте <span className="serif">свою мысль.</span></h1><p>Можно пропустить вопрос и вернуться к нему позже.</p></section>
-        <div className="answer-workspace"><section className="answer-card"><div className="answer-top"><span className="topic-pill">{question.topic}</span><span>Вопрос {index + 1} из {questions.length}</span></div><h2 ref={questionHeading} tabIndex={-1} id="question-label">{question.text}</h2>{question.block && <span className="question-block">Блок: {question.block}</span>}<p className="content-provenance">{question.id.startsWith('custom-') ? 'Ваш вопрос' : 'Вопрос создан с помощью ИИ'}</p><label className="answer-label" htmlFor="answer">Ваш ответ</label><textarea id="answer" aria-labelledby="question-label" placeholder="Начните писать здесь…" value={session.answers[question.id] ?? ''} onChange={e => { const value=e.target.value; if(value.trim())recordStudy({kind:'answer',id:question.id});setSession(s => ({ ...s, answers: { ...s.answers, [question.id]: value } })) }} /><div className="answer-meta"><span>{saveFailed ? 'Не удалось сохранить в браузере' : 'Ответ сохраняется на этом устройстве'}</span><span>{(session.answers[question.id] ?? '').length} символов</span></div><div className="answer-actions"><button className="secondary" disabled={index === 0} onClick={() => setSession(s => ({ ...s, index: index - 1 }))}><Arrow back />Назад</button>{index < questions.length - 1 ? <button className="primary" onClick={() => setSession(s => ({ ...s, index: index + 1 }))}>Следующий вопрос<Arrow /></button> : <button className="primary" onClick={finish}>Посмотреть результат<Arrow /></button>}</div></section>
+        <div className="answer-workspace"><section className="answer-card"><div className="answer-top"><span className="topic-pill">{question.topic}</span><span>Вопрос {index + 1} из {questions.length}</span></div><h2 ref={questionHeading} tabIndex={-1} id="question-label"><QuestionText text={question.text}/></h2>{question.block && <span className="question-block">Блок: {question.block}</span>}<p className="content-provenance">{question.id.startsWith('custom-') ? 'Ваш вопрос' : 'Вопрос создан с помощью ИИ'}</p><label className="answer-label" htmlFor="answer">Ваш ответ</label><textarea id="answer" aria-labelledby="question-label" placeholder="Начните писать здесь…" value={session.answers[question.id] ?? ''} onChange={e => { const value=e.target.value; if(value.trim())recordStudy({kind:'answer',id:question.id});setSession(s => ({ ...s, answers: { ...s.answers, [question.id]: value } })) }} /><div className="answer-meta"><span>{saveFailed ? 'Не удалось сохранить в браузере' : 'Ответ сохраняется на этом устройстве'}</span><span>{(session.answers[question.id] ?? '').length} символов</span></div><div className="answer-actions"><button className="secondary" disabled={index === 0} onClick={() => setSession(s => ({ ...s, index: index - 1 }))}><Arrow back />Назад</button>{index < questions.length - 1 ? <button className="primary" onClick={() => setSession(s => ({ ...s, index: index + 1 }))}>Следующий вопрос<Arrow /></button> : <button className="primary" onClick={finish}>Посмотреть результат<Arrow /></button>}</div></section>
           <aside className="progress-card"><span className="eyebrow">ВАШ ПРОГРЕСС</span><div className="progress-number">{answered}<span> / {questions.length}</span></div><p>вопросов с ответом</p><progress value={answered} max={questions.length} aria-label="Заполнено вопросов" /><div className="question-nav" aria-label="Переход к вопросу">{questions.map((q, i) => <button key={q.id} aria-label={`Вопрос ${i + 1}${session.answers[q.id]?.trim() ? ', есть ответ' : ', без ответа'}`} aria-current={i === index ? 'step' : undefined} className={`${session.answers[q.id]?.trim() ? 'filled' : ''} ${i === index ? 'current' : ''}`} onClick={() => setSession(s => ({ ...s, index: i }))}>{i + 1}</button>)}</div><button className="text-button" onClick={() => setSession(s => ({ ...s, stage: 'topics' }))}>Изменить темы</button><button className="secondary finish-button" onClick={finish}>Завершить опрос</button><p className="small-note">Незаполненные ответы будут отмечены в документе.</p></aside></div>
       </>}
       {session.stage === 'result' && <>
@@ -301,7 +331,7 @@ function App() {
         <div className="mobile-result-summary mobile-only no-print"><span className="result-check" aria-hidden="true">✓</span><h2>Готово. Мысли записаны.</h2><p>Раскройте тему, чтобы перечитать ответы.</p><div><span><strong>{answered}</strong>с ответом</span><span><strong>{questions.length - answered}</strong>пропущено</span><span><strong>{activeTopics.length}</strong>{russianPlural.select(activeTopics.length) === 'one' ? 'тема' : russianPlural.select(activeTopics.length) === 'few' ? 'темы' : 'тем'}</span></div></div>
         <div className="result-home no-print"><button className="primary" onClick={goHome}><Arrow back />На главную</button></div>
         <div className="result-toolbar no-print"><div><strong>{answered} из {questions.length}</strong><span> вопросов заполнено · {questions.length ? Math.round(answered / questions.length * 100) : 0}%</span></div><div className="export-actions"><button className="secondary" onClick={copyText}>Копировать</button><button className="secondary" onClick={downloadText}>{isAndroid ? 'Сохранить / отправить .txt' : 'Скачать .txt'}</button><button className="primary" onClick={savePdf}>Сохранить PDF <span aria-hidden="true">↓</span></button></div></div><p className="pdf-help no-print">Для PDF в окне печати выберите «Сохранить как PDF».</p>
-        <article className="document"><header className="document-header"><span className="eyebrow">ANSWERBOOK / ЛИЧНЫЙ КОНСПЕКТ</span><h2>Вопросы и мои ответы</h2><p>{session.completedAt && new Date(session.completedAt).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' })} · {countLabel(activeTopics.length, 'тема', 'темы', 'тем')} · {countLabel(questions.length, 'вопрос', 'вопроса', 'вопросов')}</p></header>{activeTopics.map(topic => (
+        <article className="document"><header className="document-header"><span className="eyebrow">КОДШАГ / ЛИЧНЫЙ КОНСПЕКТ</span><h2>Вопросы и мои ответы</h2><p>{session.completedAt && new Date(session.completedAt).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' })} · {countLabel(activeTopics.length, 'тема', 'темы', 'тем')} · {countLabel(questions.length, 'вопрос', 'вопроса', 'вопросов')}</p></header>{activeTopics.map(topic => (
           <section className={`document-topic ${expandedTopics.includes(topic.id) ? 'is-expanded' : ''}`} key={topic.id}>
             <button className="document-topic-toggle mobile-only no-print" aria-expanded={expandedTopics.includes(topic.id)} aria-controls={`answers-${topic.id}`} onClick={() => setExpandedTopics(current => current.includes(topic.id) ? current.filter(id => id !== topic.id) : [...current, topic.id])}><span><strong>{topic.title}</strong><small>{topic.questions.filter(q => session.answers[q.id]?.trim()).length} из {topic.questions.length} с ответом</small></span><span className="topic-chevron" aria-hidden="true">⌄</span></button>
             <h3 className="document-topic-title desktop-only">{topic.number}. {topic.title}</h3>
@@ -326,7 +356,7 @@ function App() {
       setTopicQuery('');setTopicDirection('custom')
     }} />}
     <KnowledgeSettings topic={availableTopics.find(topic => topic.id === settingsTopicId) ?? null} knowledge={knowledge} onChange={setKnowledge} onClose={() => setSettingsTopicId(null)} disabled={knowledgeLoad.failed} saveFailed={knowledgeSaveFailed} />
-    <footer className="site-footer no-print"><span>answerbook · Учиться, размышлять, формулировать.</span><span className={saveFailed ? 'save-error' : ''}>{saveFailed ? 'Хранилище недоступно. Скачайте ответы перед закрытием.' : 'Ваши ответы сохраняются на этом устройстве'}</span></footer>
+    <footer className="site-footer no-print"><span>КодШаг · Учиться, размышлять, формулировать.</span><a href={privacyPolicy.publicUrl} target="_blank" rel="noreferrer">Политика конфиденциальности приложения</a><span className={saveFailed ? 'save-error' : ''}>{saveFailed ? 'Хранилище недоступно. Скачайте ответы перед закрытием.' : 'Ваши ответы сохраняются на этом устройстве'}</span></footer>
     {notice && <div className="toast no-print" role="status">{notice}</div>}
     <dialog ref={resetDialog} onCancel={() => setShowReset(false)} className="reset-dialog"><h2>Начать с чистого листа?</h2><p>Текущие ответы будут удалены с этого устройства. Сначала сохраните конспект, если хотите оставить его.</p><div className="answer-actions"><button className="secondary" onClick={() => setShowReset(false)}>Отмена</button><button className="primary" onClick={() => { setSession(freshSession()); setShowReset(false) }}>Начать заново</button></div></dialog>
     <dialog ref={questionsDialog} onCancel={() => setShowQuestions(false)} className="mobile-sheet no-print" aria-labelledby="questions-sheet-title">

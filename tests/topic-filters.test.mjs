@@ -7,7 +7,7 @@ const {topics} = JSON.parse(readFileSync(new URL('../src/data/questions.json', i
 test('all survey topics belong to one direction; filters intersect without changing source data', () => {
   const before = structuredClone(topics)
   assert.ok(topics.every(topic => topicDirections[topic.id]))
-  assert.equal(filterTopics(topics,'','all').length,28)
+  assert.equal(filterTopics(topics,'','all').length,topics.length)
   assert.deepEqual(filterTopics(topics,'  REDIS  ','storage').map(t=>t.id),['redis-caching'])
   assert.equal(filterTopics(topics,'redis','web').length,0)
   assert.equal(filterTopics(topics,'невозможный запрос','all').length,0)

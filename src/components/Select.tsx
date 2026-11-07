@@ -4,9 +4,9 @@ import type { KeyboardEvent } from 'react'
 import './select.css'
 
 type Option = { value: string; label: string }
-type Props = { label: string; value: string; options: Option[]; onChange: (value: string) => void; disabled?: boolean; hideLabel?: boolean }
+type Props = { label: string; value: string; options: Option[]; onChange: (value: string) => void; disabled?: boolean; hideLabel?: boolean; menuClassName?:string }
 
-export function Select({ label, value, options, onChange, disabled = false, hideLabel = false }: Props) {
+export function Select({ label, value, options, onChange, disabled = false, hideLabel = false, menuClassName = '' }: Props) {
   const id = useId()
   const trigger = useRef<HTMLButtonElement>(null)
   const menu = useRef<HTMLDivElement>(null)
@@ -35,9 +35,8 @@ export function Select({ label, value, options, onChange, disabled = false, hide
       const rect = trigger.current?.getBoundingClientRect()
       if (!rect) return
       const nav = document.querySelector('.mobile-bottom-nav')?.getBoundingClientRect()
-      const banner = document.querySelector('.mobile-banner-slot')?.getBoundingClientRect()
       const viewportBottom = window.visualViewport ? window.visualViewport.offsetTop + window.visualViewport.height : window.innerHeight
-      const bottom = Math.min(viewportBottom, nav?.height ? nav.top : viewportBottom, banner?.height ? banner.top : viewportBottom) - 8
+      const bottom = Math.min(viewportBottom, nav?.height ? nav.top : viewportBottom) - 8
       const below = Math.max(0, bottom - rect.bottom - 6)
       const above = Math.max(0, Math.min(rect.top, bottom) - 14)
       const upwards = below < 160 && above > below
@@ -88,8 +87,8 @@ export function Select({ label, value, options, onChange, disabled = false, hide
     <button ref={trigger} type="button" className="custom-select-trigger" role="combobox" aria-labelledby={`${id}-label ${id}-value`} aria-haspopup="listbox" aria-expanded={open} aria-controls={open ? `${id}-list` : undefined} aria-activedescendant={open ? `${id}-${active}` : undefined} disabled={disabled || !options.length} onClick={() => open ? close() : show()} onKeyDown={onKeyDown} onBlur={close}>
       <span id={`${id}-value`}>{options[selected]?.label ?? 'Выберите'}</span><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="m6 9 6 6 6-6" /></svg>
     </button>
-    {open && createPortal(<div ref={menu} id={`${id}-list`} className="custom-select-menu" role="listbox" aria-labelledby={`${id}-label`} style={position} onMouseDown={event => event.preventDefault()}>
-      {options.map((option, index) => <div key={option.value} id={`${id}-${index}`} role="option" aria-selected={option.value === value} className={`custom-select-option ${active === index ? 'is-active' : ''}`} onClick={() => choose(index)}><span>{option.label}</span>{option.value === value && <span aria-hidden="true">✓</span>}</div>)}
+    {open && createPortal(<div ref={menu} id={`${id}-list`} className={`custom-select-menu ${menuClassName}`} role="listbox" aria-labelledby={`${id}-label`} style={position} onMouseDown={event => event.preventDefault()}>
+      {options.map((option, index) => <div key={option.value} id={`${id}-${index}`} role="option" title={option.label} aria-selected={option.value === value} className={`custom-select-option ${active === index ? 'is-active' : ''}`} onClick={() => choose(index)}><span>{option.label}</span>{option.value === value && <span aria-hidden="true">✓</span>}</div>)}
     </div>, document.body)}
   </div>
 }

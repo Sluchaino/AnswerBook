@@ -1,0 +1,66 @@
+/* Shared controls keep their phone flow; only the browser opts into web placement. */
+.learning-workspace, .course-layout-controls, .learning-activity { display:contents; }
+@media screen {
+html[data-design] .app-shell[data-surface="web"] { max-width:1440px; }
+html[data-design] .app-shell[data-surface="web"] .site-header { display:flex; flex-wrap:wrap; align-items:center; gap:16px; height:auto; min-height:84px; padding:16px 0; }
+.app-shell[data-surface="web"] .header-caption, .app-shell[data-surface="web"] .local-badge { display:none; }
+.web-navigation { display:flex; align-items:center; gap:6px; margin-left:auto; }
+.web-navigation button { border:0; background:transparent; color:var(--ui-muted); min-height:44px; padding:10px 18px; border-radius:12px; font:inherit; font-size:14px; }
+.web-navigation button[aria-current] { background:var(--ui-soft); color:var(--ui-primary); font-weight:600; }
+.web-navigation button:hover { background:var(--ui-soft); }
+html[data-design] .app-shell[data-surface="web"] .mobile-appbar,
+html[data-design] .app-shell[data-surface="web"] .mobile-bottom-nav,
+html[data-design] .app-shell[data-surface="web"] .mobile-banner-slot { display:none; }
+html[data-design] .app-shell[data-surface="web"] .topic-discovery { grid-template-columns:minmax(0,1fr) minmax(200px,.8fr); }
+.app-shell[data-surface="web"] .topics-section > .direction-picker { display:none; }
+.app-shell[data-surface="web"] .learning-course-actions { display:flex; flex-direction:row; flex-wrap:wrap; align-items:center; }
+.app-shell[data-surface="web"] .learning-course-actions > .primary { flex:1 1 180px; }
+.app-shell[data-surface="web"] .learning-course-actions > .secondary { flex:1; }
+.app-shell[data-surface="web"] .learning-course-actions > .text-button { margin-left:auto; }
+.app-shell[data-surface="web"] .result-bottom { justify-content:flex-end; }
+@media(min-width:761px){
+ html[data-design] .app-shell[data-surface="web"] .learning-course-grid > .learning-course-card:only-child { grid-column:1 / -1; width:100%; max-width:none; }
+ html[data-design] .app-shell[data-surface="web"] .learning-course-card { display:grid; grid-template-columns:48px minmax(0,1fr); column-gap:18px; padding:22px; }
+ .app-shell[data-surface="web"] .learning-course-card > * { grid-column:2; min-width:0; }
+ html[data-design] .app-shell[data-surface="web"] .learning-course-card > .topic-symbol { grid-column:1; grid-row:1 / span 2; }
+ html[data-design] .app-shell[data-surface="web"] .learning-course-card h3 { margin:0 0 8px; padding-right:120px; }
+ html[data-design] .app-shell[data-surface="web"] .learning-course-card > p:first-of-type { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden; margin:0 0 8px; }
+ html[data-design] .app-shell[data-surface="web"] .learning-card-stats { margin:10px 0; }
+ html[data-design] .app-shell[data-surface="web"] .learning-course-actions { margin-top:8px; padding-top:8px; }
+ html[data-design] .app-shell[data-surface="web"] .course-catalog-page .direction-group-heading { padding:14px 18px; min-height:0; }
+ html[data-design] .app-shell[data-surface="web"] .course-catalog-page .direction-group-heading p { margin:4px 0; }
+ html[data-design] .app-shell[data-surface="web"] .course-catalog-page .direction-group-count { margin-top:4px; }
+}
+@media(min-width:1000px){
+ .app-shell[data-surface="web"] .learning-course-grid > .learning-course-card:only-child { grid-column:1 / -1; max-width:none; }
+ .app-shell[data-surface="web"] .course-catalog-page { display:grid; grid-template-columns:minmax(0,1fr) 300px; column-gap:32px; align-items:start; }
+ .app-shell[data-surface="web"] .course-catalog-page > * { grid-column:1; min-width:0; }
+ .app-shell[data-surface="web"] .course-catalog-page > .learning-intro,
+ .app-shell[data-surface="web"] .course-catalog-page > .learning-sync { grid-column:1 / -1; }
+ .app-shell[data-surface="web"] .course-catalog-page > .learning-activity { display:block; grid-column:2; grid-row:3 / span 12; position:sticky; top:24px; padding-top:28px; }
+ .app-shell[data-surface="web"] .learning-activity .streak-week { gap:4px; }
+ .app-shell[data-surface="web"] .learning-activity .study-streak { padding:18px; }
+ .app-shell[data-surface="web"] .workspace { grid-template-columns:minmax(0,1fr) 300px; gap:32px; }
+ .app-shell[data-surface="web"] .answer-workspace { grid-template-columns:minmax(0,1fr) 280px; gap:32px; }
+ .app-shell[data-surface="web"] .progress-card { position:sticky; top:24px; align-self:start; }
+ .app-shell[data-surface="web"] .learning-workspace[data-assessment="lesson"] { display:grid; grid-template-columns:270px minmax(0,1fr); column-gap:32px; align-items:start; }
+ .app-shell[data-surface="web"] .learning-workspace[data-assessment="lesson"] > * { grid-column:2; min-width:0; }
+ .app-shell[data-surface="web"] .learning-workspace > .course-layout-controls { display:block; grid-column:1; grid-row:1 / span 5; position:sticky; top:24px; padding:20px; border:1px solid var(--ui-line); border-radius:20px; background:var(--ui-card); }
+ .app-shell[data-surface="web"] .course-layout-controls .learning-hierarchy-selects { display:grid; grid-template-columns:minmax(0,1fr); }
+ .app-shell[data-surface="web"] .course-layout-controls .learning-step-row { display:flex; flex-direction:column; align-items:stretch; position:static; background:transparent; padding-bottom:0; border-bottom:0; margin-bottom:0; }
+ .app-shell[data-surface="web"] .course-layout-controls .learning-block-actions { justify-content:space-between; }
+ .app-shell[data-surface="web"] .course-layout-controls .learning-lesson-controls { background:transparent; }
+ .app-shell[data-surface="web"] .learning-workspace .learning-theory { margin-top:0; }
+ html[data-design] .app-shell[data-surface="web"] .profile-overview { grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+}
+@media(max-width:760px){
+ html[data-design] .app-shell[data-surface="web"] { --mobile-appbar-height:0px; --bottom-space:24px; padding-bottom:24px; max-width:760px; }
+ html[data-design] .app-shell[data-surface="web"] .site-header { gap:8px; padding:12px 0; }
+ .app-shell[data-surface="web"] .site-header > .brand { margin-right:auto; font-size:23px; }
+ .app-shell[data-surface="web"] .web-navigation { order:5; flex:1 0 100%; margin:0; padding-top:8px; border-top:1px solid var(--ui-line); }
+ .app-shell[data-surface="web"] .web-navigation button { flex:1; font-size:12px; padding:10px 6px; }
+ html[data-design] .app-shell[data-surface="web"] .mobile-actionbar { top:0; }
+ html[data-design] .app-shell[data-surface="web"] .mobile-test-summary { position:static; }
+ html[data-design] .app-shell[data-surface="web"] .topic-discovery { grid-template-columns:minmax(0,1fr); }
+}
+}

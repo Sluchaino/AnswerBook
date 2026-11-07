@@ -4,14 +4,23 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node scripts/validate-content.mjs && vite",
-    "build": "node scripts/validate-content.mjs && tsc -b && vite build",
+    "dev": "node scripts/generate-privacy-page.mjs && node scripts/validate-content.mjs && vite",
+    "build": "node scripts/generate-privacy-page.mjs && node scripts/validate-content.mjs && tsc -b && vite build",
     "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "content:publish": "node --experimental-strip-types scripts/publish-learning.mjs",
+    "content:prepare:s3": "node --experimental-strip-types scripts/prepare-s3-upload.mjs",
+    "content:verify:s3": "node --experimental-strip-types scripts/verify-s3-content.mjs",
+    "server:dev": "dotnet run --project server/AnswerBook.ContentApi --urls http://127.0.0.1:5129",
     "android:sync": "npm run build && cap sync android",
     "android:open": "cap open android",
     "android:apk": "npm run android:sync && node scripts/build-android.mjs",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "content:import:csharp": "node --experimental-strip-types scripts/import-csharp-course.mjs",
+    "authoring:dev": "node scripts/start-authoring.mjs",
+    "authoring:test:api": "node --test tests/authoring-api.integration.mjs",
+    "content:import:aspnet": "node --experimental-strip-types scripts/import-aspnet-v2.mjs",
+    "courses:archive": "node scripts/sync-course-library.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.3",

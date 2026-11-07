@@ -1,11 +1,10 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import {readFileSync} from 'node:fs'
 import {shuffled,isOptionOrder} from '../src/lib/shuffle.ts'
 import {freshLearningAttempt,withOptionOrders,isLearningCorrect,finishLearningAttempt,restoreLearningAttempt,restartLearningAttempt,startMistakeReview,answerMistake,checkMistake,finishMistakeReview,learningProgress} from '../src/lib/learning.ts'
 import {beginSession,freshSession,leaveSession,restoreSession,testTopics} from '../src/lib/session.ts'
 import {parseTheme,nextTheme} from '../src/lib/theme.ts'
-const course=JSON.parse(readFileSync(new URL('../src/data/csharp-foundations-course.json',import.meta.url),'utf8'))
+import {course} from './fixtures/synthetic-course.mjs'
 const all=course.lessons.flatMap(l=>l.questions)
 function resultWithErrors(){const a=freshLearningAttempt(course);for(const q of all)a.answers[q.id]=q.kind==='choice'? String(q.correct):q.answers[0];const choice=all.find(q=>q.kind==='choice'),output=all.find(q=>q.kind==='output');a.answers[choice.id]=String((choice.correct+1)%4);a.answers[output.id]='wrong';return finishLearningAttempt(course,a)}
 

@@ -1,0 +1,10 @@
+.code-example, .learning-question pre.code-example, .learning-theory pre.code-example, .question-code-block {
+  display:block; max-width:100%; overflow-x:auto; white-space:pre;
+  font:13px/1.8 Consolas, 'Courier New', monospace; tab-size:4;
+  border-radius:10px; background:var(--surface-edf2e6); color:var(--ink-304f3a);
+  padding:18px; margin:18px 0; font-weight:400; letter-spacing:normal; text-align:left;
+}
+.code-example code, .question-code-block code { font:inherit; white-space:inherit; }
+.question-rich-text { white-space:pre-wrap; overflow-wrap:anywhere; }
+.question-inline-code { font-family:Consolas, 'Courier New', monospace; font-size:.95em; background:var(--surface-edf2e6); border-radius:4px; padding:1px 4px; }
+@media(max-width:700px){ .code-example, .learning-question pre.code-example, .learning-theory pre.code-example, .question-code-block { font-size:12px; padding:14px; } }

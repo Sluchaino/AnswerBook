@@ -2,6 +2,13 @@ import type { Topic } from './catalog'
 
 // Separate from course progress: these groups only control the catalog display.
 export const topicDirections: Record<string, string> = {
+  'csharp-operators':'dotnet', 'csharp-control-flow':'dotnet', 'csharp-methods':'dotnet', 'csharp-arrays-strings':'dotnet',
+  'csharp-custom-types':'dotnet', 'csharp-equality-null':'dotnet', 'csharp-generics':'dotnet', 'csharp-delegates-events':'dotnet',
+  'csharp-exceptions-resources':'dotnet', 'csharp-advanced':'dotnet',
+  'aspnet-hosting-config':'web', 'aspnet-routing':'web', 'aspnet-binding-results':'web', 'aspnet-middleware':'web',
+  'aspnet-di-options':'web', 'aspnet-minimal-api':'web', 'aspnet-controllers':'web', 'aspnet-validation-errors':'web',
+  'aspnet-data-consistency':'storage', 'aspnet-auth-sessions':'web', 'aspnet-jwt-oauth':'web', 'aspnet-authorization':'web',
+  'aspnet-http-background':'web', 'aspnet-realtime':'web', 'aspnet-tasks-project':'web',
   csharp:'dotnet', 'oop-design':'dotnet', 'collections-linq':'dotnet', 'dotnet-memory':'dotnet', 'async-threading':'dotnet', 'dotnet-practical':'dotnet',
   algorithms:'fundamentals',
   databases:'storage', postgresql:'storage', 'ef-core':'storage', 'redis-caching':'storage',

@@ -16,7 +16,7 @@ public class PrintDocumentPlugin extends Plugin {
             try {
                 PrintManager manager = (PrintManager) getActivity().getSystemService(Context.PRINT_SERVICE);
                 if (manager == null) { call.reject("Печать недоступна"); return; }
-                manager.print("AnswerBook", getBridge().getWebView().createPrintDocumentAdapter("AnswerBook"), new PrintAttributes.Builder().build());
+                manager.print("КодШаг", getBridge().getWebView().createPrintDocumentAdapter("КодШаг"), new PrintAttributes.Builder().build());
                 call.resolve();
             } catch (Exception error) {
                 call.reject("Не удалось открыть печать", error);
