@@ -8,6 +8,23 @@ Android-релиз 1.58 (versionCode 59) содержит рекламу Янд�
 
 Ключи подписи, пароли, APK, исходные и готовые пакеты курсов, черновики упражнений и исторические тестовые снимки материалов остаются локально и исключены из Git. Для полного набора проверок импорта и совместимости нужны локальные материалы курсов и снимки в `server/*-source` и `tests/fixtures`; публичный клон сам по себе их не содержит. Production-сборка сайта использует встроенный каталог описаний и публичное хранилище, поэтому эти приватные материалы для неё не нужны. Инструкции по публикации сайта — в [docs/cloudflare-pages.md](docs/cloudflare-pages.md).
 
+## Скриншоты мобильного приложения
+
+Офлайн-курсы, программа обучения, теория, интерактивные упражнения, тесты и личный прогресс. Нажмите на изображение, чтобы открыть его в полном размере.
+
+<p>
+  <a href="docs/screenshots/01_kodshag_rustore.jpg"><img src="docs/screenshots/01_kodshag_rustore.jpg" width="180" alt="КодШаг — офлайн-доступ к скачанным курсам"></a>
+  <a href="docs/screenshots/02_kodshag_rustore.jpg"><img src="docs/screenshots/02_kodshag_rustore.jpg" width="180" alt="КодШаг — выбор направления обучения"></a>
+  <a href="docs/screenshots/03_kodshag_rustore.jpg"><img src="docs/screenshots/03_kodshag_rustore.jpg" width="180" alt="КодШаг — программа курса C# по модулям"></a>
+  <a href="docs/screenshots/04_kodshag_rustore.jpg"><img src="docs/screenshots/04_kodshag_rustore.jpg" width="180" alt="КодШаг — описание курса и прогресс прохождения"></a>
+  <a href="docs/screenshots/05_kodshag_rustore.jpg"><img src="docs/screenshots/05_kodshag_rustore.jpg" width="180" alt="КодШаг — теория с примерами кода C#"></a>
+  <a href="docs/screenshots/06_kodshag_rustore.jpg"><img src="docs/screenshots/06_kodshag_rustore.jpg" width="180" alt="КодШаг — интерактивный поиск и исправление ошибки в коде"></a>
+  <a href="docs/screenshots/07_kodshag_rustore.jpg"><img src="docs/screenshots/07_kodshag_rustore.jpg" width="180" alt="КодШаг — тесты для закрепления знаний"></a>
+  <a href="docs/screenshots/08_kodshag_rustore.jpg"><img src="docs/screenshots/08_kodshag_rustore.jpg" width="180" alt="КодШаг — выбор тем для открытых вопросов"></a>
+  <a href="docs/screenshots/09_kodshag_rustore.jpg"><img src="docs/screenshots/09_kodshag_rustore.jpg" width="180" alt="КодШаг — личный план обучения и профессии"></a>
+  <a href="docs/screenshots/10_kodshag_rustore.jpg"><img src="docs/screenshots/10_kodshag_rustore.jpg" width="180" alt="КодШаг — серия занятий и итоги недели"></a>
+</p>
+
 Ниже сохранена история предыдущих этапов разработки.
 
 React + TypeScript + Capacitor и сервер контента на C# / ASP.NET Core. Локальный профиль без регистрации.
