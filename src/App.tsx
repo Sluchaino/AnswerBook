@@ -254,7 +254,7 @@ function App() {
   return <div data-surface={isAndroid ? 'app' : 'web'} data-layout={mobileLayout ? 'mobile' : 'desktop'} className={`app-shell screen-${view !== 'catalog' ? view : session.stage}`}>
     <MobileLayoutStyles enabled={mobileLayout} />
     <header className="mobile-appbar mobile-only no-print">
-      {view !== 'catalog' || session.stage === 'topics' ? <a className="brand mobile-brand" href="#" onClick={e => { e.preventDefault(); goHome() }} aria-label="КодШаг — главная"><span className="brand-mark" aria-hidden="true"><img src="/favicon.svg" width="35" height="35" alt="" /></span><span>КодШаг</span></a> : <>
+      {view !== 'catalog' || session.stage === 'topics' ? <a className="brand mobile-brand" href="#" onClick={e => { e.preventDefault(); goHome() }} aria-label="КодШаг — главная"><span className="brand-mark" aria-hidden="true"><img src={`${import.meta.env.BASE_URL}favicon.svg`} width="35" height="35" alt="" /></span><span>КодШаг</span></a> : <>
         {session.stage === 'questions' && <button className="icon-button" onClick={goHome} aria-label="На главную"><Arrow back /></button>}
         <div className="appbar-title"><h1 ref={mobileHeading} tabIndex={-1}>{session.stage === 'questions' ? 'Опрос' : 'Результаты'}</h1><span>{session.stage === 'questions' ? `Вопрос ${index + 1} из ${questions.length}` : 'Ваш личный конспект'}</span></div>
       </>}
@@ -263,7 +263,7 @@ function App() {
       <ThemeToggle theme={theme} onToggle={toggleTheme} />
     </header>
     <header className="site-header no-print">
-      <a className="brand" href="#" onClick={e => { e.preventDefault(); goHome() }} aria-label="КодШаг — выбор тем"><span className="brand-mark" aria-hidden="true"><img src="/favicon.svg" width="35" height="35" alt="" /></span><span>КодШаг</span></a>
+      <a className="brand" href="#" onClick={e => { e.preventDefault(); goHome() }} aria-label="КодШаг — выбор тем"><span className="brand-mark" aria-hidden="true"><img src={`${import.meta.env.BASE_URL}favicon.svg`} width="35" height="35" alt="" /></span><span>КодШаг</span></a>
       {!isAndroid&&<nav className="web-navigation" aria-label="Разделы сайта"><button aria-current={view==='catalog'?'page':undefined} onClick={()=>navigate('catalog')}>Каталог</button><button aria-current={view==='learning'?'page':undefined} onClick={()=>navigate('learning')}>Курсы</button><button aria-current={view==='profile'?'page':undefined} onClick={()=>navigate('profile')}>Личный кабинет</button></nav>}
       <span className="header-caption">Пространство для ваших знаний</span><span className="local-badge"><i />Без регистрации</span>
       {(!isAndroid||!mobileLayout)&&<CourseNotifications onCourse={id=>{setLearningStart(current=>({id,key:current.key+1}));setView('learning')}}/>}

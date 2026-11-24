@@ -2,7 +2,9 @@
 
 ## Текущий релиз — КодШаг 1.58
 
-Сайт: https://kodshag.pages.dev/. Политика мобильного приложения: https://kodshag.pages.dev/privacy.html.
+Веб-версия на [GitHub Pages](https://sluchaino.github.io/AnswerBook/). Также доступна версия на [Cloudflare Pages](https://kodshag.pages.dev/). [Политика мобильного приложения](https://kodshag.pages.dev/privacy.html).
+
+GitHub Actions публикует веб-сборку при обновлении `main`. В настройках **Settings → Pages → Build and deployment** источником должна быть выбрана опция **GitHub Actions**. Локальная сборка для этого адреса — `npm run build -- --mode github-pages`. Браузерный прогресс хранится отдельно на каждом домене.
 
 Android-релиз 1.58 (versionCode 59) содержит рекламу Яндекса и FAQ из девяти вопросов в «Личный кабинет → Помощь и информация». Курсы C#, ASP.NET Core и SQL загружаются отдельно из Yandex Object Storage и сохраняются для офлайн-обучения. В каталоге открытых вопросов — 29 тем и 702 вопроса.
 

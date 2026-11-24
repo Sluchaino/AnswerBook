@@ -28,9 +28,17 @@ for (const topic of topics) {
 }
 console.log(`Контент проверен: тем — ${topicIds.size}, вопросов — ${questionIds.size}.`)
 const directions=JSON.parse(readFileSync(new URL('../src/data/learning-directions.json',import.meta.url),'utf8'))
+const courseSource = new URL('../server/course-source/', import.meta.url)
+let courseFiles = []
+try {
+  courseFiles = readdirSync(courseSource)
+} catch (error) {
+  if (error.code !== 'ENOENT') throw error
+  console.log('Локальные исходники курсов отсутствуют.')
+}
 const ids=new Set()
-for(const file of readdirSync(new URL('../server/course-source/',import.meta.url)).filter(f=>f.endsWith('.json')&&f!=='directions.json')) {
-  const course=validateDownloadedCourse(JSON.parse(readFileSync(new URL('../server/course-source/'+file,import.meta.url),'utf8')))
+for(const file of courseFiles.filter(f=>f.endsWith('.json')&&f!=='directions.json')) {
+  const course=validateDownloadedCourse(JSON.parse(readFileSync(new URL(file,courseSource),'utf8')))
   if(course.formatVersion!==2 || !course.modules)throw new Error('Новые курсы должны использовать formatVersion: 2 и modules')
   if(ids.has(course.id)||retiredCourseSet.has(course.id))throw new Error('Повторный или удалённый курс: '+course.id)
   if(!directions.some(d=>d.id===course.direction))throw new Error('Неизвестное направление')
